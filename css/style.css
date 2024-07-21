@@ -1350,8 +1350,8 @@ table .filterDropdown{
 }
 .excelExportWrapper{
     .box{
-    background: #F5F5F5;
-    min-height: 370px;
+        background: #F5F5F5;
+        max-height: 370px;
        border: 1px solid #B3B3B3;
        border-radius: 8px;
        -webkit-border-radius: 8px;
@@ -1363,6 +1363,9 @@ table .filterDropdown{
             font-family: Helvetica;
             font-size: 14px;
             font-weight: 400;
+       }
+       &.min-224{
+        min-height: 224px !important;
        }
     }
     .searchbox{
@@ -1489,6 +1492,10 @@ table .filterDropdown{
 }
 .scroller-170{
     max-height: 170px;
+    overflow-y: auto;
+}
+.scroller-200{
+    max-height: 200px;
     overflow-y: auto;
 }
 .uk-lightbox{
