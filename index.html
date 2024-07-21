@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+            user-scalable=0" name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png"> <!-- toral18012023-->
+        <title>RegitArt</title>
+
+        <script src="js/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/css/uikit.min.css" />
+        <!-- phosphor-icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="grid-wrapper">
+
+                 <!---------- logo ----------------->
+                 <div class="logo-wrapper">
+                    <button class="btn toggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" />
+                    </a>
+                </div>
+                
+                <!---------- header ----------------->
+               <header class="header">
+                    <nav class="mainmenu px-3 py-2">
+                        <div class="filter-uk-navbar floating-sidebar right" >
+                            <button class="close-floating" type="button">
+                                <i class="bi bi-x icon"></i>
+                            </button>
+                            <ul class="uk-navbar-nav scroller-x ">
+                                <li class="uk-active">
+                                    <a href="#" class="navlink">
+                                        <img src="assets/icons/gallery 1.png" class="img-fluid" />
+                                    View</a>
+                                    <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#">TILES VIEW</a></li>
+                                            <li><a href="#">LIST VIEW</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="navlink">
+                                        <img src="assets/icons/post 1.png" class="img-fluid" />
+                                        New Post</a>
+                                </li>
+                                <li><a href="#" class="navlink">
+                                    <img src="assets/icons/bin 1.png" class="img-fluid" />
+                                    Delete</a></li>
+                                <li>
+                                    <a href="#" class="navlink">
+                                        <img src="assets/icons/setting 1.png" class="img-fluid" />
+                                        Mass Update
+                                    </a>
+                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#modal-massUpdate" uk-toggle>LOAN</a></li>
+                                            <li><a href="#">INVENTORY</a></li>
+                                            <li><a href="#">LIST</a></li>
+                                            <li><a href="#">EXCEL EXPORT</a></li>
+                                            <li><a href="#">PDF</a></li>
+                                            <li><a href="#">LABELS</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="navlink">
+                                        <img src="assets/icons/CREATE 1.png" class="img-fluid" />
+                                        Create
+                                    </a>
+                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#modal-createLoan" uk-toggle>LOAN</a></li>
+                                            <li><a href="#modal-createInventory" uk-toggle>INVENTORY</a></li>
+                                            <li><a href="#modal-createList" uk-toggle>LIST</a></li>
+                                            <li><a href="#modal-createExcelExport" uk-toggle>EXCEL EXPORT</a></li>
+                                            <li><a href="#modal-createPDF" uk-toggle>PDF</a></li>
+                                            <li><a href="#modal-createLabel" uk-toggle>LABELS</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a class="navlink" href="#modal-changeLayout" uk-toggle>
+                                    <img src="assets/icons/layout 1.png" class="img-fluid" />
+                                    Change Page Layout</a></li>
+                                <li>
+                                    <a href="#" class="navlink">
+                                    <img src="assets/icons/red-flag 1.png" class="img-fluid" />
+                                        Flagged Works</a>
+                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#">FIND FLAGGED WORKS</a></li>
+                                            <li><a href="#">DE-SELECT ALL</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#modal-advancedSearching" class="navlink" uk-toggle>
+                                    <img src="assets/icons/Vector.png" class="img-fluid" />
+                                    Advanced Search
+                                </a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
+                        <div class="uk-inline">
+                            <button class="btn btn-outline-light navbar-search" type="button">
+                                <i class="bi bi-search icon"></i>
+                            </button>
+                        </div>
+                    </nav> 
+                </header> 
+
+                <!---------- sidebar ----------------->
+                <aside class="sidebar floating-sidebar" >
+                    <button class="close-floating" type="button">
+                        <i class="bi bi-x icon"></i>
+                    </button>
+                    <a href="" class="notifiaction-icon">
+                        <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                    </a>
+                    <div class="offset-sidebar">
+                            <ul class="uk-nav uk-nav-default" uk-nav>
+                                <li class="item"><a href="overview.html">Overview</a></li>
+                                <li class="item uk-parent uk-open">
+                                    <a class="uk-active" href="artwork_tileview.html">Artworks</a>
+                                    <ul class="uk-nav-sub">
+                                        <li class="sub-item"><a href="artwork_tileview.html">HISTORIK</a></li>
+                                        <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
+                                        <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
+                                        <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
+                                        <li class="sub-item"><a href="#">LISTOR</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item"><a href="#">Artists</a></li>
+                                <li class="item"><a href="#">Reports</a></li>
+                                <li class="item"><a href="#">Admin</a></li>
+                                <li class="item"><a href="#">Help</a></li>
+                            </ul>
+                    </div>
+
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="item"><a href="#">konstnärsdatabasen</a></li>
+                        <li class="item"><a href="#">User Profile</a></li>
+                        <li class="item"><a href="#">Change language</a></li>
+                        <li class="item"><a href="#">Log Out</a></li>
+                    </ul>
+                </aside>
+               
+                <!---------- main ----------------->
+                <div class="main main-wrapper" >
+                     
+                        <!---------- table ----------------->
+                        <div class="uk-overflow-auto table-parent position-relative w-100">
+                            <table class="uk-table uk-table-striped my-table">
+                                <thead>
+                                    <tr>
+                                        <th class="flag">
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </th>
+                                        <th></th>
+                                        <th class="">
+                                            <label class="label-text" for="">ID-HOMHER</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip" >
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text" >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">KONSTNÄR</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">TITEL</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">BYGGNAD</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">ANTECKNINGAR</label>
+                                            <div class="uk-inline" >
+                                                <span class="uk-form-icon uk-form-icon-flip ">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">RUM</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">KONSTPORTAL</label>
+                                            <div class="uk-inline " >
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">KONSTNÄR</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">SKADAD</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody uk-lightbox>
+                                    <tr class="tr-click-model">
+                                        <td>
+                                            <div class="flagDiv tr-click-model">
+                                                <a href="#modal-flagRemove" class="flagTrigger" uk-toggle><img src="assets/icons/flag.png" alt="" class="img-fluid"></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/1.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            8
+                                        </td>
+                                        <td>Sandor Sandström</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Bibiloteset</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/2.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            10
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/3.png" data-caption="11. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/3.png" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/4.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/4.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/5.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/5.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/7.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/7.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/8.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/8.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/9.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/9.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/1.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/2.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/2.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/3.png" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img src="assets/3.png" alt="" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="uk-checkbox" type="checkbox" checked>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="my-table-model">
+                                <button class="uk-drop-close closeDialog" type="button" uk-close></button>
+                                <div class="imgBox">
+                                    <img src="assets/2.jpg" alt="" class="img-fluid">
+                                    <p class="text">RIW-789, SANDOR SANDSTRÖM SAND, HUVUDET I SANDEN</p>
+                                </div>
+                                <ul uk-accordion class="arrow">
+                                    <li>
+                                        <a class="uk-accordion-title" href>GENERELLT</a>
+                                        <div class="uk-accordion-content">
+                                            <ul class="uk-nav">
+                                                <li><a href="#" class="navlink">Sandor Sandström Sand</a></li>
+                                                <li><a href="#" class="navlink">Huvudet i sanden</a></li>
+                                                <li><a href="#" class="navlink">1979</a></li>
+                                                <li><a href="#" class="navlink">Fotografi</a></li>
+                                                <li><a href="#" class="navlink">C-print med aluminiumram</a></li>
+                                                <li><a href="#" class="navlink">32 x 32 cm</a></li>
+                                                <li><a href="#" class="navlink">2/75</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title" href>DETALJER</a>
+                                        <div class="uk-accordion-content">
+                                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title" href>PLACERING</a>
+                                        <div class="uk-accordion-content">
+                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title" href>ΕΚΟΝΟΜΙ</a>
+                                        <div class="uk-accordion-content">
+                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uk-accordion-title" href>ÖVRIGT</a>
+                                        <div class="uk-accordion-content">
+                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!---------- pagination ----------------->
+                        <div class="paginationWrapper">
+                            <nav aria-label="Pagination">
+                                <ul class="uk-pagination" uk-margin>
+                                    <li><a href="#"><span uk-pagination-previous></span></a></li>
+                                    <li class="uk-active"><span aria-current="page">1</span></li>
+                                    <li><a href="#">2</a></li>
+                                    <li class="uk-disabled"><span>…</span></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#"><span uk-pagination-next></span></a></li>
+                                </ul>
+                            </nav>
+                            <div class="pageSize">
+                                <label class="uk-form-label" for="form-horizontal-text">PAGE SIZE:</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="number" value="12">
+                                </div>
+                            </div>
+                            <div class="totalEntries">POST 1 TO 6 OF 780</div>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer copyright">@2024 REGITART | ALL RIGHTS RESERVED</div>
+        
+        <!---------- modal-slider ----------------->
+        <div id="modal-slider" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog modal-dialog-cstm uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+        
+                <div uk-slider>
+
+                    <div class="uk-position-relative p-3">
+                
+                        <div class="uk-slider-container">
+                            <div class="uk-slider-items uk-child-width-1-1 modal-img-slider">
+                                <div>
+                                    <div class="image-div"><img src="assets/1.jpg" alt=""></div>
+                                    <div class="content text-center">
+                                        8. Anna Andersson, Gräset finns
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="image-div"><img src="assets/2.jpg" alt=""></div>
+                                    <div class="content text-center">
+                                        10. Anna Andersson, Gräset finns
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="image-div"><img src="assets/3.png" alt=""></div>
+                                    <div class="content text-center">
+                                        11. Anna Andersson, Gräset finns
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                
+                        <div class="uk-hidden@s uk-light">
+                            <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                
+                        <div class="uk-visible@s">
+                            <a class="uk-position-center-left-out uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right-out uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                
+                    </div>
+                
+                </div>
+        
+            </div>
+        </div>
+
+         <!---------- modal-flagRemove ----------------->
+         <div id="modal-flagRemove" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-540 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div class="text-center">
+                    <h1 class="modal-title uppr">ARE YOU SURE THAT YOU WANT TO DELETE THE 3 FOUND FLAGGED WORKS?</h1>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">Yes</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <!---------- modal-create Loan ----------------->
+        <div id="modal-createLoan" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-420 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">CREATE LOAN</h1>
+                    <br>
+                    <div class="form-content-check">
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createloantype" id="createloantype1">
+                            <label class="form-check-label" for="createloantype1">
+                                Use flagged works
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createloantype" id="createloantype2" checked>
+                            <label class="form-check-label" for="createloantype2">
+                                Use current search
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">PROCEED</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-create Inventory ----------------->
+        <div id="modal-createInventory" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-420 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">CREATE INVENTORY LIST</h1>
+                    <br>
+                    <div class="form-content-check">
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createInventorytype" id="createInventorytype1">
+                            <label class="form-check-label" for="createInventorytype1">
+                                Use flagged works
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createInventorytype" id="createInventorytype2" checked>
+                            <label class="form-check-label" for="createInventorytype2">
+                                Use current search
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">PROCEED</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-create List ----------------->
+        <div id="modal-createList" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-420 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">CREATE LIST</h1>
+                    <br>
+                    <div class="form-content-check">
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createListtype" id="createListtype1">
+                            <label class="form-check-label" for="createListtype1">
+                                Use flagged works
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createListtype" id="createListtype2" checked>
+                            <label class="form-check-label" for="createListtype2">
+                                Use current search
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">PROCEED</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!---------- modal-create Excel Export ----------------->
+        <div id="modal-createExcelExport" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-840 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">CREATE EXCEL EXPORT</h1>
+                    <br>
+                    <div class="form-content-check">
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createExcelExporttype" id="createExcelExporttype1">
+                            <label class="form-check-label" for="createExcelExporttype1">
+                                Use flagged works
+                            </label>
+                        </div>
+
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createExcelExporttype" id="createExcelExporttype2" checked>
+                            <label class="form-check-label" for="createExcelExporttype2">
+                                Use current search
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-12 col-md-6 excelExportWrapper availableFolcs">
+                            <div class="text-center text-title">Available folcs</div>
+                            <br>
+                            <div class="box">
+                                <div class="searchbox addon">
+                                    <input type="search" name="" id="" placeholder="Search">
+                                    <i class="bi bi-search icon"></i>
+                                </div>
+                                <div class="item-wrapper scroller">
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Titel">
+                                        <label class="form-check-label" for="Titel">
+                                            Titel
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Framställningsår">
+                                        <label class="form-check-label" for="Framställningsår">
+                                            Framställningsår
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Teknik">
+                                        <label class="form-check-label" for="Teknik">
+                                            Teknik
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Medium">
+                                        <label class="form-check-label" for="Medium">
+                                            Medium
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Upplaga">
+                                        <label class="form-check-label" for="Upplaga">
+                                            Upplaga
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Matt">
+                                        <label class="form-check-label" for="Matt">
+                                            Matt
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Ort">
+                                        <label class="form-check-label" for="Ort">
+                                            Ort
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Address">
+                                        <label class="form-check-label" for="Address">
+                                            Address
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Byggnad">
+                                        <label class="form-check-label" for="Byggnad">
+                                            Byggnad
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 excelExportWrapper currentPageElds">
+                            <div class="text-center text-title">Current page elds</div>
+                            <br>
+                            <div class="box bg-white">
+                                <div class="item-wrapper scroller">
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Inköpsår" checked>
+                                        <label class="form-check-label" for="Inköpsår">
+                                            Inköpsår
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Inköpspris" checked>
+                                        <label class="form-check-label" for="Inköpspris">
+                                            Inköpspris
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Inköpsplats" checked>
+                                        <label class="form-check-label" for="Inköpsplats">
+                                            Inköpsplats
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Use current search" checked>
+                                        <label class="form-check-label" for="Use current search">
+                                            Use current search
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Use current search" checked>
+                                        <label class="form-check-label" for="Use current search">
+                                            Use current search
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Use current search" checked>
+                                        <label class="form-check-label" for="Use current search">
+                                            Use current search
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Szatus" checked>
+                                        <label class="form-check-label" for="Szatus">
+                                            Szatus
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">Create</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-create PDF ----------------->
+        <div id="modal-createPDF" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-840 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">CREATE PDF</h1>
+                    <br>
+                    <div class="form-content-check">
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createPDFtype" id="createPDFtype1">
+                            <label class="form-check-label" for="createPDFtype1">
+                                Use flagged works
+                            </label>
+                        </div>
+
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createPDFtype" id="createPDFtype2" checked>
+                            <label class="form-check-label" for="createPDFtype2">
+                                Use current search
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="d-block form-check custom-form-check">
+                                <input class="form-check-input" type="radio" name="template" id="choosetemplate">
+                                <label class="form-check-label" for="choosetemplate">
+                                    Standard template
+                                </label>
+                            </div>
+                            <br>
+                            <ul uk-accordion class="arrow accordian-createpdf">
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title" href>Choose paper orientation</a>
+                                    <div class="uk-accordion-content bg-light">
+                                        <div class="paper-size-btns">
+                                            <a href="" class="link">Portrait</a>
+                                            <a href="" class="link">Landscape</a>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                            <br>
+                            <div class="d-block form-check custom-form-check">
+                                <input class="form-check-input" type="checkbox" name="IncludeImages" id="IncludeImages">
+                                <label class="form-check-label" for="IncludeImages">
+                                    Include Images
+                                </label>
+                            </div>
+                            <p class="text-small">This option creates a pdf with the current page layout. You can change the layout of the page by going to “Change page layout” menu.</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="d-block form-check custom-form-check">
+                                <input class="form-check-input" type="radio" name="template" id="Yourowntemplate">
+                                <label class="form-check-label" for="Yourowntemplate">
+                                    Your own template
+                                </label>
+                            </div>
+                            <br>
+                            <ul uk-accordion class="arrow accordian-createpdf" open>
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title" href>Choose your own template</a>
+                                    <div class="uk-accordion-content scroller-170">
+                                        <div class="paper-size-btns">
+                                            <a href="" class="link">My template 1</a>
+                                            <a href="" class="link">My template 2</a>
+                                            <a href="" class="link">My template 3</a>
+                                            <a href="" class="link">My template 4</a>
+                                            <a href="" class="link">My template 5</a>
+                                            <a href="" class="link">My template 6</a>
+                                            <a href="" class="link">My template 7</a>
+                                            <a href="" class="link">My template 8</a>
+                                            <a href="" class="link">My template 9</a>
+                                            <a href="" class="link">My template 10</a>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="text-small">This option creates a pdf with the current page layout. You can change the layout of the page by going to “Change page layout” menu.</p>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">Create</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-create Label ----------------->
+        <div id="modal-createLabel" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-340 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">CREATE LABELS</h1>
+                    <br>
+                    <div class="form-content-check">
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createLabeltype" id="createLabeltype1">
+                            <label class="form-check-label" for="createLabeltype1">
+                                Use flagged works
+                            </label>
+                        </div>
+
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="createLabeltype" id="createLabeltype2" checked>
+                            <label class="form-check-label" for="createLabeltype2">
+                                Use current search
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="radio" name="template" id="choosetemplate">
+                            <label class="form-check-label" for="choosetemplate">
+                                Standard template
+                            </label>
+                        </div>
+                        <br>
+                        <ul uk-accordion class="arrow accordian-createpdf">
+                            <li class="uk-open">
+                                <a class="uk-accordion-title" href>Choose your own template</a>
+                                <div class="uk-accordion-content bg-light scroller-170">
+                                    <div class="paper-size-btns">
+                                        <a href="" class="link">My template 1</a>
+                                        <a href="" class="link">My template 2</a>
+                                        <a href="" class="link">My template 3</a>
+                                        <a href="" class="link">My template 4</a>
+                                        <a href="" class="link">My template 5</a>
+                                        <a href="" class="link">My template 6</a>
+                                        <a href="" class="link">My template 7</a>
+                                        <a href="" class="link">My template 8</a>
+                                        <a href="" class="link">My template 9</a>
+                                        <a href="" class="link">My template 10</a>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                        <br>
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="checkbox" name="IncludeImages" id="IncludeImages">
+                            <label class="form-check-label" for="IncludeImages">
+                                Include Images
+                            </label>
+                        </div>
+                        <p class="text-small">You can create a new template via Admin -> Label templates.</p>
+                    </div>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">Create</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-change page Layout  ----------------->
+        <div id="modal-changeLayout" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-840 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">Change Page Layout</h1>
+                    
+                    <br>
+                    <div class="row">
+                        <div class="col-12 col-md-6 excelExportWrapper availableFolcs">
+                            <div class="text-center text-title">Available folcs</div>
+                            <br>
+                            <div class="box">
+                                <div class="searchbox addon">
+                                    <input type="search" name="" id="" placeholder="Search">
+                                    <i class="bi bi-search icon"></i>
+                                </div>
+                                <div class="item-wrapper scroller">
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Titel">
+                                        <label class="form-check-label" for="Titel">
+                                            Titel
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Framställningsår">
+                                        <label class="form-check-label" for="Framställningsår">
+                                            Framställningsår
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Teknik">
+                                        <label class="form-check-label" for="Teknik">
+                                            Teknik
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Medium">
+                                        <label class="form-check-label" for="Medium">
+                                            Medium
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Upplaga">
+                                        <label class="form-check-label" for="Upplaga">
+                                            Upplaga
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Matt">
+                                        <label class="form-check-label" for="Matt">
+                                            Matt
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Ort">
+                                        <label class="form-check-label" for="Ort">
+                                            Ort
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Address">
+                                        <label class="form-check-label" for="Address">
+                                            Address
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available item" id="Byggnad">
+                                        <label class="form-check-label" for="Byggnad">
+                                            Byggnad
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 excelExportWrapper currentPageElds">
+                            <div class="text-center text-title">Current page elds</div>
+                            <br>
+                            <div class="box bg-white">
+                                <div class="item-wrapper scroller">
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Inköpsår" checked>
+                                        <label class="form-check-label" for="Inköpsår">
+                                            Inköpsår
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Inköpspris" checked>
+                                        <label class="form-check-label" for="Inköpspris">
+                                            Inköpspris
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Inköpsplats" checked>
+                                        <label class="form-check-label" for="Inköpsplats">
+                                            Inköpsplats
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Use current search" checked>
+                                        <label class="form-check-label" for="Use current search">
+                                            Use current search
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Use current search" checked>
+                                        <label class="form-check-label" for="Use current search">
+                                            Use current search
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Use current search" checked>
+                                        <label class="form-check-label" for="Use current search">
+                                            Use current search
+                                        </label>
+                                    </div>
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Szatus" checked>
+                                        <label class="form-check-label" for="Szatus">
+                                            Szatus
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div class="loadSaveLayout" id="loadSaveLayout">
+                        <div class="action-fab-tools size-24 mb-3">
+                            <button class="tool-item" href="">
+                                <i class="ph ph-note-pencil"></i>
+                            </button>
+                            <button class="tool-item" href="">
+                                <i class="ph ph-trash"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch1" id="Savedsearch1" >
+                            <label class="form-check-label" for="Savedsearch1">
+                                Saved search 1
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch2" id="Savedsearch2" >
+                            <label class="form-check-label" for="Savedsearch2">
+                                Saved search 2
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch3" id="Savedsearch3" >
+                            <label class="form-check-label" for="Savedsearch3">
+                                Saved search 3
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch4" id="Savedsearch4" >
+                            <label class="form-check-label" for="Savedsearch4">
+                                Saved search 4
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
+                        <button class="btn btn-outline-light-gray radius-8 min-100" id="loadSaveTriggerBtn">LOAD SAVED LAYOUT</button>
+                        <button class="btn btn-outline-light-gray radius-8 min-100" id="saveLayoutBtn">SAVE LAYOUT</button>
+                        <button class="btn btn-outline-light-gray radius-8 min-100"  uk-toggle="target: #modal-createPageLayout">GO</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-create page Layout  ----------------->
+        <div id="modal-createPageLayout" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-630 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-center uppr">Create Page Layout</h1>
+                    
+                    <br>
+                    <div class="inlineForm-cstm">
+                        <label for="inventeringsdatum" class="col-form-label">NAME SEARCH</label>
+                        <div>
+                            <input type="text" class="form-control" value="Saved search 1" id="inventeringsdatum">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div class="d-flex align-items-center gap-3 flex-wrap justify-content-end">
+                        <button class="btn btn-outline-light-gray radius-8 min-100" id="saveLayoutBtn">SAVE</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-advanced searching  ----------------->
+        <div id="modal-advancedSearching" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-1180 uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <h1 class="modal-title text-start uppr">AVANCERAD SÖKNING</h1>
+                    
+                    <br>
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="artistSelect">
+                                <option selected>Artist</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="inputStatus">
+                                <option selected>is</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <input type="text" class="form-control" value="Anna" name="" id="intext">
+                        </div>
+                        <div class="col-12 col-lg-auto">
+                            <div class="action-fab-tools light-gray gap-2 mb-3">
+                                <button class="tool-item" href="">
+                                    <i class="ph ph-plus"></i>
+                                </button>
+                                <button class="tool-item" href="">
+                                    <i class="ph ph-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="artistSelect">
+                                <option selected>Artist</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="inputStatus">
+                                <option selected>is</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <input type="text" class="form-control" value="Anna" name="" id="intext">
+                        </div>
+                        <div class="col-12 col-lg-auto">
+                            <div class="action-fab-tools light-gray gap-2 mb-3">
+                                <button class="tool-item" href="">
+                                    <i class="ph ph-plus"></i>
+                                </button>
+                                <button class="tool-item" href="">
+                                    <i class="ph ph-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="artistSelect">
+                                <option selected>Artist</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="inputStatus">
+                                <option selected>is</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <input type="text" class="form-control" value="Anna" name="" id="intext">
+                        </div>
+                        <div class="col-12 col-lg-auto">
+                            <div class="action-fab-tools light-gray gap-2 mb-3">
+                                <button class="tool-item" href="">
+                                    <i class="ph ph-plus"></i>
+                                </button>
+                                <button class="tool-item" href="">
+                                    <i class="ph ph-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
+                        <button class="btn btn-outline-light-gray radius-8 min-100" id="loadSavedSearchBtn" >LOAD SAVED SEARCH</button>
+                        <button class="btn btn-outline-light-gray radius-8 min-100" id="savedSearchBtn">SAVE SEARCH</button>
+                        <button class="btn btn-outline-light-gray radius-8 min-100 ms-auto" >SEARCH</button>
+                    </div>
+                   
+                    <div class="loadSaveLayout" id="loadSaveSearchList">
+                        <br>
+                        <div class="action-fab-tools size-24 mb-3">
+                            <button class="tool-item" href="">
+                                <i class="ph ph-note-pencil"></i>
+                            </button>
+                            <button class="tool-item" href="">
+                                <i class="ph ph-trash"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch1" id="Savedsearch1" >
+                            <label class="form-check-label" for="Savedsearch1">
+                                Saved search 1
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch2" id="Savedsearch2" >
+                            <label class="form-check-label" for="Savedsearch2">
+                                Saved search 2
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch3" id="Savedsearch3" >
+                            <label class="form-check-label" for="Savedsearch3">
+                                Saved search 3
+                            </label>
+                        </div>
+                        <div class="d-block form-check custom-form-check  size-16">
+                            <input class="form-check-input" type="checkbox" name="Savedsearch4" id="Savedsearch4" >
+                            <label class="form-check-label" for="Savedsearch4">
+                                Saved search 4
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!---------- modal-massUpdate ----------------->
+         <div id="modal-massUpdate" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog dialog-massUpdate uk-modal-body uk-margin-auto-vertical">
+        
+                <!-- <button class="uk-modal-close-default close-cstm" type="button" uk-close></button> -->
+                <div class="header-modal">
+                    <div class="heading">Mass Update</div>
+                    <div class="d-flex gap-3">
+                        <a href="" class="btn btn-outline-dark btn-140">SAVE AND CLOSE</a>
+                        <a href="" class="btn btn-outline-dark btn-140 uk-modal-close">CANCEL</a>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="mass-details">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <div class="inlineForm-cstm">
+                                <label for="inputStatus" class="col-form-label">Status</label>
+                                <div>
+                                    <select class="form-select" aria-label="Default select example" id="inputStatus">
+                                        <option selected></option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="inlineForm-cstm">
+                                <label for="inventeringsdatum" class="col-form-label">Inventeringsdatum</label>
+                                <div>
+                                    <input type="date" class="form-control" id="inventeringsdatum">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="inlineForm-cstm">
+                                <label for="inputStatus" class="col-form-label">Produktkategori</label>
+                                <div>
+                                    <select class="form-select" aria-label="Default select example" id="inputStatus">
+                                        <option selected></option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="inlineForm-cstm">
+                                <label for="publiksökning" class="col-form-label">Publik sökning</label>
+                                <div>
+                                    <input type="radio" id="publiksökning">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul uk-accordion class="arrow accordian-massupdate">
+                        <li>
+                            <a class="uk-accordion-title" href>DETALJER</a>
+                            <div class="uk-accordion-content">
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col col-md-8">
+                                                <div class="inlineForm-cstm">
+                                                    <label for="Konstnär" class="col-form-label">Konstnär</label>
+                                                    <div>
+                                                        <select class="form-select" aria-label="Default select example" id="Konstnär">
+                                                            <option selected></option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
+                                                    <label class="form-check-label" for="Settoempty1">
+                                                        Set to empty
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col col-md-8">
+                                                <div class="inlineForm-cstm">
+                                                    <label for="Titel" class="col-form-label">Titel</label>
+                                                    <div>
+                                                        <input type="text" class="form-control" name="" id="Titel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
+                                                    <label class="form-check-label" for="Settoempty1">
+                                                        Set to empty
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col col-md-8">
+                                                <div class="inlineForm-cstm">
+                                                    <label for="Titel" class="col-form-label">Tillkomstår</label>
+                                                    <div>
+                                                        <input type="text" class="form-control" name="" id="Tillkomstår">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
+                                                    <label class="form-check-label" for="Settoempty1">
+                                                        Set to empty
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col col-md-8">
+                                                <div class="inlineForm-cstm">
+                                                    <label for="Titel" class="col-form-label">Teknik</label>
+                                                    <div>
+                                                        <input type="text" class="form-control" name="" id="Teknik">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
+                                                    <label class="form-check-label" for="Settoempty1">
+                                                        Set to empty
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col col-md-8">
+                                                <div class="inlineForm-cstm">
+                                                    <label for="Titel" class="col-form-label">Anteckningar</label>
+                                                    <div>
+                                                        <textarea type="text" class="form-control" cols="3" rows="3" name="" id="Anteckningar"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
+                                                    <label class="form-check-label" for="Settoempty1">
+                                                        Set to empty
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
+                                                    <label class="form-check-label" for="Settoempty1">
+                                                        Overwrite previously written information
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href>PLACERING</a>
+                            <div class="uk-accordion-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href>ΕΚΟΝΟΜΙ</a>
+                            <div class="uk-accordion-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href>ÖVRIGT</a>
+                            <div class="uk-accordion-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href>NOTISER</a>
+                            <div class="uk-accordion-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href>BIFOGADE FILER</a>
+                            <div class="uk-accordion-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="d-flex align-items-start gap-2">
+                        <div class="file_button_container">
+                            <label for="upload" class="uploadButton">Choose File</label>
+                            <input class="form-control custom-btn" type="file" id="uploadButton" multiple>
+                        </div>
+                        <div class="uploadfile-storage">
+                            <span>No file choosen</span>
+                            <div class="file-uploaded">
+                                <a href="">
+                                    <span>Utskick I-projekt.xlsx</span>
+                                    <i class="bi bi-x-lg remove"></i>
+                                </a>
+                                <a href="">
+                                    <span>Utskick I-projekt.xlsx</span>
+                                    <i class="bi bi-x-lg remove"></i>
+                                </a>
+                                <a href="">
+                                    <span>Utskick I-projekt.xlsx</span>
+                                    <i class="bi bi-x-lg remove"></i>
+                                </a>
+                                <a href="">
+                                    <span>Utskick I-projekt.xlsx</span>
+                                    <i class="bi bi-x-lg remove"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit-icons.min.js"></script>
+       
+        <!--Common script -->
+        <script src="js/script.js"></script>
+       
+    </body>
+</html>
