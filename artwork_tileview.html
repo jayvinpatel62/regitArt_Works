@@ -51,10 +51,10 @@
                                 <a href="#" class="navlink">
                                     <img src="assets/icons/gallery 1.png" class="img-fluid" />
                                 View</a>
-                                <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li><a href="#">TILES VIEW</a></li>
-                                        <li><a href="#">LIST VIEW</a></li>
+                                        <li><a href="artwork_tileview.html">TILES VIEW</a></li>
+                                        <li><a href="index.html">LIST VIEW</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -69,36 +69,51 @@
                             <li>
                                 <a href="#" class="navlink">
                                     <img src="assets/icons/setting 1.png" class="img-fluid" />
-                                    Mass Update</a>
-                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li><a href="#">LOAN</a></li>
-                                            <li><a href="#">INVENTORY</a></li>
-                                            <li><a href="#">LIST</a></li>
-                                            <li><a href="#">EXCEL EXPORT</a></li>
-                                            <li><a href="#">PDF</a></li>
-                                            <li><a href="#">LABELS</a></li>
-                                        </ul>
-                                    </div>
+                                    Mass Update
+                                </a>
+                                <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="#modal-massUpdate" uk-toggle>LOAN</a></li>
+                                        <li><a href="#">INVENTORY</a></li>
+                                        <li><a href="#">LIST</a></li>
+                                        <li><a href="#">EXCEL EXPORT</a></li>
+                                        <li><a href="#">PDF</a></li>
+                                        <li><a href="#">LABELS</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li><a href="#" class="navlink">
-                                <img src="assets/icons/CREATE 1.png" class="img-fluid" />
-                                Create</a></li>
-                            <li><a href="#" class="navlink">
+                            
+                            <li>
+                                <a href="#" class="navlink">
+                                    <img src="assets/icons/CREATE 1.png" class="img-fluid" />
+                                    Create
+                                </a>
+                                <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="#modal-createLoan" uk-toggle>LOAN</a></li>
+                                        <li><a href="#modal-createInventory" uk-toggle>INVENTORY</a></li>
+                                        <li><a href="#modal-createList" uk-toggle>LIST</a></li>
+                                        <li><a href="#modal-createExcelExport" uk-toggle>EXCEL EXPORT</a></li>
+                                        <li><a href="#modal-createPDF" uk-toggle>PDF</a></li>
+                                        <li><a href="#modal-createLabel" uk-toggle>LABELS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a class="navlink" href="#modal-changeLayout" uk-toggle>
                                 <img src="assets/icons/layout 1.png" class="img-fluid" />
                                 Change Page Layout</a></li>
                             <li>
                                 <a href="#" class="navlink">
                                 <img src="assets/icons/red-flag 1.png" class="img-fluid" />
                                     Flagged Works</a>
-                                <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
                                         <li><a href="#">FIND FLAGGED WORKS</a></li>
                                         <li><a href="#">DE-SELECT ALL</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="#" class="navlink">
+                            <li><a href="#modal-advancedSearching" class="navlink" uk-toggle>
                                 <img src="assets/icons/Vector.png" class="img-fluid" />
                                 Advanced Search
                             </a></li>
@@ -127,7 +142,7 @@
                             <li class="item uk-parent uk-open">
                                 <a class="uk-active" href="artwork_tileview.html">Artworks</a>
                                 <ul class="uk-nav-sub">
-                                    <li class="sub-item"><a href="artwork_tileview.html">HISTORIK</a></li>
+                                    <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
                                     <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
                                     <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
                                     <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
