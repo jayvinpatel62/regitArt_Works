@@ -314,9 +314,14 @@ table .filterDropdown{
             color: var(--primary-color) !important;
         }
         .uk-nav-sub{
-            font-size: 14px;
             padding: 0;
+            .sub-item.active{
+                a{
+                    color: var(--text-color) !important;
+                }
+            }
             a{
+                font-size: 14px;
                 color: var(--text2-light-color);
             }
         }
@@ -1352,6 +1357,7 @@ table .filterDropdown{
     .box{
         background: #F5F5F5;
         max-height: 370px;
+        height: 100%;
        border: 1px solid #B3B3B3;
        border-radius: 8px;
        -webkit-border-radius: 8px;
@@ -1653,6 +1659,9 @@ table .filterDropdown{
         border-radius: var(--_size);
         color:var(--_color);
         font-size:calc( var(--_size) / 2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         i{
             color:var(--_color);
         }
@@ -2115,3 +2124,15 @@ table .filterDropdown{
     }
   }
  
+
+  .btns-nav{
+    --size:52px;
+    .btn{
+        width: var(--size);
+        height: var(--size);
+        background: white;
+    }
+    .circle{
+
+    }
+  }

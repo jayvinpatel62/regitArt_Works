@@ -69,20 +69,10 @@
                                     <img src="assets/icons/bin 1.png" class="img-fluid" />
                                     Delete</a></li>
                                 <li>
-                                    <a href="#" class="navlink">
+                                    <a href="#modal-massUpdate" class="navlink" uk-toggle>
                                         <img src="assets/icons/setting 1.png" class="img-fluid" />
                                         Mass Update
                                     </a>
-                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li><a href="#modal-massUpdate" uk-toggle>LOAN</a></li>
-                                            <li><a href="#">INVENTORY</a></li>
-                                            <li><a href="#">LIST</a></li>
-                                            <li><a href="#">EXCEL EXPORT</a></li>
-                                            <li><a href="#">PDF</a></li>
-                                            <li><a href="#">LABELS</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
                                 
                                 <li>
@@ -145,7 +135,7 @@
                                     <a class="uk-active" href="artwork_tileview.html">Artworks</a>
                                     <ul class="uk-nav-sub">
                                         <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
-                                        <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
+                                        <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
                                         <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
                                         <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
                                         <li class="sub-item"><a href="#">LISTOR</a></li>
@@ -350,7 +340,7 @@
                                     <tr class="tr-click-model">
                                         <td>
                                             <div class="flagDiv tr-click-model">
-                                                <a href="#modal-flagRemove" class="flagTrigger" uk-toggle><img src="assets/icons/flag.png" alt="" class="img-fluid"></a>
+                                                <a href="" class="flagTrigger" ><img src="assets/icons/flag.png" alt="" class="img-fluid"></a>
                                             </div>
                                         </td>
                                         <td>
@@ -792,23 +782,6 @@
                 
                 </div>
         
-            </div>
-        </div>
-
-         <!---------- modal-flagRemove ----------------->
-         <div id="modal-flagRemove" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog custom-dialog custom-dialog-540 uk-modal-body uk-margin-auto-vertical">
-        
-                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
-        
-                <div class="text-center">
-                    <h1 class="modal-title uppr">ARE YOU SURE THAT YOU WANT TO DELETE THE 3 FOUND FLAGGED WORKS?</h1>
-                    <br>
-                    <div class="d-flex align-items-center justify-content-center gap-2">
-                        <a href="" class="btn btn-flex btn-green btn-140 uppr">Yes</a>
-                        <a href="" class="btn btn-flex btn-red btn-140 uppr">No</a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -1590,8 +1563,8 @@
                 <div class="header-modal">
                     <div class="heading">Mass Update</div>
                     <div class="d-flex gap-3">
-                        <a href="" class="btn btn-outline-dark btn-140">SAVE AND CLOSE</a>
-                        <a href="" class="btn btn-outline-dark btn-140 uk-modal-close">CANCEL</a>
+                        <a href="#modal-flagRemove" class="btn btn-outline-dark btn-140" uk-toggle>SAVE AND CLOSE</a>
+                        <a href="void://" class="btn btn-outline-dark btn-140 uk-modal-close">CANCEL</a>
                     </div>
                 </div>
 
@@ -1635,9 +1608,15 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="inlineForm-cstm">
-                                <label for="publiksökning" class="col-form-label">Publik sökning</label>
+                                <label class="col-form-label" for="publiksökning">
+                                    Publik sökning
+                                </label>
                                 <div>
-                                    <input type="radio" id="publiksökning">
+                                    <div class="d-block form-check custom-form-check">
+                                       
+                                        <input class="form-check-input" type="checkbox" name="publiksökning" id="publiksökning">
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1663,9 +1642,9 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
-                                                    <label class="form-check-label" for="Settoempty1">
+                                                <div class="d-block form-check custom-form-check">
+                                                    <input class="form-check-input" type="checkbox" name="settoempty" id="settoempty0">
+                                                    <label class="form-check-label" for="settoempty0">
                                                         Set to empty
                                                     </label>
                                                 </div>
@@ -1683,9 +1662,9 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
-                                                    <label class="form-check-label" for="Settoempty1">
+                                                <div class="d-block form-check custom-form-check">
+                                                    <input class="form-check-input" type="checkbox" name="settoempty" id="settoempty1">
+                                                    <label class="form-check-label" for="settoempty1">
                                                         Set to empty
                                                     </label>
                                                 </div>
@@ -1703,9 +1682,9 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
-                                                    <label class="form-check-label" for="Settoempty1">
+                                                <div class="d-block form-check custom-form-check">
+                                                    <input class="form-check-input" type="checkbox" name="settoempty" id="settoempty2">
+                                                    <label class="form-check-label" for="settoempty2">
                                                         Set to empty
                                                     </label>
                                                 </div>
@@ -1723,9 +1702,9 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
-                                                    <label class="form-check-label" for="Settoempty1">
+                                                <div class="d-block form-check custom-form-check">
+                                                    <input class="form-check-input" type="checkbox" name="settoempty" id="settoempty3">
+                                                    <label class="form-check-label" for="settoempty3">
                                                         Set to empty
                                                     </label>
                                                 </div>
@@ -1743,15 +1722,15 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
-                                                    <label class="form-check-label" for="Settoempty1">
+                                                <div class="d-block form-check custom-form-check">
+                                                    <input class="form-check-input" type="checkbox" name="settoempty" id="settoempty4">
+                                                    <label class="form-check-label" for="settoempty4">
                                                         Set to empty
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="Settoempty" id="Settoempty1">
-                                                    <label class="form-check-label" for="Settoempty1">
+                                                <div class="d-block form-check custom-form-check">
+                                                    <input class="form-check-input" type="checkbox" name="overwritepreviously" id="overwritepreviously">
+                                                    <label class="form-check-label" for="overwritepreviously">
                                                         Overwrite previously written information
                                                     </label>
                                                 </div>
@@ -1824,6 +1803,24 @@
                 </div>
             </div>
         </div>
+
+        <!---------- modal-flagRemove ----------------->
+        <div id="modal-flagRemove" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-540 uk-modal-body uk-margin-auto-vertical">
+
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+
+                <div class="text-center">
+                    <h1 class="modal-title uppr">ARE YOU SURE THAT YOU WANT TO DELETE THE 3 FOUND FLAGGED WORKS?</h1>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">Yes</a>
+                        <a href="" class="btn btn-flex btn-red btn-140 uppr">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- UIkit JS -->
