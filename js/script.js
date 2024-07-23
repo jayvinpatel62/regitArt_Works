@@ -109,14 +109,57 @@ mydropdowns.forEach(function(dropdown) {
 
 
  // Get reference to the right-click area
- let popTrigger = document.querySelector('.pop-trigger');
- let targetDiv = document.querySelector('.pop-trigger .popover-context');
- popTrigger.addEventListener('contextmenu', function(e) {
-   e.preventDefault(); 
-   targetDiv.classList.toggle('show');
- });
+//  let popTrigger = document.querySelector('.pop-trigger');
+//  let targetDiv = document.querySelector('.pop-trigger .popover-context');
+//  popTrigger.addEventListener('contextmenu', function(e) {
+//    e.preventDefault(); 
+//    targetDiv.classList.toggle('show');
+//  });
 
- popTrigger.addEventListener('click', function(e) {
-  e.preventDefault();
-  targetDiv.classList.toggle('show');
-});
+//  popTrigger.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   targetDiv.classList.toggle('show');
+// });
+
+
+  const contextMenu = document.getElementById('tooltip-context');
+  let currentItem = null;
+
+  // Show custom context menu on right-click
+  document.addEventListener('contextmenu', function(event) {
+      if (event.target.classList.contains('right-click-trigger')) {
+          event.preventDefault();
+          currentItem = event.target.getAttribute('data-item');
+          
+          // Get the bounding rectangle of the right-clicked area
+          const rect = event.target.getBoundingClientRect();
+          
+          // Calculate the vertical center position of the right-clicked area
+          const top = rect.top + window.scrollY + (rect.height / 2) - (contextMenu.offsetHeight / 2);
+          const left = event.pageX;
+
+          contextMenu.style.top = `${top}px`;
+          contextMenu.style.left = `${left}px`;
+          contextMenu.style.display = 'block';
+      } else {
+          contextMenu.style.display = 'none';
+      }
+  });
+
+  // Hide the custom context menu on click outside
+  document.addEventListener('click', function(event) {
+      if (!contextMenu.contains(event.target)) {
+          contextMenu.style.display = 'none';
+      }
+  });
+
+  // Add event listeners for each menu item
+  contextMenu.addEventListener('click', function(event) {
+      event.preventDefault();
+      if (event.target.tagName === 'A') {
+          const action = event.target.getAttribute('data-action');
+          contextMenu.style.display = 'none';
+      }
+  });
+
+  
