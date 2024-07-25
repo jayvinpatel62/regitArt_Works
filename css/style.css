@@ -526,7 +526,24 @@ table .filterDropdown{
     .uk-open>.uk-accordion-title::before{
         transform: rotate(180deg);
     }
+    &.arrow-circle{
+        .uk-accordion-title::before{
+            border:1px solid #D4D4D4;
+            border-radius: 50px;
+        } 
+    }
     
+}
+.uk-accordion.btmline{
+    .uk-accordion-title{
+        border-bottom:1px solid #D4D4D4;
+        padding-bottom: 20px;
+    }
+}
+.uk-accordion.cstm-padding{
+    .uk-accordion-title,.uk-accordion-content{
+        padding-inline: 20px;
+    } 
 }
 
 .artwork-wrapper.uk-grid{
@@ -1780,12 +1797,14 @@ table .filterDropdown{
     min-height: 316px;
 }
 .btn-outline-gray{
+    background: white;
     height: 44px;
     border-color: #40403F !important;
     color: #40403F !important;
     border-radius: 4px;
 }
 .btn-outline-light-gray{
+    background: white;
     border-color: #B3B3B3 !important;
     color: #40403F !important;
     border-radius: 4px;
@@ -2263,4 +2282,9 @@ table .filterDropdown{
     --bs-tooltip-padding-x: 3px !important;
     --bs-tooltip-padding-y: 2px !important;
     --bs-tooltip-font-size: 12px !important;
+  }
+
+  #toggleGen-BtnsGroup.setPosTop{
+    position: absolute;
+    top: 85px;
   }

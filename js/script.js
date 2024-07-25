@@ -64,6 +64,39 @@ $(savedSearchBtn).click(function() {
    $(searchListlement).toggle();
 });
 
+
+  // show general tab content
+  const arrowDownClick = document.getElementById("arrowDownClick");
+  const arrowUpClick = document.getElementById("arrowUpClick");
+  const acContentToggle = document.getElementById("accordianContentToggle");
+  const setPosBtnsGroup = document.getElementById("toggleGen-BtnsGroup");
+  const tabNavSwitcher =  document.getElementById("tabNavSwitcher");
+  
+  arrowDownClick.addEventListener("click", () => {
+    setPosBtnsGroup.classList.add("setPosTop");
+    tabNavSwitcher.style.display = 'none';
+    if (acContentToggle.hasAttribute("hidden")) {
+        acContentToggle.removeAttribute("hidden");
+    }else{
+      acContentToggle.setAttribute("hidden")
+    }
+  });
+  arrowUpClick.addEventListener("click", () => {
+    alert("up arrow");
+    
+    if (tabNavSwitcher.style.display = 'none' || setPosBtnsGroup.className == "setPosTop") {
+      setPosBtnsGroup.classList.remove("setPosTop");
+      tabNavSwitcher.style.display = 'flex';
+      acContentToggle.removeAttribute("visible");
+      acContentToggle.setAttribute("hidden");
+      
+    }else{
+      tabNavSwitcher.style.display = 'none';
+    }
+  });
+
+
+
 // contextmenu right click menu
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -73,7 +106,7 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 
 
 // Get all dropdown buttons
-let mydropdowns = document.querySelectorAll('.dropdown-drop');
+const mydropdowns = document.querySelectorAll('.dropdown-drop');
 
 // Loop through each dropdown
 mydropdowns.forEach(function(dropdown) {
@@ -92,35 +125,6 @@ mydropdowns.forEach(function(dropdown) {
     }
   });
 });
-
-// let options = {
-//   html: true,
-//   title: "",
-//   //html element
-//   //content: $("#popover-content")
-//   content: $('[data-name="popover-content"]')
-//   //Doing below won't work. Shows title only
-//   //content: $("#popover-content").html()
-
-// }
-// // let popDiv = document.querySelector('[pop-tigger="pop-trigger"]')
-// // let popover = new bootstrap.Popover(popDiv, options)
-
-
-
- // Get reference to the right-click area
-//  let popTrigger = document.querySelector('.pop-trigger');
-//  let targetDiv = document.querySelector('.pop-trigger .popover-context');
-//  popTrigger.addEventListener('contextmenu', function(e) {
-//    e.preventDefault(); 
-//    targetDiv.classList.toggle('show');
-//  });
-
-//  popTrigger.addEventListener('click', function(e) {
-//   e.preventDefault();
-//   targetDiv.classList.toggle('show');
-// });
-
 
   const contextMenu = document.getElementById('tooltip-context');
   let currentItem = null;
@@ -163,3 +167,5 @@ mydropdowns.forEach(function(dropdown) {
   });
 
   
+
+

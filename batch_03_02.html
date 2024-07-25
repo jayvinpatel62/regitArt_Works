@@ -80,7 +80,7 @@
             <main class="main">
                <div class="innerBetween ">
                 <div class="tab-with-search-nav">
-                    <ul class="uk-subnav uk-subnav-pill custom-tab--nav"  uk-switcher="connect: #tab-content; animation: uk-animation-fade">
+                    <ul id="tabNavSwitcher" class="uk-subnav uk-subnav-pill custom-tab--nav"  uk-switcher="connect: #tab-content; animation: uk-animation-fade">
                         <li class="tab-nav-item"><a href="#">GENERAL INFO</a></li>
                         <li class="tab-nav-item"><a href="#">DETAILS</a></li>
                         <li class="tab-nav-item"><a href="#">LOCATION</a></li>
@@ -103,7 +103,7 @@
                         <div class="generellt-dettail tab-inner-content">
                             <div class="row">
                                 <!------ left content ------->
-                                <div class="col-md-8">
+                                <div class="col-md-8 px-0">
                                     <div class="p-4">
                                         <p class="text-address">RIW - 789, SANDOR SANDSTRÖM SAND, HUVUDET I SANDEN</p>
                                         <br>
@@ -382,7 +382,7 @@
                                         </div>
                                         
                                         <br>
-                                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                                        <div class="d-flex align-items-center gap-3 flex-wrap" id="toggleGen-BtnsGroup">
                                             <button class="btn btn-outline-light-gray radius-8">SAVE</button>
                                             <button class="btn btn-outline-light-gray radius-8">SAVE AND CLOSE</button>
                                             <button class="btn btn-outline-light-gray radius-8" uk-toggle="target: #modal-deleteWorks">DELETE</button>
@@ -390,17 +390,20 @@
                                             <button class="btn btn-outline-light-gray radius-8">PRINT PDF</button>
                                             <button class="btn btn-outline-light-gray radius-8">HISTORY</button>
                                             <div class="d-flex align-items-center gap-2">
-                                                <button class="btn btn-outline-light-gray btn-fab fab-32">
+                                                <button class="btn btn-outline-light-gray btn-fab fab-32" id="arrowDownClick">
                                                     <i class="ph ph-caret-down"></i>
                                                 </button>
-                                                <button class="btn btn-outline-light-gray btn-fab fab-32">
+                                                <button class="btn btn-outline-light-gray btn-fab fab-32" id="arrowUpClick">
                                                     <i class="ph ph-caret-up"></i>
                                                 </button>
                                             </div>
                                         </div>
                                         <br>
                                         
-                                        <ul uk-accordion class="arrow">
+                                        
+                                    </div>
+                                    <div id="accordianContentToggle" hidden>
+                                        <ul uk-accordion class="arrow arrow-circle btmline cstm-padding">
                                             <li>
                                                 <a class="uk-accordion-title" href>DETALJER</a>
                                                 <div class="uk-accordion-content">
