@@ -37,7 +37,7 @@
                         <i class="bi bi-list"></i>
                     </button>
                     <a href="index.html" class="logo">
-                        <img src="assets/logo.png" />
+                        <img  loading="lazy" src="assets/logo.png" />
                     </a>
                 </div>
                 
@@ -51,7 +51,7 @@
                             <ul class="uk-navbar-nav scroller-x ">
                                 <li class="uk-active">
                                     <a href="#" class="navlink">
-                                        <img src="assets/icons/gallery 1.png" class="img-fluid" />
+                                        <img  loading="lazy" src="assets/icons/gallery 1.png" class="img-fluid" />
                                     View</a>
                                     <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -62,22 +62,22 @@
                                 </li>
                                 <li>
                                     <a href="#" class="navlink">
-                                        <img src="assets/icons/post 1.png" class="img-fluid" />
+                                        <img  loading="lazy" src="assets/icons/post 1.png" class="img-fluid" />
                                         New Post</a>
                                 </li>
                                 <li><a href="#" class="navlink">
-                                    <img src="assets/icons/bin 1.png" class="img-fluid" />
+                                    <img  loading="lazy" src="assets/icons/bin 1.png" class="img-fluid" />
                                     Delete</a></li>
                                 <li>
                                     <a href="#modal-massUpdate" class="navlink" uk-toggle>
-                                        <img src="assets/icons/setting 1.png" class="img-fluid" />
+                                        <img  loading="lazy" src="assets/icons/setting 1.png" class="img-fluid" />
                                         Mass Update
                                     </a>
                                 </li>
                                 
                                 <li>
                                     <a href="#" class="navlink">
-                                        <img src="assets/icons/CREATE 1.png" class="img-fluid" />
+                                        <img  loading="lazy" src="assets/icons/CREATE 1.png" class="img-fluid" />
                                         Create
                                     </a>
                                     <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
@@ -92,11 +92,11 @@
                                     </div>
                                 </li>
                                 <li><a class="navlink" href="#modal-changeLayout" uk-toggle>
-                                    <img src="assets/icons/layout 1.png" class="img-fluid" />
+                                    <img  loading="lazy" src="assets/icons/layout 1.png" class="img-fluid" />
                                     Change Page Layout</a></li>
                                 <li>
                                     <a href="#" class="navlink">
-                                    <img src="assets/icons/red-flag 1.png" class="img-fluid" />
+                                    <img  loading="lazy" src="assets/icons/red-flag 1.png" class="img-fluid" />
                                         Flagged Works</a>
                                     <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -106,15 +106,23 @@
                                     </div>
                                 </li>
                                 <li><a href="#modal-advancedSearching" class="navlink" uk-toggle>
-                                    <img src="assets/icons/Vector.png" class="img-fluid" />
+                                    <img  loading="lazy" src="assets/icons/Vector.png" class="img-fluid" />
                                     Advanced Search
                                 </a></li>
                             </ul>
                         </div>
                         <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
+                       
                         <div class="uk-inline">
-                            <button class="btn btn-outline-light navbar-search" type="button">
-                                <i class="bi bi-search icon"></i>
+                            <div class="searchbox-head absolute right " style="width: 300px;" id="searchToogle" hidden>
+                                <div class="input-group-addon icon-right">
+                                    <input type="text" name="" id="" placeholder="SOK I ALLA FÄLT">
+                                    <i class="ph-fill ph-funnel primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER" ></i>
+                                    <i class="ph ph-x icon-close"  uk-toggle="target: #searchToogle"></i>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-light navbar-search" type="button" uk-toggle="target: #searchToogle">
+                                <i class="ph ph-magnifying-glass icon"></i>
                             </button>
                         </div>
                     </nav> 
@@ -126,7 +134,7 @@
                         <i class="bi bi-x icon"></i>
                     </button>
                     <a href="" class="notifiaction-icon">
-                        <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                        <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
                     </a>
                     <div class="offset-sidebar">
                             <ul class="uk-nav uk-nav-default" uk-nav>
@@ -166,7 +174,7 @@
                                     <tr>
                                         <th class="flag">
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </th>
                                         <th></th>
@@ -341,14 +349,14 @@
                                         <td>
                                             <div class="flagDiv tr-click-model">
                                                 <a href="" class="flagTrigger" >
-                                                    <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                    <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                                 </a>
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable ">
                                                
-                                                <img src="assets/1.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -373,13 +381,13 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable loader-div size-30">
                                                 <div class="img-loader"></div>
-                                                <img src="assets/2.jpg" alt="" class="img-fluid" style="visibility: hidden;">
+                                                <img  loading="lazy" src="assets/2.jpg" alt="" class="img-fluid" style="visibility: hidden;">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -403,12 +411,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/3.png" data-caption="11. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/3.png" alt="" class="img-fluid">
+                                            <a  href="assets/3.png" data-caption="11. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img loading="lazy" src="https://images.unsplash.com/photo-1721843431268-b8e380c6892f?q=80&w=1427&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -432,12 +440,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/4.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/4.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/4.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -461,12 +469,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/5.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/5.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/5.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -490,12 +498,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/7.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/7.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/7.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -519,12 +527,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/8.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/8.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/8.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -548,12 +556,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/9.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/9.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/9.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -577,12 +585,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/1.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -606,12 +614,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/2.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/2.jpg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/2.jpg" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -635,12 +643,12 @@
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <img src="assets/icons/flag.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/3.png" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img src="assets/3.png" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/3.png" alt="" class="img-fluid">
                                             </a>
                                         </td>
                                         <td class="text-center">
@@ -667,7 +675,7 @@
                             <div class="my-table-model">
                                 <button class="uk-drop-close closeDialog" type="button" uk-close></button>
                                 <div class="imgBox">
-                                    <img src="assets/2.jpg" alt="" class="img-fluid">
+                                    <img  loading="lazy" src="assets/2.jpg" alt="" class="img-fluid">
                                     <p class="text">RIW-789, SANDOR SANDSTRÖM SAND, HUVUDET I SANDEN</p>
                                 </div>
                                 <ul uk-accordion class="arrow">

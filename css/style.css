@@ -1568,7 +1568,14 @@ table .filterDropdown{
     width: 100%;
     position: relative;
    
-    
+    &.absolute{
+        position: absolute;
+        top:0;
+        bottom:0;
+    }
+    &.right{
+        right:0;
+    }
 }
 .input-group-addon{
     background: white;
@@ -1620,6 +1627,28 @@ table .filterDropdown{
         top:0;
         bottom:0;
    }
+   .icon-close{
+    width: var(--_size);
+    height: var(--_size);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(var(--_size) /3);
+    top:0;
+    bottom:0;
+    right:30px;
+    color: #C3C3C3;
+    cursor: pointer;
+   }
+   &.absolute{
+    position: absolute;
+    top:0;
+    bottom:0;
+    }
+    &.right{
+        right:0;
+    }
 }
 .custom-tab--nav{
     margin-bottom:-1px;
@@ -2226,4 +2255,12 @@ table .filterDropdown{
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+  }
+
+  .custom-tooltip{
+    --bs-tooltip-bg: white !important;
+    --bs-tooltip-color:#000 !important;
+    --bs-tooltip-padding-x: 3px !important;
+    --bs-tooltip-padding-y: 2px !important;
+    --bs-tooltip-font-size: 12px !important;
   }
