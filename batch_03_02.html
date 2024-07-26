@@ -386,7 +386,7 @@
                                             <button class="btn btn-outline-light-gray radius-8 bg-white">SAVE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white">SAVE AND CLOSE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white" uk-toggle="target: #modal-deleteWorks">DELETE</button>
-                                            <button class="btn btn-outline-light-gray radius-8 bg-white">DUPLICATE</button>
+                                            <button class="btn btn-outline-light-gray radius-8 bg-white" uk-toggle="target: #modal-duplicate-work">DUPLICATE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white">PRINT PDF</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white">HISTORY</button>
                                             <div class="d-flex align-items-center gap-2">
@@ -873,7 +873,7 @@
                                             <button class="btn btn-outline-light-gray radius-8">SAVE</button>
                                             <button class="btn btn-outline-light-gray radius-8">SAVE AND CLOSE</button>
                                             <button class="btn btn-outline-light-gray radius-8" uk-toggle="target: #modal-deleteWorks">DELETE</button>
-                                            <button class="btn btn-outline-light-gray radius-8">DUPLICATE</button>
+                                            <button class="btn btn-outline-light-gray radius-8" uk-toggle="target: #modal-duplicate-work">DUPLICATE</button>
                                             <button class="btn btn-outline-light-gray radius-8">PRINT PDF</button>
                                             <button class="btn btn-outline-light-gray radius-8">HISTORY</button>
                                             <div class="d-flex align-items-center gap-2">
@@ -1162,6 +1162,66 @@
                             <a href="" class="btn btn-flex btn-red btn-140 uppr">No</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- modal-duplicate work ----------------->
+        <div id="modal-duplicate-work" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-540  uk-modal-body uk-margin-auto-vertical">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+                <div class="header-modal">
+                    <div class="heading">Duplicate Work</div>
+                </div>
+
+                <br>
+
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-block form-check custom-form-check">
+                        <input class="form-check-input" type="checkbox" name="Duplicatethiswork" id="Duplicatethiswork" >
+                        <label class="form-check-label" for="Duplicatethiswork">
+                            Duplicate this work
+                        </label>
+                    </div>
+                    <div class="row align-items-center">
+                        <label for="inputStatus" class="col-12 col-md-5">New ID number :</label>
+                        <div class="col-12 col-md">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="d-block form-check custom-form-check">
+                        <input class="form-check-input" type="checkbox" name="Create a series" id="Createaseries" >
+                        <label class="form-check-label" for="Createaseries">
+                            Create a series :
+                        </label>
+                    </div>
+                    <div class="row align-items-center">
+                        <label for="inputStatus" class="col-12 col-md-5">New ID number :</label>
+                        <div class="col-12 col-md">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <label for="inputStatus" class="col-12 col-md-5">Number of copies :</label>
+                        <div class="col-12 col-md-3">
+                            <input type="number" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="d-block form-check custom-form-check">
+                        <input class="form-check-input" type="checkbox" name="Includeimage" id="Includeimage" >
+                        <label class="form-check-label" for="Includeimage">
+                            Include image and documents :
+                        </label>
+                    </div>
+                    
+                </div>
+
+                <br>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <a href="" class="btn btn-flex btn-green btn-140 uppr">Duplicate</a>
+                    <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
                 </div>
             </div>
         </div>
