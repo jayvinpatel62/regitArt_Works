@@ -65,35 +65,6 @@ $(savedSearchBtn).click(function() {
 });
 
 
-  // show general tab content
-  const arrowDownClick = document.getElementById("arrowDownClick");
-  const arrowUpClick = document.getElementById("arrowUpClick");
-  const acContentToggle = document.getElementById("accordianContentToggle");
-  const setPosBtnsGroup = document.getElementById("toggleGen-BtnsGroup");
-  const tabNavSwitcher =  document.getElementById("tabNavSwitcher");
-  
-  arrowDownClick.addEventListener("click", () => {
-    setPosBtnsGroup.classList.add("setPosTop");
-    tabNavSwitcher.style.display = 'none';
-    if (acContentToggle.hasAttribute("hidden")) {
-        acContentToggle.removeAttribute("hidden");
-    }else{
-      acContentToggle.setAttribute("hidden")
-    }
-  });
-  arrowUpClick.addEventListener("click", () => {
-    alert("up arrow");
-    
-    if (tabNavSwitcher.style.display = 'none' || setPosBtnsGroup.className == "setPosTop") {
-      setPosBtnsGroup.classList.remove("setPosTop");
-      tabNavSwitcher.style.display = 'flex';
-      acContentToggle.removeAttribute("visible");
-      acContentToggle.setAttribute("hidden");
-      
-    }else{
-      tabNavSwitcher.style.display = 'none';
-    }
-  });
 
 
 
@@ -167,5 +138,32 @@ mydropdowns.forEach(function(dropdown) {
   });
 
   
+  // show general tab content
+  const arrowDownClick = document.getElementById("arrowDownClick");
+  const arrowUpClick = document.getElementById("arrowUpClick");
+  const acContentToggle = document.getElementById("accordianContentToggle");
+  const setPosBtnsGroup = document.getElementById("toggleGen-BtnsGroup");
+  const tabNavSwitcher =  document.getElementById("tabNavSwitcher");
+  
+  arrowDownClick.addEventListener("click", () => {
+    setPosBtnsGroup.classList.add("setPosTop");
+    tabNavSwitcher.style.display = 'none';
+    if ( acContentToggle.style.display = 'none') {
+      acContentToggle.style.display = 'block';
+    }else{
+      acContentToggle.style.display = 'none'
+    }
+  });
+  arrowUpClick.addEventListener("click", () => {
+    
+    if (tabNavSwitcher.style.display = 'none' || setPosBtnsGroup.className == "setPosTop") {
+      setPosBtnsGroup.classList.remove("setPosTop");
+      tabNavSwitcher.style.display = 'flex';
+      acContentToggle.style.display = 'none';
+      
+    }else{
+      acContentToggle.style.display = 'block';
+    }
+  });
 
 
