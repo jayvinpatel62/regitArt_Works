@@ -859,6 +859,7 @@ table .filterDropdown{
 .custom-dialog {
     box-shadow: 4px 4px 32px 0px #00000029;
     border-radius: 12px !important;
+    border: 1px solid #d4d4d4;
 }
 .uk-modal-dialog.dialog-login{
     width: 100%;
@@ -1192,6 +1193,9 @@ table .filterDropdown{
 .custom-dialog-840{
     max-width: 840px !important;
     width: 100%;
+}
+.uk-modal.no-backdrop{
+    background: none;
 }
 .modal-title{
     font-size: 18px;
@@ -1939,6 +1943,9 @@ table .filterDropdown{
  input.form-control,textarea.form-control,select.form-select{
     border-color: #A5A1A4 !important;
  }
+ .form-control[contenteditable]{
+    border-color: #A5A1A4 !important;
+ }
   .items-list{
     display: flex;
     flex-direction: column;
@@ -2307,3 +2314,4 @@ table .filterDropdown{
   input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0iIzAwMDAwMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiPjxwYXRoIGQ9Ik0yMDgsMzJIMTg0VjI0YTgsOCwwLDAsMC0xNiwwdjhIODhWMjRhOCw4LDAsMCwwLTE2LDB2OEg0OEExNiwxNiwwLDAsMCwzMiw0OFYyMDhhMTYsMTYsMCwwLDAsMTYsMTZIMjA4YTE2LDE2LDAsMCwwLDE2LTE2VjQ4QTE2LDE2LDAsMCwwLDIwOCwzMlpNNzIsNDh2OGE4LDgsMCwwLDAsMTYsMFY0OGg4MHY4YTgsOCwwLDAsMCwxNiwwVjQ4aDI0VjgwSDQ4VjQ4Wk0yMDgsMjA4SDQ4Vjk2SDIwOFYyMDhabS02OC03NmExMiwxMiwwLDEsMS0xMi0xMkExMiwxMiwwLDAsMSwxNDAsMTMyWm00NCwwYTEyLDEyLDAsMSwxLTEyLTEyQTEyLDEyLDAsMCwxLDE4NCwxMzJaTTk2LDE3MmExMiwxMiwwLDEsMS0xMi0xMkExMiwxMiwwLDAsMSw5NiwxNzJabTQ0LDBhMTIsMTIsMCwxLDEtMTItMTJBMTIsMTIsMCwwLDEsMTQwLDE3MlptNDQsMGExMiwxMiwwLDEsMS0xMi0xMkExMiwxMiwwLDAsMSwxODQsMTcyWiI+PC9wYXRoPjwvc3ZnPg==) !important;
 }
+
