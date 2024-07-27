@@ -65,6 +65,16 @@ $(savedSearchBtn).click(function() {
 });
 
 
+const saveClose = document.getElementById("saveandclose");
+const formUnfilled = document.getElementById("form-unfilled");
+const formfilled = document.getElementById("form-filled");
+$(formfilled).hide();
+$(saveClose).click(function() {
+  $(formUnfilled).hide();
+  $(formfilled).show();
+ 
+});
+
 
 
 
@@ -138,6 +148,7 @@ mydropdowns.forEach(function(dropdown) {
   });
 
   
+
   // show general tab content
   const arrowDownClick = document.getElementById("arrowDownClick");
   const arrowUpClick = document.getElementById("arrowUpClick");
