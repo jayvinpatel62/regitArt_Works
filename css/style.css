@@ -1327,6 +1327,9 @@ table .filterDropdown{
 }
 
 .custom-form-check{
+    display:inline-flex;
+    align-items: center;
+    gap:10px;
     .form-check-input:checked{
         background-color: var(--primary-color);
         border-color: var(--primary-color);
@@ -1347,8 +1350,19 @@ table .filterDropdown{
         --_size:16px !important;
         .form-check-input,.size-16{
             --_size:16px !important;
-            width:var(--_size) ;
-            height:var(--_size) ;
+            width:var(--_size) - 2;
+            height:var(--_size) - 2;
+        }
+        .form-check-label{
+            font-size: 12px;
+        }
+    }
+    &.size-14{
+        --_size:14px !important;
+        .form-check-input,.size-14{
+            --_size:14px !important;
+            width:var(--_size);
+            height:var(--_size);
         }
         .form-check-label{
             font-size: 12px;

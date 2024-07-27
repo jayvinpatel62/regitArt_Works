@@ -387,7 +387,7 @@
                                             <button class="btn btn-outline-light-gray radius-8 bg-white">SAVE AND CLOSE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white" uk-toggle="target: #modal-deleteWorks">DELETE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white" uk-toggle="target: #modal-duplicate-work">DUPLICATE</button>
-                                            <button class="btn btn-outline-light-gray radius-8 bg-white">PRINT PDF</button>
+                                            <button class="btn btn-outline-light-gray radius-8 bg-white"  uk-toggle="target:#modal-createPrintPDF">PRINT PDF</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white">HISTORY</button>
                                             <div class="d-flex align-items-center gap-2">
                                                 <button class="btn btn-outline-light-gray btn-fab fab-32 bg-white" id="arrowDownClick">
@@ -874,7 +874,7 @@
                                             <button class="btn btn-outline-light-gray radius-8">SAVE AND CLOSE</button>
                                             <button class="btn btn-outline-light-gray radius-8" uk-toggle="target: #modal-deleteWorks">DELETE</button>
                                             <button class="btn btn-outline-light-gray radius-8" uk-toggle="target: #modal-duplicate-work">DUPLICATE</button>
-                                            <button class="btn btn-outline-light-gray radius-8">PRINT PDF</button>
+                                            <button class="btn btn-outline-light-gray radius-8" uk-toggle="target:#modal-createPrintPDF">PRINT PDF</button>
                                             <button class="btn btn-outline-light-gray radius-8">HISTORY</button>
                                             <div class="d-flex align-items-center gap-2">
                                                 <button class="btn btn-outline-light-gray btn-fab fab-32">
@@ -1166,55 +1166,80 @@
             </div>
         </div>
 
+        <!---------- modal-delete value ----------------->
+        <div id="modal-deletevalue" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-540 uk-modal-body uk-margin-auto-vertical" >
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div class="text-center d-flex align-items-center justify-content-center" style="min-height: 300px;">
+                    <div>
+                        <h1 class="modal-title uppr">ARE YOU SURE THAT YOU WANT TO <br> DELETE THIS VALUE?</h1>
+                        <br>
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                            <a href="" class="btn btn-flex btn-green btn-140 uppr">Yes</a>
+                            <a href="" class="btn btn-flex btn-red btn-140 uppr">No</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!---------- modal-duplicate work ----------------->
         <div id="modal-duplicate-work" class="uk-flex-top" uk-modal>
             <div class="uk-modal-dialog custom-dialog custom-dialog-540  uk-modal-body uk-margin-auto-vertical">
         
                 <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
-                <div class="header-modal">
-                    <div class="heading">Duplicate Work</div>
+                <div class="header-modal border-0">
+                    <div class="heading uppr">Duplicate Work</div>
                 </div>
 
                 <br>
 
-                <div class="d-flex flex-column gap-3">
-                    <div class="d-block form-check custom-form-check">
-                        <input class="form-check-input" type="checkbox" name="Duplicatethiswork" id="Duplicatethiswork" >
-                        <label class="form-check-label" for="Duplicatethiswork">
-                            Duplicate this work
-                        </label>
-                    </div>
-                    <div class="row align-items-center">
-                        <label for="inputStatus" class="col-12 col-md-5">New ID number :</label>
-                        <div class="col-12 col-md">
-                            <input type="text" class="form-control">
+                <div class="d-flex flex-column gap-3 mb-3">
+                    <div>
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="checkbox" name="Duplicatethiswork" id="Duplicatethiswork" >
+                            <label class="form-check-label" for="Duplicatethiswork">
+                                Duplicate this work
+                            </label>
+                        </div>
+                        <div class="row align-items-center ps-4">
+                            <label for="inputStatus" class="col-12 col-md-5">New ID number:</label>
+                            <div class="col-12 col-md">
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
                     </div>
-                    <div class="d-block form-check custom-form-check">
-                        <input class="form-check-input" type="checkbox" name="Create a series" id="Createaseries" >
-                        <label class="form-check-label" for="Createaseries">
-                            Create a series :
-                        </label>
-                    </div>
-                    <div class="row align-items-center">
-                        <label for="inputStatus" class="col-12 col-md-5">New ID number :</label>
-                        <div class="col-12 col-md">
-                            <input type="text" class="form-control">
+                    <div>
+                        <div class="d-block form-check custom-form-check">
+                            <input class="form-check-input" type="checkbox" name="Create a series" id="Createaseries" >
+                            <label class="form-check-label" for="Createaseries">
+                                Create a series
+                            </label>
                         </div>
-                    </div>
-                    <div class="row align-items-center">
-                        <label for="inputStatus" class="col-12 col-md-5">Number of copies :</label>
-                        <div class="col-12 col-md-3">
-                            <input type="number" class="form-control">
+                        <div class="row align-items-center mb-2 ps-4">
+                            <label for="inputStatus" class="col-12 col-md-5">Start with ID number:</label>
+                            <div class="col-12 col-md">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row align-items-center ps-4">
+                            <label for="inputStatus" class="col-12 col-md-5">Number of copies:</label>
+                            <div class="col-12 col-md-2">
+                                <input type="number" class="form-control">
+                            </div>
                         </div>
                     </div>
 
+                   <div>
                     <div class="d-block form-check custom-form-check">
                         <input class="form-check-input" type="checkbox" name="Includeimage" id="Includeimage" >
                         <label class="form-check-label" for="Includeimage">
-                            Include image and documents :
+                            Include image and documents
                         </label>
                     </div>
+                   </div>
                     
                 </div>
 
@@ -1225,11 +1250,141 @@
                 </div>
             </div>
         </div>
+
+         <!---------- modal- Print PDF ----------------->
+         <div id="modal-createPrintPDF" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-630 uk-modal-body uk-margin-auto-vertical p-0">
+        
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+        
+                <div>
+                    <div class="border-div-bottom p-4">
+                        <h1 class="modal-title text-center uppr">CREATE PDF</h1>
+                    </div>
+                    <div class="border-div-bottom">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="p-4">
+                                    <div class="form-check custom-form-check">
+                                        <input class="form-check-input" type="radio" name="template" id="choosetemplate">
+                                        <label class="form-check-label" for="choosetemplate">
+                                            Standard template
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="row row-cols-md-2 align-items-center">
+                                        <div class="col">
+                                            <div class="d-flex form-check custom-form-check size-14">
+                                                <input class="form-check-input" type="checkbox" name="Generelt" id="Generelt">
+                                                <label class="form-check-label" for="Generelt">
+                                                    Generelt
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex form-check custom-form-check size-14">
+                                                <input class="form-check-input" type="checkbox" name="Detajer" id="Detajer">
+                                                <label class="form-check-label" for="Detajer">
+                                                    Detajer
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex form-check custom-form-check size-14">
+                                                <input class="form-check-input" type="checkbox" name="Placoring" id="Placoring">
+                                                <label class="form-check-label" for="Placoring">
+                                                    Placoring
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex form-check custom-form-check size-14">
+                                                <input class="form-check-input" type="checkbox" name="Ekonomi" id="Ekonomi">
+                                                <label class="form-check-label" for="Ekonomi">
+                                                    Ekonomi
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex form-check custom-form-check size-14">
+                                                <input class="form-check-input" type="checkbox" name="Origt" id="Origt">
+                                                <label class="form-check-label" for="Origt">
+                                                    Origt
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex form-check custom-form-check size-14">
+                                                <input class="form-check-input" type="checkbox" name="Notiser" id="Notiser">
+                                                <label class="form-check-label" for="Notiser">
+                                                    Notiser
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                    <br>
+                                    <div class="form-check custom-form-check">
+                                        <input class="form-check-input" type="checkbox" name="IncludeImages" id="IncludeImages">
+                                        <label class="form-check-label" for="IncludeImages">
+                                            Include Images
+                                        </label>
+                                    </div>
+                                    <p class="text-small">This option creates a pdf with the information in the chosen tabs.</p>
+                                  
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 p-0 border-div-left">
+                                <div class="p-4">
+                                    <div class="d-block form-check custom-form-check">
+                                        <input class="form-check-input" type="radio" name="template" id="Yourowntemplate">
+                                        <label class="form-check-label" for="Yourowntemplate">
+                                            Your own template
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <ul uk-accordion class="arrow accordian-createpdf" open>
+                                        <li class="uk-open">
+                                            <a class="uk-accordion-title" href>Choose your own template</a>
+                                            <div class="uk-accordion-content scroller-170">
+                                                <div class="paper-size-btns">
+                                                    <a href="" class="link">My template 1</a>
+                                                    <a href="" class="link">My template 2</a>
+                                                    <a href="" class="link">My template 3</a>
+                                                    <a href="" class="link">My template 4</a>
+                                                    <a href="" class="link">My template 5</a>
+                                                    <a href="" class="link">My template 6</a>
+                                                    <a href="" class="link">My template 7</a>
+                                                    <a href="" class="link">My template 8</a>
+                                                    <a href="" class="link">My template 9</a>
+                                                    <a href="" class="link">My template 10</a>
+                                                </div>
+        
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="text-small">This option creates a pdf with your own set 
+                                        templates. You can create a new template via
+                                        Admin -> Document templates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                            <a href="" class="btn btn-flex btn-green btn-140 uppr">Create</a>
+                            <a href="" class="btn btn-flex btn-red btn-140 uppr">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!----------- tooltip popovermenu ---------->
         <div class="pop-menu" id="tooltip-context">
             <a class="menu-item"  data-action="action1"><i class="ph ph-note-pencil"></i> Edit</a>
-            <a class="menu-item"  data-action="action2"><i class="ph ph-trash"></i> Delete</a>
+            <a class="menu-item"  data-action="action2" uk-toggle="target: #modal-deletevalue"><i class="ph ph-trash"></i> Delete</a>
         </div>
 
 
