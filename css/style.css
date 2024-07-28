@@ -2370,3 +2370,12 @@ table .filterDropdown{
         color: white;
     }
 }
+
+.table-breadcum{
+    tr td{
+        padding: 20px;
+    }
+}
+.breadcrumb.cstm-breadcrumb{
+    margin-bottom: 0 !important;
+}

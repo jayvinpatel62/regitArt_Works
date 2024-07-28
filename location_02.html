@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+            user-scalable=0" name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png"> <!-- toral18012023-->
+        <title>RegitArt</title>
+
+        <script src="js/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/css/uikit.min.css" />
+        <!-- phosphor-icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="grid-wrapper">
+
+                 <!---------- logo ----------------->
+                 <div class="logo-wrapper">
+                    <button class="btn toggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <img  loading="lazy" src="assets/logo.png" />
+                    </a>
+                </div>
+                
+                <!---------- header ----------------->
+               <header class="header">
+                    <nav class="mainmenu px-3 py-2">
+                        <div class="filter-uk-navbar floating-sidebar right" >
+                            <button class="close-floating" type="button">
+                                <i class="bi bi-x icon"></i>
+                            </button>
+                            <ul class="uk-navbar-nav scroller-x ">
+                                <li>
+                                    <a href="#" class="navlink">
+                                        <img src="assets/icons/post 1.png" class="img-fluid" />
+                                        New Post</a>
+                                </li>
+                                <li><a href="#" class="navlink">
+                                    <img src="assets/icons/bin 1.png" class="img-fluid" />
+                                    Delete</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
+                       
+                        <div class="uk-inline">
+                            <div class="searchbox-head absolute right " style="width: 300px;" id="searchToogle" hidden>
+                                <div class="input-group-addon icon-right">
+                                    <input type="text" name="" id="" placeholder="SOK I ALLA FÄLT">
+                                    <i class="ph-fill ph-funnel primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER" ></i>
+                                    <i class="ph ph-x icon-close"  uk-toggle="target: #searchToogle"></i>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-light navbar-search" type="button" uk-toggle="target: #searchToogle">
+                                <i class="ph ph-magnifying-glass icon"></i>
+                            </button>
+                        </div>
+                    </nav> 
+                </header> 
+
+                <!---------- sidebar ----------------->
+                <aside class="sidebar floating-sidebar" >
+                    <button class="close-floating" type="button">
+                        <i class="bi bi-x icon"></i>
+                    </button>
+                    <a href="" class="notifiaction-icon">
+                        <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                    </a>
+                    <div class="offset-sidebar">
+                            <ul class="uk-nav uk-nav-default" uk-nav>
+                                <li class="item"><a href="overview.html">Overview</a></li>
+                                <li class="item uk-parent uk-open">
+                                    <a class="uk-active" href="artwork_tileview.html">Artworks</a>
+                                    <ul class="uk-nav-sub">
+                                        <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
+                                        <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
+                                        <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
+                                        <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
+                                        <li class="sub-item"><a href="#">LISTOR</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item"><a href="#">Artists</a></li>
+                                <li class="item"><a href="#">Reports</a></li>
+                                <li class="item"><a href="#">Admin</a></li>
+                                <li class="item"><a href="#">Help</a></li>
+                            </ul>
+                    </div>
+
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="item"><a href="#">konstnärsdatabasen</a></li>
+                        <li class="item"><a href="#">User Profile</a></li>
+                        <li class="item"><a href="#">Change language</a></li>
+                        <li class="item"><a href="#">Log Out</a></li>
+                    </ul>
+                </aside>
+               
+                <!---------- main ----------------->
+                <div class="main main-wrapper" >
+                     
+                        <!---------- table ----------------->
+                        <div class="uk-overflow-auto table-parent position-relative w-100 bg-white">
+                            <table class="uk-table uk-table-striped my-table table-breadcum">
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                          <li class="breadcrumb-item">Department</li>
+                                          <li class="breadcrumb-item">Room</li>
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                          <li class="breadcrumb-item">Department</li>
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                          <li class="breadcrumb-item">Department</li>
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                        
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                         
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                         
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                        
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                        
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                          <li class="breadcrumb-item">Department</li>
+                                          <li class="breadcrumb-item">Room</li>
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                          <li class="breadcrumb-item">Department</li>
+                                          <li class="breadcrumb-item">Room</li>
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                          <li class="breadcrumb-item">Department</li>
+                                          <li class="breadcrumb-item">Room</li>
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb cstm-breadcrumb">
+                                          <li class="breadcrumb-item">City</li>
+                                          <li class="breadcrumb-item">Building</li>
+                                          <li class="breadcrumb-item">Floor</li>
+                                          <li class="breadcrumb-item">Department</li>
+                                          <li class="breadcrumb-item">Room</li>
+                                        </ol>
+                                      </nav>
+                                </td>
+                              </tr>
+
+                            </table>
+                          
+                        </div>
+                        <!---------- pagination ----------------->
+                        <div class="paginationWrapper">
+                            <nav aria-label="Pagination">
+                                <ul class="uk-pagination" uk-margin>
+                                    <li><a href="#"><span uk-pagination-previous></span></a></li>
+                                    <li class="uk-active"><span aria-current="page">1</span></li>
+                                    <li><a href="#">2</a></li>
+                                    <li class="uk-disabled"><span>…</span></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#"><span uk-pagination-next></span></a></li>
+                                </ul>
+                            </nav>
+                            <div class="pageSize">
+                                <label class="uk-form-label" for="form-horizontal-text">PAGE SIZE:</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="number" value="12">
+                                </div>
+                            </div>
+                            <div class="totalEntries">POST 1 TO 6 OF 780</div>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer copyright">@2024 REGITART | ALL RIGHTS RESERVED</div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit-icons.min.js"></script>
+       
+        <!--Common script -->
+        <script src="js/script.js"></script>
+       
+    </body>
+</html>
