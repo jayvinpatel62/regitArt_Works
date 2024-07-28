@@ -2348,3 +2348,25 @@ table .filterDropdown{
 .box-border{
     border:1px solid #A5A1A4;
 }
+.location-grid-wrapper{
+    height: 84vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px;
+}
+.offcanvas{
+    max-width:600px;
+    box-shadow: 4px 4px 32px 0px #00000029;
+    .close-cstm {
+        position: absolute;
+        right:10px;
+        top:10px;
+        --size: 20px;
+        background: #D9D9D9;
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--size);
+        color: white;
+    }
+}

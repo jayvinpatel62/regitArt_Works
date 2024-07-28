@@ -64,21 +64,21 @@ $(savedSearchBtn).click(function() {
    $(searchListlement).toggle();
 });
 
-
+// location tab & page script 
 const saveClose = document.getElementById("saveandclose");
 const formUnfilled = document.getElementById("form-unfilled");
 const formfilled = document.getElementById("form-filled");
+const infoNote = document.getElementById("info-note");
+
 $(formfilled).hide();
 $(saveClose).click(function() {
   $(formUnfilled).hide();
   $(formfilled).show();
- 
+  $(infoNote).hide();
 });
 
 
-
-
-// contextmenu right click menu
+// tooltip enabled
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
@@ -107,6 +107,7 @@ mydropdowns.forEach(function(dropdown) {
   });
 });
 
+// contextmenu right click menu
   const contextMenu = document.getElementById('tooltip-context');
   let currentItem = null;
 
