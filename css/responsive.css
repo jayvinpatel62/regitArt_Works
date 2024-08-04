@@ -164,7 +164,58 @@
             display: none;
         }
     }
+
+    .singleSearchBar{
+       margin: 0;
+       position: relative;
+        .searchbox-head{
+            position: absolute;
+            top: -85px;
+            right: 0;
+        }
+        .btns-nav{
+            position: absolute;
+            top: -85px;
+            right: 0;
+        }
+    }
+
+    .custom-tab--nav{
+        flex-wrap: nowrap !important;
+        overflow-x:auto ;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        
+        >*{
+            scroll-snap-align: start;
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
 }
+@media (max-width: 650px) {
+    .singleSearchBar{
+        position: relative;
+         .searchbox-head{
+            max-width: 50px;
+         }
+         .btns-nav {
+            --size: 40px;
+            .btn{
+                padding: 0.5rem;
+            }
+        }
+     }
+}
+@media (max-width: 991px) {
+    .img-box-270 {
+        width: 100%;
+        height: 270px;
+        max-width: 270px;
+    }
+}
+
 @media (min-width: 1200px) {
     body{
         min-width:1900px;
