@@ -28,207 +28,205 @@
         <![endif]-->
     </head>
     <body>
-        <div class="wrapper">
-            <div class="grid-wrapper">
+        <div class="wrapper grid-wrapper">
+              <!---------- logo ----------------->
+              <div class="logo-wrapper">
+                <button class="btn toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a href="index.html" class="logo">
+                    <img  loading="lazy" src="assets/logo.png" />
+                </a>
+            </div>
+            
+           
 
-                 <!---------- logo ----------------->
-                 <div class="logo-wrapper">
-                    <button class="btn toggleSidebar">
-                        <i class="bi bi-list"></i>
-                    </button>
-                    <a href="index.html" class="logo">
-                        <img  loading="lazy" src="assets/logo.png" />
-                    </a>
+            <!---------- sidebar ----------------->
+            <aside class="sidebar floating-sidebar" >
+                <button class="close-floating" type="button">
+                    <i class="bi bi-x icon"></i>
+                </button>
+                <a href="" class="notifiaction-icon">
+                    <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                </a>
+                <div class="offset-sidebar">
+                        <ul class="uk-nav uk-nav-default" uk-nav>
+                            <li class="item"><a href="overview.html">Overview</a></li>
+                            <li class="item uk-parent uk-open">
+                                <a class="uk-active" href="artwork_tileview.html">Artworks</a>
+                                <ul class="uk-nav-sub">
+                                    <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
+                                    <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
+                                    <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
+                                    <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
+                                    <li class="sub-item"><a href="#">LISTOR</a></li>
+                                </ul>
+                            </li>
+                            <li class="item"><a href="#">Artists</a></li>
+                            <li class="item"><a href="#">Reports</a></li>
+                            <li class="item"><a href="#">Admin</a></li>
+                            <li class="item"><a href="#">Help</a></li>
+                        </ul>
                 </div>
-                
-                <!---------- header ----------------->
-               <header class="header">
-                    <nav class="mainmenu px-3 py-2">
-                        <div class="filter-uk-navbar floating-sidebar right" >
-                            <button class="close-floating" type="button">
-                                <i class="bi bi-x icon"></i>
-                            </button>
-                            <ul class="uk-navbar-nav scroller-x ">
-                                <li>
-                                    <a href="#" class="navlink">
-                                        <img src="assets/icons/post 1.png" class="img-fluid" />
-                                        New Post</a>
-                                </li>
-                                <li><a href="#" class="navlink">
-                                    <img src="assets/icons/bin 1.png" class="img-fluid" />
-                                    Delete</a></li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
-                       
-                        <div class="uk-inline">
-                            <div class="searchbox-head absolute right " style="width: 300px;" id="searchToogle" hidden>
-                                <div class="input-group-addon icon-right">
-                                    <input type="text" name="" id="" placeholder="SOK I ALLA FÄLT">
-                                    <i class="ph-fill ph-funnel primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER" ></i>
-                                    <i class="ph ph-x icon-close"  uk-toggle="target: #searchToogle"></i>
-                                </div>
+
+                <ul class="uk-nav uk-nav-default">
+                    <li class="item"><a href="#">konstnärsdatabasen</a></li>
+                    <li class="item"><a href="#">User Profile</a></li>
+                    <li class="item"><a href="#">Change language</a></li>
+                    <li class="item"><a href="#">Log Out</a></li>
+                </ul>
+            </aside>
+            
+            <!---------- main ----------------->
+            <div class="main main-wrapper" >
+               <!---------- header ----------------->
+              <header class="header">
+                <nav class="mainmenu px-3 py-2">
+                    <div class="filter-uk-navbar floating-sidebar right" >
+                        <button class="close-floating" type="button">
+                            <i class="bi bi-x icon"></i>
+                        </button>
+                        <ul class="uk-navbar-nav scroller-x ">
+                            <li>
+                                <a href="#" class="navlink">
+                                    <img src="assets/icons/post 1.png" class="img-fluid" />
+                                    New Post</a>
+                            </li>
+                            <li><a href="#" class="navlink">
+                                <img src="assets/icons/bin 1.png" class="img-fluid" />
+                                Delete</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
+                    
+                    <div class="uk-inline">
+                        <div class="searchbox-head absolute right " style="width: 300px;" id="searchToogle" hidden>
+                            <div class="input-group-addon icon-right">
+                                <input type="text" name="" id="" placeholder="SOK I ALLA FÄLT">
+                                <i class="ph-fill ph-funnel primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER" ></i>
+                                <i class="ph ph-x icon-close"  uk-toggle="target: #searchToogle"></i>
                             </div>
-                            <button class="btn btn-outline-light navbar-search" type="button" uk-toggle="target: #searchToogle">
-                                <i class="ph ph-magnifying-glass icon"></i>
-                            </button>
                         </div>
-                    </nav> 
-                </header> 
-
-                <!---------- sidebar ----------------->
-                <aside class="sidebar floating-sidebar" >
-                    <button class="close-floating" type="button">
-                        <i class="bi bi-x icon"></i>
-                    </button>
-                    <a href="" class="notifiaction-icon">
-                        <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
-                    </a>
-                    <div class="offset-sidebar">
-                            <ul class="uk-nav uk-nav-default" uk-nav>
-                                <li class="item"><a href="overview.html">Overview</a></li>
-                                <li class="item uk-parent uk-open">
-                                    <a class="uk-active" href="artwork_tileview.html">Artworks</a>
-                                    <ul class="uk-nav-sub">
-                                        <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
-                                        <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
-                                        <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
-                                        <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
-                                        <li class="sub-item"><a href="#">LISTOR</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item"><a href="#">Artists</a></li>
-                                <li class="item"><a href="#">Reports</a></li>
-                                <li class="item"><a href="#">Admin</a></li>
-                                <li class="item"><a href="#">Help</a></li>
-                            </ul>
+                        <button class="btn btn-outline-light navbar-search" type="button" uk-toggle="target: #searchToogle">
+                            <i class="ph ph-magnifying-glass icon"></i>
+                        </button>
                     </div>
-
-                    <ul class="uk-nav uk-nav-default">
-                        <li class="item"><a href="#">konstnärsdatabasen</a></li>
-                        <li class="item"><a href="#">User Profile</a></li>
-                        <li class="item"><a href="#">Change language</a></li>
-                        <li class="item"><a href="#">Log Out</a></li>
-                    </ul>
-                </aside>
-               
-                <!---------- main ----------------->
-                <div class="main main-wrapper" >
-                  <div class="w-100 bg-white p-4" style="height: 100%;">
-                    <div class="artbox-grid-wrapper">
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
-                      <div class="artbox-item">
-                        <div class="artImgbox">
-                          <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
-                        </div>
-                        <div class="content">Anna Andersson</div>
-                      </div>
+                </nav> 
+            </header> 
+              <div class="w-100 bg-white p-4" style="height: 100%;">
+                <div class="artbox-grid-wrapper">
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
                     </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
+                  </div>
+                  <div class="artbox-item">
+                    <div class="artImgbox">
+                      <img src="assets/1.jpg" alt="" class="img-fluid object-fit">
+                    </div>
+                    <div class="content">Anna Andersson</div>
                   </div>
                 </div>
-
+              </div>
             </div>
+
         </div>
         <div class="footer copyright">@2024 REGITART | ALL RIGHTS RESERVED</div>
         

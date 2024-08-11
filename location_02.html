@@ -41,41 +41,7 @@
                     </a>
                 </div>
                 
-                <!---------- header ----------------->
-               <header class="header">
-                    <nav class="mainmenu px-3 py-2">
-                        <div class="filter-uk-navbar floating-sidebar right" >
-                            <button class="close-floating" type="button">
-                                <i class="bi bi-x icon"></i>
-                            </button>
-                            <ul class="uk-navbar-nav scroller-x ">
-                                <li>
-                                    <a href="#" class="navlink">
-                                        <img src="assets/icons/post 1.png" class="img-fluid" />
-                                        New Post</a>
-                                </li>
-                                <li><a href="#" class="navlink">
-                                    <img src="assets/icons/bin 1.png" class="img-fluid" />
-                                    Delete</a></li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
-                       
-                        <div class="uk-inline">
-                            <div class="searchbox-head absolute right " style="width: 300px;" id="searchToogle" hidden>
-                                <div class="input-group-addon icon-right">
-                                    <input type="text" name="" id="" placeholder="SOK I ALLA FÄLT">
-                                    <i class="ph-fill ph-funnel primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER" ></i>
-                                    <i class="ph ph-x icon-close"  uk-toggle="target: #searchToogle"></i>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-light navbar-search" type="button" uk-toggle="target: #searchToogle">
-                                <i class="ph ph-magnifying-glass icon"></i>
-                            </button>
-                        </div>
-                    </nav> 
-                </header> 
-
+               
                 <!---------- sidebar ----------------->
                 <aside class="sidebar floating-sidebar" >
                     <button class="close-floating" type="button">
@@ -114,7 +80,41 @@
                
                 <!---------- main ----------------->
                 <div class="main main-wrapper" >
-                     
+                      <!---------- header ----------------->
+                      <header class="header">
+                        <nav class="mainmenu px-3 py-2">
+                            <div class="filter-uk-navbar floating-sidebar right" >
+                                <button class="close-floating" type="button">
+                                    <i class="bi bi-x icon"></i>
+                                </button>
+                                <ul class="uk-navbar-nav scroller-x ">
+                                    <li>
+                                        <a href="#" class="navlink">
+                                            <img src="assets/icons/post 1.png" class="img-fluid" />
+                                            New Post</a>
+                                    </li>
+                                    <li><a href="#" class="navlink">
+                                        <img src="assets/icons/bin 1.png" class="img-fluid" />
+                                        Delete</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
+                          
+                            <div class="uk-inline">
+                                <div class="searchbox-head absolute right " style="width: 300px;" id="searchToogle" hidden>
+                                    <div class="input-group-addon icon-right">
+                                        <input type="text" name="" id="" placeholder="SOK I ALLA FÄLT">
+                                        <i class="ph-fill ph-funnel primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER" ></i>
+                                        <i class="ph ph-x icon-close"  uk-toggle="target: #searchToogle"></i>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-light navbar-search" type="button" uk-toggle="target: #searchToogle">
+                                    <i class="ph ph-magnifying-glass icon"></i>
+                                </button>
+                            </div>
+                        </nav> 
+                      </header> 
+
                         <!---------- table ----------------->
                         <div class="uk-overflow-auto table-parent position-relative w-100 bg-white">
                             <table class="uk-table uk-table-striped my-table table-breadcum">

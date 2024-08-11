@@ -39,95 +39,6 @@
                 </a>
             </div>
             
-             <!---------- header ----------------->
-             <header class="header">
-                <nav class="mainmenu px-3 py-2">
-                    <div class="filter-uk-navbar floating-sidebar right" >
-                        <button class="close-floating" type="button">
-                            <i class="bi bi-x icon"></i>
-                        </button>
-                        <ul class="uk-navbar-nav scroller-x ">
-                            <li class="uk-active">
-                                <a href="#" class="navlink">
-                                      <img loading="lazy" src="assets/icons/gallery 1.png" class="img-fluid" />
-                                View</a>
-                                <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li><a href="artwork_tileview.html">TILES VIEW</a></li>
-                                        <li><a href="index.html">LIST VIEW</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="navlink">
-                                      <img loading="lazy" src="assets/icons/post 1.png" class="img-fluid" />
-                                    New Post</a>
-                            </li>
-                            <li><a href="#" class="navlink">
-                                  <img loading="lazy" src="assets/icons/bin 1.png" class="img-fluid" />
-                                Delete</a></li>
-                            <li>
-                                <a href="#" class="navlink">
-                                      <img loading="lazy" src="assets/icons/setting 1.png" class="img-fluid" />
-                                    Mass Update
-                                </a>
-                                <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li><a href="#modal-massUpdate" uk-toggle>LOAN</a></li>
-                                        <li><a href="#">INVENTORY</a></li>
-                                        <li><a href="#">LIST</a></li>
-                                        <li><a href="#">EXCEL EXPORT</a></li>
-                                        <li><a href="#">PDF</a></li>
-                                        <li><a href="#">LABELS</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            
-                            <li>
-                                <a href="#" class="navlink">
-                                      <img loading="lazy" src="assets/icons/CREATE 1.png" class="img-fluid" />
-                                    Create
-                                </a>
-                                <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li><a href="#modal-createLoan" uk-toggle>LOAN</a></li>
-                                        <li><a href="#modal-createInventory" uk-toggle>INVENTORY</a></li>
-                                        <li><a href="#modal-createList" uk-toggle>LIST</a></li>
-                                        <li><a href="#modal-createExcelExport" uk-toggle>EXCEL EXPORT</a></li>
-                                        <li><a href="#modal-createPDF" uk-toggle>PDF</a></li>
-                                        <li><a href="#modal-createLabel" uk-toggle>LABELS</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a class="navlink" href="#modal-changeLayout" uk-toggle>
-                                  <img loading="lazy" src="assets/icons/layout 1.png" class="img-fluid" />
-                                Change Page Layout</a></li>
-                            <li>
-                                <a href="#" class="navlink">
-                                  <img loading="lazy" src="assets/icons/red-flag 1.png" class="img-fluid" />
-                                    Flagged Works</a>
-                                <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li><a href="#">FIND FLAGGED WORKS</a></li>
-                                        <li><a href="#">DE-SELECT ALL</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#modal-advancedSearching" class="navlink" uk-toggle>
-                                  <img loading="lazy" src="assets/icons/Vector.png" class="img-fluid" />
-                                Advanced Search
-                            </a></li>
-                        </ul>
-                    </div>
-                    <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
-                    <div class="uk-inline">
-                        <button class="btn btn-outline-light navbar-search" type="button">
-                            <i class="bi bi-search icon"></i>
-                        </button>
-                    </div>
-                </nav> 
-            </header> 
-
             <!---------- sidebar ----------------->
             <aside class="sidebar floating-sidebar" >
                 <button class="close-floating" type="button">
@@ -165,6 +76,95 @@
             </aside>
             <!---------- main ----------------->
             <main class="main main-wrapper">
+                 <!---------- header ----------------->
+                <header class="header">
+                    <nav class="mainmenu px-3 py-2">
+                        <div class="filter-uk-navbar floating-sidebar right" >
+                            <button class="close-floating" type="button">
+                                <i class="bi bi-x icon"></i>
+                            </button>
+                            <ul class="uk-navbar-nav scroller-x ">
+                                <li class="uk-active">
+                                    <a href="#" class="navlink">
+                                        <img loading="lazy" src="assets/icons/gallery 1.png" class="img-fluid" />
+                                    View</a>
+                                    <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="artwork_tileview.html">TILES VIEW</a></li>
+                                            <li><a href="index.html">LIST VIEW</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="navlink">
+                                        <img loading="lazy" src="assets/icons/post 1.png" class="img-fluid" />
+                                        New Post</a>
+                                </li>
+                                <li><a href="#" class="navlink">
+                                    <img loading="lazy" src="assets/icons/bin 1.png" class="img-fluid" />
+                                    Delete</a></li>
+                                <li>
+                                    <a href="#" class="navlink">
+                                        <img loading="lazy" src="assets/icons/setting 1.png" class="img-fluid" />
+                                        Mass Update
+                                    </a>
+                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#modal-massUpdate" uk-toggle>LOAN</a></li>
+                                            <li><a href="#">INVENTORY</a></li>
+                                            <li><a href="#">LIST</a></li>
+                                            <li><a href="#">EXCEL EXPORT</a></li>
+                                            <li><a href="#">PDF</a></li>
+                                            <li><a href="#">LABELS</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="navlink">
+                                        <img loading="lazy" src="assets/icons/CREATE 1.png" class="img-fluid" />
+                                        Create
+                                    </a>
+                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#modal-createLoan" uk-toggle>LOAN</a></li>
+                                            <li><a href="#modal-createInventory" uk-toggle>INVENTORY</a></li>
+                                            <li><a href="#modal-createList" uk-toggle>LIST</a></li>
+                                            <li><a href="#modal-createExcelExport" uk-toggle>EXCEL EXPORT</a></li>
+                                            <li><a href="#modal-createPDF" uk-toggle>PDF</a></li>
+                                            <li><a href="#modal-createLabel" uk-toggle>LABELS</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a class="navlink" href="#modal-changeLayout" uk-toggle>
+                                    <img loading="lazy" src="assets/icons/layout 1.png" class="img-fluid" />
+                                    Change Page Layout</a></li>
+                                <li>
+                                    <a href="#" class="navlink">
+                                    <img loading="lazy" src="assets/icons/red-flag 1.png" class="img-fluid" />
+                                        Flagged Works</a>
+                                    <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li><a href="#">FIND FLAGGED WORKS</a></li>
+                                            <li><a href="#">DE-SELECT ALL</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#modal-advancedSearching" class="navlink" uk-toggle>
+                                    <img loading="lazy" src="assets/icons/Vector.png" class="img-fluid" />
+                                    Advanced Search
+                                </a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-white btn-filterhead">Filter  <i class="bi bi-sliders2"></i></button>
+                        <div class="uk-inline">
+                            <button class="btn btn-outline-light navbar-search" type="button">
+                                <i class="bi bi-search icon"></i>
+                            </button>
+                        </div>
+                    </nav> 
+                </header> 
+
                 <div class="main-inner">
                      <!---------- tileview ----------------->
                     <div class="artwork-wrapper tileview" uk-grid>
