@@ -140,13 +140,31 @@ mydropdowns.forEach(function(dropdown) {
   });
 
   // Add event listeners for each menu item
-  contextMenu.addEventListener('click', function(event) {
-      event.preventDefault();
-      if (event.target.tagName === 'A') {
-          const action = event.target.getAttribute('data-action');
-          contextMenu.style.display = 'none';
-      }
-  });
+  // contextMenu.addEventListener('click', function(event) {
+  //     event.preventDefault();
+  //     if (event.target.tagName === 'A') {
+  //         const action = event.target.getAttribute('data-action');
+  //         contextMenu.style.display = 'none';
+  //     }
+  // });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const contextMenu = document.getElementById('contextMenu'); // Adjust this selector as needed
+    if (contextMenu) {
+        const menuItems = contextMenu.querySelectorAll('a[data-action]'); // Select all anchor tags with data-action attribute
+        
+        menuItems.forEach(function(menuItem) {
+            menuItem.addEventListener('click', function(event) {
+                event.preventDefault();
+                const action = menuItem.getAttribute('data-action');
+                contextMenu.style.display = 'none';
+
+                // Perform action here if needed
+                console.log('Action:', action);
+            });
+        });
+    }
+});
 
   
 
@@ -156,8 +174,8 @@ mydropdowns.forEach(function(dropdown) {
   const acContentToggle = document.getElementById("accordianContentToggle");
   const setPosBtnsGroup = document.getElementById("toggleGen-BtnsGroup");
   const tabNavSwitcher =  document.getElementById("tabNavSwitcher");
-  
-  arrowDownClick.addEventListener("click", () => {
+
+  $(arrowDownClick).on('click', function() {
     setPosBtnsGroup.classList.add("setPosTop");
     tabNavSwitcher.style.display = 'none';
     if ( acContentToggle.style.display = 'none') {
@@ -166,16 +184,51 @@ mydropdowns.forEach(function(dropdown) {
       acContentToggle.style.display = 'none'
     }
   });
-  arrowUpClick.addEventListener("click", () => {
-    
+  
+
+  
+  $(arrowUpClick).on('click', function() {
+  
     if (tabNavSwitcher.style.display = 'none' || setPosBtnsGroup.className == "setPosTop") {
-      setPosBtnsGroup.classList.remove("setPosTop");
-      tabNavSwitcher.style.display = 'flex';
-      acContentToggle.style.display = 'none';
-      
-    }else{
-      acContentToggle.style.display = 'block';
-    }
+          setPosBtnsGroup.classList.remove("setPosTop");
+          tabNavSwitcher.style.display = 'flex';
+          acContentToggle.style.display = 'none';
+          
+        }else{
+          acContentToggle.style.display = 'block';
+        }
   });
 
+  
 
+//   function makeDraggable(element) {
+    
+//     let offsetX, offsetY;
+//     // const modalHeader = element.querySelector('.graggable');
+
+//     element.addEventListener('mousedown', (e) => {
+//         offsetX = e.clientX - element.getBoundingClientRect().left;
+//         offsetY = e.clientY - element.getBoundingClientRect().top;
+
+//         function onMouseMove(e) {
+//             element.style.left = `${e.clientX - offsetX}px`;
+//             element.style.top = `${e.clientY - offsetY}px`;
+//         }
+
+//         function onMouseUp() {
+//             document.removeEventListener('mousemove', onMouseMove);
+//             document.removeEventListener('mouseup', onMouseUp);
+//         }
+
+//         document.addEventListener('mousemove', onMouseMove);
+//         document.addEventListener('mouseup', onMouseUp);
+//     });
+// }
+
+// // Apply draggable functionality to all elements with class 'draggable'
+// document.querySelectorAll('.custom-dialog').forEach(makeDraggable);
+
+$(".custom-dialog").draggable({
+  drag: function(event, ui) {
+  }
+});
