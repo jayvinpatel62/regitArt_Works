@@ -8,6 +8,9 @@
     .header{
         background: none;
         box-shadow: none;
+        position: absolute;
+        top: 30px;
+        right: 0;
     }
     .closeFilter{
         position: absolute;
@@ -206,6 +209,9 @@
                 padding: 0.5rem;
             }
         }
+     }
+     .paginationWrapper{
+        flex-direction: column;
      }
 }
 @media (max-width: 991px) {
