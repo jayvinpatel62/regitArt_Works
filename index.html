@@ -43,7 +43,9 @@
             <!---------- sidebar ----------------->
             <aside class="sidebar floating-sidebar" >
                 <button class="close-floating" type="button">
-                    <i class="bi bi-x icon"></i>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                    </span>
                 </button>
                 <a href="" class="notifiaction-icon">
                     <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
@@ -155,12 +157,16 @@
                                 <div class="searchbox-head absolute right " style="width: 300px;" id="searchToogle" hidden>
                                     <div class="input-group-addon icon-right">
                                         <input type="text" name="" id="" placeholder="SOK I ALLA FÄLT">
-                                        <i class="ph-fill ph-funnel primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER" ></i>
-                                        <i class="ph ph-x icon-close"  uk-toggle="target: #searchToogle"></i>
+                                        <span class="primary-text icon" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="CLEAR FILTER">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--primary-text)" viewBox="0 0 256 256"><path d="M227.81,66.76l-.08.09L160,139.17v55.49A16,16,0,0,1,152.87,208l-32,21.34A16,16,0,0,1,96,216V139.17L28.27,66.85l-.08-.09A16,16,0,0,1,40,40H216a16,16,0,0,1,11.84,26.76Z"></path></svg>
+                                        </span>
+                                        <span class="icon-close"  uk-toggle="target: #searchToogle">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  fill="var(--colorLight)" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                                        </span>
                                     </div>
                                 </div>
                                 <button class="btn btn-outline-light navbar-search" type="button" uk-toggle="target: #searchToogle">
-                                    <i class="ph ph-magnifying-glass icon"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
                                 </button>
                             </div>
                         </nav> 
@@ -795,8 +801,6 @@
             </div>
         </div>
 
-       
-
         <!---------- modal-create Loan ----------------->
         <div id="modal-createLoan" class="uk-flex-top no-backdrop" uk-modal>
             <div class="uk-modal-dialog custom-dialog custom-dialog-420 uk-modal-body uk-margin-auto-vertical">
@@ -925,7 +929,7 @@
                             <div class="box">
                                 <div class="searchbox addon">
                                     <input type="search" name="" id="" placeholder="Search">
-                                    <i class="ph ph-magnifying-glass icon"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
                                 </div>
                                 <div class="item-wrapper scroller">
                                     <div class="d-block form-check custom-form-check">
@@ -1231,7 +1235,7 @@
                             <div class="box">
                                 <div class="searchbox addon">
                                     <input type="search" name="" id="" placeholder="Search">
-                                    <i class="bi bi-search icon"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
                                 </div>
                                 <div class="item-wrapper scroller">
                                     <div class="d-block form-check custom-form-check">
@@ -1347,10 +1351,10 @@
                     <div class="loadSaveLayout" id="loadSaveLayout">
                         <div class="action-fab-tools size-24 mb-3">
                             <button class="tool-item" href="">
-                                <i class="ph ph-note-pencil"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,128v80a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h80a8,8,0,0,1,0,16H48V208H208V128a8,8,0,0,1,16,0Z"></path></svg>
                             </button>
                             <button class="tool-item" href="">
-                                <i class="ph ph-trash"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
                             </button>
                         </div>
                         
@@ -1452,41 +1456,10 @@
                         <div class="col-12 col-lg-auto">
                             <div class="action-fab-tools light-gray gap-2 mb-3">
                                 <button class="tool-item" href="">
-                                    <i class="ph ph-plus"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,128v80a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h80a8,8,0,0,1,0,16H48V208H208V128a8,8,0,0,1,16,0Z"></path></svg>
                                 </button>
                                 <button class="tool-item" href="">
-                                    <i class="ph ph-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row g-3 mb-3">
-                        <div class="col-12 col-lg">
-                            <select class="form-select" aria-label="Default select example" id="artistSelect">
-                                <option selected>Artist</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-lg">
-                            <select class="form-select" aria-label="Default select example" id="inputStatus">
-                                <option selected>is</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-lg">
-                            <input type="text" class="form-control" value="Anna" name="" id="intext">
-                        </div>
-                        <div class="col-12 col-lg-auto">
-                            <div class="action-fab-tools light-gray gap-2 mb-3">
-                                <button class="tool-item" href="">
-                                    <i class="ph ph-plus"></i>
-                                </button>
-                                <button class="tool-item" href="">
-                                    <i class="ph ph-trash"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
                                 </button>
                             </div>
                         </div>
@@ -1514,10 +1487,41 @@
                         <div class="col-12 col-lg-auto">
                             <div class="action-fab-tools light-gray gap-2 mb-3">
                                 <button class="tool-item" href="">
-                                    <i class="ph ph-plus"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,128v80a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h80a8,8,0,0,1,0,16H48V208H208V128a8,8,0,0,1,16,0Z"></path></svg>
                                 </button>
                                 <button class="tool-item" href="">
-                                    <i class="ph ph-trash"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="artistSelect">
+                                <option selected>Artist</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <select class="form-select" aria-label="Default select example" id="inputStatus">
+                                <option selected>is</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <input type="text" class="form-control" value="Anna" name="" id="intext">
+                        </div>
+                        <div class="col-12 col-lg-auto">
+                            <div class="action-fab-tools light-gray gap-2 mb-3">
+                                <button class="tool-item" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,128v80a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h80a8,8,0,0,1,0,16H48V208H208V128a8,8,0,0,1,16,0Z"></path></svg>
+                                </button>
+                                <button class="tool-item" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
                                 </button>
                             </div>
                         </div>
@@ -1534,10 +1538,10 @@
                         <br>
                         <div class="action-fab-tools size-24 mb-3">
                             <button class="tool-item" href="">
-                                <i class="ph ph-note-pencil"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,128v80a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h80a8,8,0,0,1,0,16H48V208H208V128a8,8,0,0,1,16,0Z"></path></svg>
                             </button>
                             <button class="tool-item" href="">
-                                <i class="ph ph-trash"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
                             </button>
                         </div>
                         
@@ -1573,7 +1577,7 @@
         </div>
 
          <!---------- modal-massUpdate ----------------->
-         <div id="modal-massUpdate" class="uk-flex-top no-backdrop "  uk-modal>
+         <div id="modal-massUpdate" class="uk-flex-top no-backdrop"  uk-modal>
             <div class="draggable uk-modal-dialog custom-dialog dialog-massUpdate uk-modal-body uk-margin-auto-vertical" >
         
                 <!-- <button class="uk-modal-close-default close-cstm" type="button" uk-close></button> -->
