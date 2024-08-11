@@ -19,6 +19,7 @@
     --bs-primary:var(--primary-color);
     --green-color: #9FB699;
     --green-hover: #768f70;
+    --red: #dc3545;
     /* --bs-btn-border-color */
 }
 .fs-10{
@@ -192,6 +193,10 @@ body{
             border-color: var(--dark);
             color: var(--dark);
         }
+        svg.icon{
+            width: 20px;
+            fill: var(--colorLight);
+        }
     }
 }
 
@@ -238,6 +243,7 @@ body{
         .icon{
             font-size: 14px;
         }
+       
     }
   
 }
@@ -1131,6 +1137,9 @@ table .filterDropdown{
 }
 .text-primary,.primary-text {
     color: var(--primary-color) !important;
+    svg{
+        fill: var(--primary-color) !important;
+    }
 }
 
 .sign-up-form{
@@ -1662,6 +1671,7 @@ table .filterDropdown{
         top:0;
         bottom:0;
    }
+
    .icon-close{
     width: var(--_size);
     height: var(--_size);
@@ -1726,8 +1736,15 @@ table .filterDropdown{
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 4px;
         i{
             color:var(--_color);
+        }
+        .icon{
+            color:var(--_color);
+        }
+        svg{
+            fill:var(--_color);
         }
     }
     button.tool-item{
@@ -1835,7 +1852,7 @@ table .filterDropdown{
 }
 .btn-fab{
     --_size:30px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     padding: 5px !important;
@@ -2220,6 +2237,9 @@ table .filterDropdown{
   .info{
     i{
         color: #E1A350;
+    }
+    svg{
+        fill: #E1A350;
     }
   }
  
