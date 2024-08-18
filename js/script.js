@@ -232,3 +232,8 @@ $(".custom-dialog").draggable({
   drag: function(event, ui) {
   }
 });
+
+
+$('.uk-navbar-dropdown-nav a').on('click', function() {
+  $('.filterDropdown').removeClass('uk-open');
+});
