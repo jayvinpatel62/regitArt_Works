@@ -109,7 +109,7 @@
                                         <img src="assets/icons/bin 1.png" class="img-fluid" />
                                         Delete</a></li>
                                     <li>
-                                        <a href="#modal-massUpdate" class="navlink" uk-toggle>
+                                        <a href="javascript:void(0)" onclick="modalMassUpdate()" class="navlink" >
                                             <img src="assets/icons/setting 1.png" class="img-fluid" />
                                             Mass Update
                                         </a>
@@ -120,7 +120,7 @@
                                             <img src="assets/icons/CREATE 1.png" class="img-fluid" />
                                             Create
                                         </a>
-                                        <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="close-on-scroll:true;mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                                 <li><a href="#modal-createLoan" uk-toggle>LOAN</a></li>
                                                 <li><a href="#modal-createInventory" uk-toggle>INVENTORY</a></li>
@@ -131,6 +131,7 @@
                                             </ul>
                                         </div>
                                     </li>
+                                   
                                     <li><a class="navlink" href="#modal-changeLayout" uk-toggle>
                                         <img src="assets/icons/layout 1.png" class="img-fluid" />
                                         Change Page Layout</a></li>
