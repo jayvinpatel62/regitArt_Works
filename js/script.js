@@ -235,5 +235,11 @@ $(".custom-dialog").draggable({
 
 
 $('.uk-navbar-dropdown-nav a').on('click', function() {
-  $('.filterDropdown').removeClass('uk-open');
+  $(this).parent().parent().parent().parent().find('.filterDropdown').toggleClass('uk-open');
 });
+
+$('.filter-uk-navbar a.navlink').on('click', function() {
+  $(this).find('.filterDropdown').toggleClass('uk-open');
+});
+
+function modalMassUpdate() { UIkit.modal($('#modal-massUpdate')).show();}
