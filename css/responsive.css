@@ -242,10 +242,15 @@
         display: none !important;
     }
     
-    .main-wrapper{
+    /* .main-wrapper{
         display: grid !important;
         gap: var(--grid-gap);
-        /* grid-template-columns: var(--sidepanel-width) auto; */
+        /* grid-template-columns: var(--sidepanel-width) auto; 
+    } */
+    .main-wrapper {
+        display: flex;
+        gap: var(--grid-gap);
+        flex-direction: column;
     }
     .btn-signUp{
         min-width: 240px;
