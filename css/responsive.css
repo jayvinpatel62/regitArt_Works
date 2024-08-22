@@ -251,6 +251,7 @@
         display: flex;
         gap: var(--grid-gap);
         flex-direction: column;
+        max-width: 1529px;
     }
     .btn-signUp{
         min-width: 240px;
