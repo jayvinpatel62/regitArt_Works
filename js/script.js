@@ -243,3 +243,86 @@ $('.filter-uk-navbar a.navlink').on('click', function() {
 });
 
 function modalMassUpdate() { UIkit.modal($('#modal-massUpdate')).show();}
+
+
+$("img.lazyload").lazyload();
+ 
+
+
+
+
+// $(filterClick).on('click', function() {
+  
+//   $(filterDropdownGlobal).toggle();
+
+//   const rect = event.target.getBoundingClientRect();
+          
+  
+  
+
+// });
+
+// const filterDropdownGlobal = document.getElementsByClassName("global");
+// const filterClick = document.getElementsByClassName("filterDemo");
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with the class 'menu-button'
+  const menuButtons = document.querySelectorAll('.filterDemo');
+  const menu = document.querySelector('.global');
+
+  // Function to toggle menu visibility
+  function toggleMenu() {
+      const rect = event.target.getBoundingClientRect(); // Get the bounding rectangle of the clicked element
+      menu.style.left = `${rect.left - 15}px`; // Set the menu's left position
+      menu.style.top = `${rect.bottom + 10}px`; // Set the menu's top position
+      
+      if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+      } else {
+          menu.classList.add('hidden');
+      }
+  }
+  
+  // Add click event listener to each button
+  menuButtons.forEach(button => {
+      button.addEventListener('click', toggleMenu);
+  });
+
+  
+});
+
+
+
+
+// ctxTooltip right click menu
+const contextTooltip = document.getElementById('ctxTooltip');
+
+ // Show custom context menu on right-click
+ document.addEventListener('contextmenu', function(event) {
+  if (event.target.classList.contains('openNewTab')) {
+      event.preventDefault();
+      
+      // Get the bounding rectangle of the right-clicked area
+      const rect = event.target.getBoundingClientRect();
+      
+      // Calculate the vertical center position of the right-clicked area
+      const y = rect.top + window.scrollY + (rect.height / 1) - (contextTooltip.offsetHeight / 1);
+      const x = rect.left + window.scrollX + (rect.width * -2) - (contextTooltip.offsetWidth / 2);
+
+
+      contextTooltip.style.top = `${y}px`;
+      contextTooltip.style.left = `${x}px`;
+      contextTooltip.style.display = 'block';
+
+  } else {
+    contextTooltip.style.display = 'none';
+  }
+});
+
+// Hide the custom context menu on click outside
+document.addEventListener('click', function(event) {
+  if (!contextTooltip.contains(event.target)) {
+    contextTooltip.style.display = 'none';
+  }
+});
