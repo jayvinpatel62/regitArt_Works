@@ -134,17 +134,18 @@ body{
         gap: var(--grid-gap);
     }
 }
-.overview-page{
+/* .overview-page{
     .grid-wrapper{
         grid-template-areas: "logo-wrapper main" "sidebar main" "footer footer";
     }
-}
+} */
 .grid-wrapper{
     margin: auto;
-    display: grid;
+    display: flex;
+    /* display: grid;
     grid-template-columns: var(--sidepanel-width) 1fr;
     grid-template-rows: 80px 1fr;
-    grid-template-areas: "logo-wrapper main" "sidebar main" "footer footer";
+    grid-template-areas: "logo-wrapper main" "sidebar main" "footer footer"; */
     gap: var(--grid-gap);
    
     padding-block: 36px;
@@ -167,6 +168,20 @@ body{
 .uk-navbar-nav>li>a{
     color: var(--text-color) !important;
 }
+
+
+.logo-side-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:var(--grid-gap);
+}
+.grow-1{
+    flex-grow: 1;
+}
+.flex-column{
+    flex-direction: column;
+}
+
 .logo-wrapper{
     width: var( --sidepanel-width);
     display: flex;
@@ -176,6 +191,7 @@ body{
 .main{
     min-height: var(--main-height);
     width: 100%;
+    flex-grow: 1;
 }
 
 
@@ -469,9 +485,9 @@ table .filterDropdown{
     color: var(--muted-color);
 }
 .my-table-model{
-    position: absolute;
-    right:15px;
-    top: 78px;
+    position: fixed;
+    right:55px;
+    top: 210px;
     padding: 60px 36px !important;
     border: 1px solid #C9C9C9;
     background: white;
@@ -587,6 +603,8 @@ table .filterDropdown{
             height: 144px;
             border-radius: calc(var(--radius) / 2);
             overflow: hidden;
+            display: flex;
+            place-content: center;
             img{
                 object-fit: cover;
                
@@ -981,6 +999,7 @@ table .filterDropdown{
 
 
 /*--------------- homepage css ----------------------*/
+
 .home-nav{
     position: fixed;
     top: 0;
@@ -1894,7 +1913,8 @@ table .filterDropdown{
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 4px;
+    height: 8px;
   }
   
   /* Track */
@@ -2445,4 +2465,92 @@ table .filterDropdown{
 }
 .draggable{
     cursor: move;
+}
+button.filterDemo{
+    cursor: pointer;
+    border: none;
+    outline: 0;
+    background: none
+}
+.filterDropdown.global{
+    position: absolute;
+}
+.hidden{
+    display: none;
+}
+.openNewTab{
+    padding: 4px;
+    cursor: pointer;
+}
+button.context-tooltip{
+    cursor: pointer;
+    border: none;
+    outline: 0;
+}
+.context-tooltip {
+    filter: drop-shadow(0px -1px 2px #0000001f);
+    position: absolute;
+    display: none;
+    --bs-tooltip-zindex: 1080;
+    --bs-tooltip-max-width: 200px;
+    --bs-tooltip-margin: ;
+    --bs-tooltip-border-radius:6px;
+    --bs-tooltip-opacity: 0.9;
+    --bs-tooltip-arrow-width: 0.8rem;
+    --bs-tooltip-arrow-height: 0.4rem;
+    --bs-tooltip-bg: white !important;
+    --bs-tooltip-color: #000 !important;
+    --bs-tooltip-padding-x: 3px !important;
+    --bs-tooltip-padding-y: 2px !important;
+    --bs-tooltip-font-size: 12px !important;
+    z-index: var(--bs-tooltip-zindex);
+    margin: var(--bs-tooltip-margin);
+    font-family: var(--bs-font-sans-serif);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    white-space: normal;
+    word-spacing: normal;
+    line-break: auto;
+    font-size: var(--bs-tooltip-font-size);
+    word-wrap: break-word;
+    opacity: 1;
+    background: var(--bs-tooltip-bg);
+    text-decoration: none;
+    border-radius: var(--bs-tooltip-border-radius);
+    
+    .arrow {
+        display: block;
+        width: var(--bs-tooltip-arrow-width);
+        height: var(--bs-tooltip-arrow-height);
+        position: absolute;
+        left: 0px;
+        transform: translate3d(46px, 0px, 0px);
+        &::before{
+            position: absolute;
+            content: "";
+            border-color: transparent;
+            border-style: solid;
+        }
+    }
+    &[data-popper-placement^=bottom] {
+        
+        .arrow{
+            top: calc(-1* var(--bs-tooltip-arrow-height));
+            &::before{
+               bottom: -1px;
+                border-width: 0 calc(var(--bs-tooltip-arrow-width)* .5) var(--bs-tooltip-arrow-height);
+                 border-bottom-color: var(--bs-tooltip-bg);
+            }
+        }
+       
+    }
+   
 }
