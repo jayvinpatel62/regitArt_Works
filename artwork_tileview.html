@@ -19,6 +19,8 @@
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/css/uikit.min.css" />
 
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -29,53 +31,57 @@
     <body>
 
         <div class="wrapper grid-wrapper">
-            <!---------- logo ----------------->
-            <div class="logo-wrapper">
-                <button class="btn toggleSidebar">
-                    <i class="bi bi-list"></i>
-                </button>
-                <a href="index.html" class="logo">
-                      <img loading="lazy" src="assets/logo.png" />
-                </a>
-            </div>
-            
-            <!---------- sidebar ----------------->
-            <aside class="sidebar floating-sidebar" >
-                <button class="close-floating" type="button">
-                    <i class="bi bi-x icon"></i>
-                </button>
-                <a href="" class="notifiaction-icon">
-                      <img loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
-                </a>
-                <div class="offset-sidebar">
-                        <ul class="uk-nav uk-nav-default" uk-nav>
-                            <li class="item"><a href="overview.html">Overview</a></li>
-                            <li class="item uk-parent uk-open">
-                                <a class="uk-active" href="artwork_tileview.html">Artworks</a>
-                                <ul class="uk-nav-sub">
-                                    <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
-                                    <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
-                                    <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
-                                    <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
-                                    <li class="sub-item"><a href="#">LISTOR</a></li>
-                                </ul>
-                            </li>
-                            <li class="item"><a href="#">Artists</a></li>
-                            <li class="item"><a href="#">Reports</a></li>
-                            <li class="item"><a href="#">Admin</a></li>
-                            <li class="item"><a href="#">Help</a></li>
-                        </ul>
+            <div class="logo-side-wrapper">
+                <!---------- logo ----------------->
+                <div class="logo-wrapper">
+                    <button class="btn toggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <img  loading="lazy" src="assets/logo.png" />
+                    </a>
                 </div>
 
-                <ul class="uk-nav uk-nav-default">
-                    <li class="item"><a href="#">konstnärsdatabasen</a></li>
-                    <li class="item"><a href="#">User Profile</a></li>
-                    <li class="item"><a href="#">Change language</a></li>
-                    <li class="item"><a href="#">Log Out</a></li>
-                </ul>
-            </aside>
+                <!---------- sidebar ----------------->
+                <aside class="sidebar floating-sidebar grow-1" >
+                    <button class="close-floating" type="button">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                        </span>
+                    </button>
+                    <a href="" class="notifiaction-icon">
+                        <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                    </a>
+                    <div class="offset-sidebar">
+                            <ul class="uk-nav uk-nav-default" uk-nav>
+                                <li class="item"><a href="overview.html">Overview</a></li>
+                                <li class="item uk-parent uk-open">
+                                    <a class="uk-active" href="artwork_tileview.html">Artworks</a>
+                                    <ul class="uk-nav-sub">
+                                        <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
+                                        <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
+                                        <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
+                                        <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
+                                        <li class="sub-item"><a href="#">LISTOR</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item"><a href="#">Artists</a></li>
+                                <li class="item"><a href="#">Reports</a></li>
+                                <li class="item"><a href="#">Admin</a></li>
+                                <li class="item"><a href="#">Help</a></li>
+                            </ul>
+                    </div>
+
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="item"><a href="#">konstnärsdatabasen</a></li>
+                        <li class="item"><a href="#">User Profile</a></li>
+                        <li class="item"><a href="#">Change language</a></li>
+                        <li class="item"><a href="#">Log Out</a></li>
+                    </ul>
+                </aside>
+            </div>
             <!---------- main ----------------->
-            <main class="main main-wrapper">
+            <main class="main main-wrapper flex-grow-1">
                  <!---------- header ----------------->
                 <header class="header">
                     <nav class="mainmenu px-3 py-2">
@@ -165,231 +171,234 @@
                     </nav> 
                 </header> 
 
-                <div class="main-inner">
-                     <!---------- tileview ----------------->
-                    <div class="artwork-wrapper tileview" uk-grid>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="img-div">
-                                  <img loading="lazy" src="assets/1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="content text-center">
-                                <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
-                                      <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
-                                      <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
-                                </a>
-                                <ul class="ul-list uk-list">
-                                    <li>RW-489</li>
-                                    <li>Anna Andersson</li>
-                                    <li>Title</li>
-                                    <li>Medium</li>
-                                    <li>Technique</li>
-                                    <li>Measurements</li>
-                                    <li>Edition</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="d-flex flex-column flex-grow-1 gap-3">
+                    <div class="main-inner grow-1">
+                        <!---------- tileview ----------------->
+                       <div class="artwork-wrapper tileview" uk-grid>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                     <img data-src="assets/1.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                <img data-src="https://images.unsplash.com/photo-1579541592065-da8a15e49bc7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGFydHxlbnwwfHwwfHx8MA%3D%3D" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                <img data-src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGFydHxlbnwwfHwwfHx8MA%3D%3D" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                    <img data-src="https://images.unsplash.com/photo-1709884732294-90379fee354c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                    <img data-src="https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGFydHxlbnwwfHwwfHx8MA%3D%3D" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                 <img data-src="https://images.unsplash.com/photo-1709884732294-90379fee354c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                    <img data-src="https://images.unsplash.com/photo-1577083552792-a0d461cb1dd6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFydHxlbnwwfHwwfHx8MA%3D%3D" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                    <img data-src="https://plus.unsplash.com/premium_photo-1664272436668-78437b92929e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFydHxlbnwwfHwwfHx8MA%3D%3D" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                           <div class="grid-item">
+                               <div class="img-div">
+                                    <img data-src="https://plus.unsplash.com/premium_photo-1682125164600-e7493508e496?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0fGVufDB8fDB8fHww" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                               </div>
+                               <div class="content text-center">
+                                   <a href="" class="flag" uk-toggle="target: .flagToggle; animation: uk-animation-fade; queued: true">
+                                         <img loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid flagToggle">
+                                         <img loading="lazy" src="assets/icons/flag_active.png" alt="" class="img-fluid flagToggle" hidden>
+                                   </a>
+                                   <ul class="ul-list uk-list">
+                                       <li>RW-489</li>
+                                       <li>Anna Andersson</li>
+                                       <li>Title</li>
+                                       <li>Medium</li>
+                                       <li>Technique</li>
+                                       <li>Measurements</li>
+                                       <li>Edition</li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!---------- pagination ----------------->
+                   <div class="paginationWrapper">
+                       <nav aria-label="Pagination">
+                           <ul class="uk-pagination" uk-margin>
+                               <li><a href="#"><span uk-pagination-previous></span></a></li>
+                               <li class="uk-active"><span aria-current="page">1</span></li>
+                               <li><a href="#">2</a></li>
+                               <li class="uk-disabled"><span>…</span></li>
+                               <li><a href="#">9</a></li>
+                               <li><a href="#"><span uk-pagination-next></span></a></li>
+                           </ul>
+                       </nav>
+                       <div class="pageSize">
+                           <label class="uk-form-label" for="form-horizontal-text">PAGE SIZE:</label>
+                           <div class="uk-form-controls">
+                               <input class="uk-input" id="form-horizontal-text" type="number" value="12">
+                           </div>
+                       </div>
+                       <div class="totalEntries">POST 1 TO 6 OF 780</div>
+                   </div>
                 </div>
-                <!---------- pagination ----------------->
-                <div class="paginationWrapper">
-                    <nav aria-label="Pagination">
-                        <ul class="uk-pagination" uk-margin>
-                            <li><a href="#"><span uk-pagination-previous></span></a></li>
-                            <li class="uk-active"><span aria-current="page">1</span></li>
-                            <li><a href="#">2</a></li>
-                            <li class="uk-disabled"><span>…</span></li>
-                            <li><a href="#">9</a></li>
-                            <li><a href="#"><span uk-pagination-next></span></a></li>
-                        </ul>
-                    </nav>
-                    <div class="pageSize">
-                        <label class="uk-form-label" for="form-horizontal-text">PAGE SIZE:</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" id="form-horizontal-text" type="number" value="12">
-                        </div>
-                    </div>
-                    <div class="totalEntries">POST 1 TO 6 OF 780</div>
-                </div>
+               
             </main>
         </div>
         <div class="footer copyright">@2024 REGITART | ALL RIGHTS RESERVED</div>
@@ -399,6 +408,7 @@
         <!-- UIkit JS -->
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit-icons.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
        
         <!--Common script -->
         <script src="js/script.js"></script>
