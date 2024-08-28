@@ -84,7 +84,7 @@
             
             <!---------- main ----------------->
             <div class="main main-wrapper" >
-
+               
                     <!---------- header ----------------->
                     <header class="header">
                         <nav class="mainmenu px-3 py-2">
@@ -92,18 +92,20 @@
                                 <button class="close-floating" type="button">
                                     <i class="bi bi-x icon"></i>
                                 </button>
-                                <ul class="uk-navbar-nav scroller-x ">
+                                <ul class="uk-navbar-nav">
+                                  
                                     <li class="uk-active">
-                                        <a href="#" class="navlink">
+                                        <a href="#" class="navlink" data-dropdown="#dropdown1">
                                             <img src="assets/icons/gallery 1.png" class="img-fluid" />
                                         View</a>
                                         <div class="uk-navbar-dropdown filterDropdown" uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                <li><a href="artwork_tileview.html">TILES VIEW</a></li>
-                                                <li><a href="index.html">LIST VIEW</a></li>
+                                                <li><a href="artwork_tileview.html" class="dropdown-item">TILES VIEW</a></li>
+                                                <li><a href="index.html" class="dropdown-item">LIST VIEW</a></li>
                                             </ul>
                                         </div>
                                     </li>
+                                    
                                     <li>
                                         <a href="#" class="navlink">
                                             <img src="assets/icons/post 1.png" class="img-fluid" />
@@ -120,18 +122,18 @@
                                     </li>
                                     
                                     <li>
-                                        <a href="#" class="navlink">
+                                        <a href="#" class="navlink" data-dropdown="#dropdown2">
                                             <img src="assets/icons/CREATE 1.png" class="img-fluid" />
                                             Create
                                         </a>
-                                        <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="close-on-scroll:true;mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <div class="uk-navbar-dropdown filterDropdown"  id="dropdown2" uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                <li><a href="#modal-createLoan" uk-toggle>LOAN</a></li>
-                                                <li><a href="#modal-createInventory" uk-toggle>INVENTORY</a></li>
-                                                <li><a href="#modal-createList" uk-toggle>LIST</a></li>
-                                                <li><a href="#modal-createExcelExport" uk-toggle>EXCEL EXPORT</a></li>
-                                                <li><a href="#modal-createPDF" uk-toggle>PDF</a></li>
-                                                <li><a href="#modal-createLabel" uk-toggle>LABELS</a></li>
+                                                <li><a href="#modal-createLoan" class="dropdown-item"  uk-toggle>LOAN</a></li>
+                                                <li><a href="#modal-createInventory" class="dropdown-item" uk-toggle>INVENTORY</a></li>
+                                                <li><a href="#modal-createList" class="dropdown-item" uk-toggle>LIST</a></li>
+                                                <li><a href="#modal-createExcelExport" class="dropdown-item" uk-toggle>EXCEL EXPORT</a></li>
+                                                <li><a href="#modal-createPDF" class="dropdown-item" uk-toggle>PDF</a></li>
+                                                <li><a href="#modal-createLabel" class="dropdown-item" uk-toggle>LABELS</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -140,13 +142,13 @@
                                         <img src="assets/icons/layout 1.png" class="img-fluid" />
                                         Change Page Layout</a></li>
                                     <li>
-                                        <a href="#" class="navlink">
+                                        <a href="#" class="navlink" data-dropdown="#dropdown3">
                                         <img src="assets/icons/red-flag 1.png" class="img-fluid" />
                                             Flagged Works</a>
-                                        <div class="uk-navbar-dropdown filterDropdown"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
+                                        <div class="uk-navbar-dropdown filterDropdown"  id="dropdown3"  uk-dropdown="mode: click;pos: bottom-left; boundary: !.uk-navbar-nav; shift: false; flip: false;animation: uk-animation-slide-top-small; animate-out: true">
                                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                <li><a href="#">FIND FLAGGED WORKS</a></li>
-                                                <li><a href="#">DE-SELECT ALL</a></li>
+                                                <li><a href="#" class="dropdown-item">FIND FLAGGED WORKS</a></li>
+                                                <li><a href="#" class="dropdown-item">DE-SELECT ALL</a></li>
                                             </ul>
                                         </div>
                                     </li>
