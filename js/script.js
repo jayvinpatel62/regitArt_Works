@@ -234,13 +234,44 @@ $(".custom-dialog").draggable({
 });
 
 
-$('.uk-navbar-dropdown-nav a').on('click', function() {
-  $(this).parent().parent().parent().parent().find('.filterDropdown').toggleClass('uk-open');
+// $('.uk-navbar-dropdown-nav a').on('click', function() {
+//   $(this).parent().parent().parent().parent().find('.filterDropdown').toggleClass('uk-open');
+// });
+
+// $('.filter-uk-navbar a.navlink').on('click', function() {
+//   $(this).find('.filterDropdown').toggleClass('uk-open');
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to open or close the dropdown menu
+  function toggleDropdown(button) {
+    const targetSelector = button.getAttribute('data-dropdown');
+    const dropdown = UIkit.dropdown(document.querySelector(targetSelector));
+    dropdown.toggle();
+  }
+
+  // Handle menu button clicks to toggle the dropdown
+  const menuButtons = document.querySelectorAll('.navlink');
+  menuButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      toggleDropdown(this);
+    });
+  });
+
+  // Handle dropdown item clicks to close the dropdown
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+      // Get the closest dropdown parent
+      const dropdown = this.closest('[uk-dropdown]');
+      if (dropdown) {
+        UIkit.dropdown(dropdown).hide();
+      }
+    });
+  });
 });
 
-$('.filter-uk-navbar a.navlink').on('click', function() {
-  $(this).find('.filterDropdown').toggleClass('uk-open');
-});
 
 function modalMassUpdate() { UIkit.modal($('#modal-massUpdate')).show();}
 
@@ -272,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const menu = document.querySelector('.global');
 
   // Function to toggle menu visibility
-  function toggleMenu() {
+  function toggleMenu(event) {
       const rect = event.target.getBoundingClientRect(); // Get the bounding rectangle of the clicked element
       menu.style.left = `${rect.left - 15}px`; // Set the menu's left position
       menu.style.top = `${rect.bottom + 10}px`; // Set the menu's top position
@@ -292,9 +323,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
 });
 
-
-
-
+// Hide the custom context menu on click outside
+document.addEventListener('click', function(event) {
+  if (!menu.contains(event.target)) {
+    menu.style.display = 'none';
+  }
+});
 // ctxTooltip right click menu
 const contextTooltip = document.getElementById('ctxTooltip');
 
@@ -326,3 +360,77 @@ document.addEventListener('click', function(event) {
     contextTooltip.style.display = 'none';
   }
 });
+
+//-------------- menu dropdown custom -------------------//
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownBtns = document.querySelectorAll('.menuDropdown-btn');
+  const dropdowns = document.querySelectorAll('.menuDropdown-content');
+  const dropdownItems = document.querySelectorAll('.menuDropdown-item');
+
+  // Toggle dropdown content
+  dropdownBtns.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+      event.stopPropagation();
+      // Close other dropdowns
+      dropdowns.forEach(dropdown => {
+        if (dropdown.previousElementSibling !== btn) {
+          dropdown.style.opacity = '0';
+          dropdown.style.transform = 'translateY(-10px)';
+          setTimeout(() => {
+            dropdown.style.display = 'none';
+          }, 300); // Match transition duration
+        }
+      });
+      // Toggle the clicked dropdown
+      const dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.opacity = '0';
+        dropdownContent.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300); // Match transition duration
+      } else {
+        dropdownContent.style.display = 'block';
+        setTimeout(() => {
+          dropdownContent.style.opacity = '1';
+          dropdownContent.style.transform = 'translateY(0)';
+        }, 10); // Small delay to allow display to be applied
+      }
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(event) {
+    dropdowns.forEach(dropdown => {
+      dropdown.style.opacity = '0';
+      dropdown.style.transform = 'translateY(-10px)';
+      setTimeout(() => {
+        dropdown.style.display = 'none';
+      }, 300); // Match transition duration
+    });
+  });
+
+  // Close dropdown when clicking on a dropdown item
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function(event) {
+      // Close the dropdown content
+      const dropdownContent = this.closest('.dropdown-content');
+      if (dropdownContent) {
+        dropdownContent.style.opacity = '0';
+        dropdownContent.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300); // Match transition duration
+      }
+    });
+  });
+
+  // Prevent closing dropdown when clicking inside
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  });
+});
+
