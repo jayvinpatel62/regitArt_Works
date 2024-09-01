@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica'), url('../fonts/Helvetica.woff') format('woff');
+    }
+    
 :root{
+    
+    --font-josefin:"Josefin Sans";
+    --font-helventica:'Helvetica';
+    --font-primary:var(--font-josefin);
+    --font-body:var(--font-helventica);
+
     --text-color:#3D3D3D;
     --text2-color:#5B5B5D;
     --text2-light-color:#5B5B5D99;
@@ -80,18 +93,25 @@
     font-weight: bold;
 }
 body{
-    font-family: "Josefin Sans", sans-serif;
+    font-family:var(--font-body);
     font-optical-sizing: auto;
+    font-weight: 400 !important;
     font-style: normal;
     background: var(--body-bg) !important;
     color: var(--text-color);
 
 }
 .font-Josefin,.font-josefin,.josefin{
-    font-family: "Josefin Sans", sans-serif;
+    font-family: var(--font-josefin);;
 }
 .font-Helvetica,.font-helvetica,.helvetica{
-    font-family: Helvetica;
+    font-family: var(--font-helventica);
+}
+.font-primary{
+    font-family: var(--font-primary);
+}
+.font-body{
+    font-family: var(--font-body);
 }
 .wrapper{
     min-height: calc(100vh - 60px);
@@ -254,6 +274,7 @@ body{
             min-height: 40px;
             font-size: 16px;
             font-weight: 600;
+            font-family: var(--font-primary);
            
        }
         .icon{
@@ -264,7 +285,7 @@ body{
   
 }
 .filterDropdown{
-    padding: 13px !important;
+    padding: 5px 0 !important;
     border: 1px solid #C9C9C9;
     border-radius: 4px;
     min-width: var(--dropdown-width) !important;
@@ -275,7 +296,7 @@ body{
         filter: drop-shadow(-0px -1px 1px #00000050);
         bottom: 100%;
         right: auto;
-        left: auto;
+        left: 5px;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         border-bottom: 10px solid #fff;
@@ -283,8 +304,13 @@ body{
     .uk-nav{
         padding: 0;
         >li>a{
+            font-family: var(--font-primary);
             font-size: 12px ;
             font-weight: 500;
+            padding:5px 13px;
+            &:hover{
+                background: #F2F2F2;
+            }
         }
     }
     
@@ -309,6 +335,7 @@ table .filterDropdown{
     flex-direction: column;
     box-shadow: 4px 4px 4px 0px #00000040;
     position: relative;
+    font-family: var(--font-primary);
     .offset-sidebar{
         padding-top: 60px;
     }
@@ -376,6 +403,7 @@ table .filterDropdown{
         font-size: 14px;
         font-weight: 500;
         color: var(--text-color);
+        font-family: var(--font-primary);
     }
     td{
         white-space: nowrap;
@@ -525,6 +553,7 @@ table .filterDropdown{
     }
     .uk-accordion {
         .uk-accordion-title{
+            font-family: var(--font-primary);
             font-size: 16px;
             font-weight: 400;
             color: #373736;
@@ -604,6 +633,8 @@ table .filterDropdown{
             border-radius: calc(var(--radius) / 2);
             overflow: hidden;
             display: flex;
+            align-items: center;
+            justify-content: center;
             place-content: center;
             img{
                 object-fit: cover;
@@ -702,12 +733,13 @@ table .filterDropdown{
         line-height: 20px;
         text-align: left;
         color: #5B5B5D;
+        font-family: var(--font-primary);
     }
     table{
         td{
             padding-block: 10px;
             padding-left: 0;
-            font-family: Helvetica;
+            font-family: var(--font-body);
             font-size: 16px;
             font-weight: 400;
             line-height: 18.4px;
@@ -728,7 +760,7 @@ table .filterDropdown{
     }
 
     .info-content{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         text-align: left;
         letter-spacing: 0.04em;
         font-weight: 400;
@@ -747,7 +779,7 @@ table .filterDropdown{
     .btn{
         min-width: 266px;
         min-height: 44px;
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 14px;
         font-weight: 700;
         line-height: 16.1px;
@@ -769,7 +801,7 @@ table .filterDropdown{
 .btn{
     padding: 14px 53px;
     border-radius: 4px !important;
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -816,7 +848,7 @@ table .filterDropdown{
 }
 .chartLabel-list{
     font-size: 18px;
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-weight: 400;
 
     li{
@@ -960,7 +992,7 @@ table .filterDropdown{
         }
    }
    .content{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 16px;
         font-weight: 400;
         margin-top: 40px;
@@ -1062,7 +1094,7 @@ table .filterDropdown{
             color: white;
         }
         .text-md{
-            font-family: Helvetica;
+            font-family: var(--font-body);
             font-size: 24px;
             font-weight: 400;
         }
@@ -1081,7 +1113,7 @@ table .filterDropdown{
 }
 .btn-google{
     position: relative;
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-size: 14px;
     font-weight: 400 !important;
     letter-spacing: 0.25px;
@@ -1102,7 +1134,7 @@ table .filterDropdown{
 }
 
 .remember-checkbox{
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-size: 12px;
     font-weight: 400;
     line-height: 13.8px;
@@ -1127,7 +1159,7 @@ table .filterDropdown{
     color: #1D1D1B;
     
     a{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
@@ -1150,7 +1182,7 @@ table .filterDropdown{
     }
 }
 .register-text{
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -1166,7 +1198,7 @@ table .filterDropdown{
 .sign-up-form{
     .label-text{
         color: #A4A4A4;
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 16px;
         font-weight: 400;
         line-height: 18.4px;
@@ -1291,7 +1323,7 @@ table .filterDropdown{
     }
     .col-form-label{
         flex-basis: 132px;
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 16px;
         font-weight: 400;
 
@@ -1301,7 +1333,7 @@ table .filterDropdown{
 .accordian-massupdate{
     .uk-accordion-title{
         background: #F2F2F2;
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 16px;
         font-weight: 400;
         padding:15px 15px;
@@ -1320,7 +1352,7 @@ table .filterDropdown{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-size: 18px;
     font-weight: 400;
     color: white;
@@ -1345,7 +1377,7 @@ table .filterDropdown{
     flex-direction: column;
     gap:5px;
     a{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 14px;
         font-weight: 400;
         color: #6C6B6B;
@@ -1406,7 +1438,7 @@ table .filterDropdown{
 .form-content-check{
 
     .form-check-label{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 14px;
         font-weight: 400;
 
@@ -1431,7 +1463,7 @@ table .filterDropdown{
        -o-border-radius: 8px;
        overflow: hidden;
        .text-title{
-            font-family: Helvetica;
+            font-family: var(--font-body);
             font-size: 14px;
             font-weight: 400;
        }
@@ -1474,7 +1506,7 @@ table .filterDropdown{
         flex-direction: column;
         gap:10px;
         .form-check-label{
-            font-family: Helvetica;
+            font-family: var(--font-body);
             font-size: 14px;
             font-weight: 400;
             padding-left: 15px;
@@ -1491,7 +1523,7 @@ table .filterDropdown{
 .accordian-Konstnär{
     margin: 0;
     .uk-accordion-title{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 14px;
         font-weight: 400;
         padding: 5px 15px;
@@ -1523,7 +1555,7 @@ table .filterDropdown{
 .accordian-createpdf{
     margin: 0;
     .uk-accordion-title{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 14px;
         font-weight: 400;
         padding: 5px 15px;
@@ -1556,7 +1588,7 @@ table .filterDropdown{
     
 }
 .text-small{
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-size: 12px;
     font-weight: 400;
     color: #575656;
@@ -1600,7 +1632,7 @@ table .filterDropdown{
     .uk-lightbox-caption{
         background: white;
         color: var(--text-color);
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 16px;
         font-weight: 400;
     }
@@ -1797,7 +1829,7 @@ table .filterDropdown{
        
         thead{
             th{
-                font-family: Helvetica;
+                font-family: var(--font-body);
                 font-size: 16px;
                 font-weight: 700;
                 color: var(--text-color);
@@ -1806,7 +1838,7 @@ table .filterDropdown{
         }
         tbody{
             td{
-                font-family: Helvetica;
+                font-family: var(--font-body);
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 20px;
@@ -1843,7 +1875,7 @@ table .filterDropdown{
 .content-editable{
     padding: 30px;
     border: 1px solid #B3B3B3;
-    font-family: Helvetica;
+    font-family: var(--font-body);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -1945,7 +1977,7 @@ table .filterDropdown{
         right:40px;
     }
     .title{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 14px;
         font-weight: 400;
         padding: 5px 15px;
@@ -2180,7 +2212,7 @@ table .filterDropdown{
         color:#A5A1A4;
     }
     .btn{
-        font-family: Helvetica;
+        font-family: var(--font-body);
         font-size: 14px;
         font-weight: 400;
         padding: 5px 15px;
@@ -2651,4 +2683,21 @@ button.context-tooltip{
         border-right: 8px solid transparent;
         border-bottom: 10px solid #fff;
     }
+}
+
+.form-check-input.custom-tb-check{
+    width: 18px !important;
+    height: 18px !important;
+    border-color:#8E8E8E !important;
+    border-radius: 2px !important;
+    border-width: 2px !important;
+}
+.form-check-input.custom-tb-check:checked {
+    background-color: transparent !important;
+    border-color: #8E8E8E !important;
+}
+.form-check-input.custom-tb-check:checked[type=checkbox] {
+    background-size: 70%;
+    background-position: center 70%;
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14px' height='14px' viewBox='0 0 14 14' version='1.1'%3E%3Cg id='surface1'%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(55.686275%25,55.686275%25,55.686275%25);fill-opacity:1;' d='M 5.359375 10.6875 C 5.226562 10.824219 5.042969 10.898438 4.855469 10.898438 C 4.667969 10.898438 4.484375 10.824219 4.351562 10.6875 L 0.3125 6.652344 C -0.105469 6.234375 -0.105469 5.554688 0.3125 5.136719 L 0.820312 4.628906 C 1.238281 4.210938 1.917969 4.210938 2.335938 4.628906 L 4.855469 7.148438 L 11.664062 0.339844 C 12.082031 -0.078125 12.761719 -0.078125 13.179688 0.339844 L 13.6875 0.847656 C 14.105469 1.265625 14.105469 1.945312 13.6875 2.363281 Z M 5.359375 10.6875 '/%3E%3C/g%3E%3C/svg%3E%0A") !important;
 }
