@@ -1,4 +1,4 @@
-@media (max-width: 1199px){
+@media (max-width: 1023px){
 
     .mainmenu {
         justify-content: flex-end;
@@ -8,8 +8,8 @@
     .header{
         background: none;
         box-shadow: none;
-        position: absolute;
-        top: 30px;
+        position: relative;
+        top: 0px;
         right: 0;
     }
     .closeFilter{
@@ -116,7 +116,7 @@
     }
     .grid-wrapper{
         display: grid;
-        grid-template-areas: "logo-wrapper header" "main main" "footer footer";
+        grid-template-areas: "logo-wrapper main" "logo-wrapper  main" "footer footer";
     }
     .overview-page{
         .grid-wrapper{
@@ -138,6 +138,7 @@
     .mainmenu{
         gap: 20px;
         display: flex;
+        height: 57px;
         .navbar-search {
             width: 40px;
             height: 40px;
@@ -196,6 +197,9 @@
             display: none;
         }
     }
+    .table-pagisition-wrapper{
+        display: grid;
+    }
 }
 @media (max-width: 650px) {
     .singleSearchBar{
@@ -222,7 +226,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     body{
         min-width:1900px;
     }
@@ -264,9 +268,9 @@
     } */
 }
 @media (max-width: 768px) {
-    .grid-wrapper{
+    /* .grid-wrapper{
         grid-template-columns: 176px 1fr;
-    }
+    } */
     
     .chartDiv {
         canvas {
@@ -284,7 +288,49 @@
     }
 
 }
-
+@media (max-width:640px) {
+    .grid-wrapper {
+        display: grid;
+        grid-template-areas:
+        "logo-wrapper logo-wrapper"
+        "main main"
+        "footer footer";
+    }
+    .header {
+        background: none;
+        box-shadow: none;
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+    
+  
+}
+@media  (min-width:640px) and (max-width:1024px) {
+    .toggleSidebar{
+        display: none !important;
+    }
+    .header {
+        background: none;
+        box-shadow: none;
+        position: relative;
+        top: 0px;
+        right: 0;
+    }
+    .floating-sidebar .close-floating{
+        display: none;
+    }
+    .floating-sidebar.left{
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        transform: 0;
+        -webkit-transform: translateX(0%);
+    }
+   .sidebar{
+        border-radius: var(--radius) !important;
+   }
+}
 @media (min-width: 1200px) {
     .main {
         flex-grow: 1;
