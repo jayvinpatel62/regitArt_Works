@@ -44,7 +44,7 @@
                 </div>
 
                 <!---------- sidebar ----------------->
-                <aside class="sidebar floating-sidebar grow-1" >
+                <aside class="sidebar floating-sidebar left grow-1" >
                     <button class="close-floating" type="button">
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
@@ -73,7 +73,7 @@
                             </ul>
                     </div>
 
-                    <ul class="uk-nav uk-nav-default">
+                    <ul class="uk-nav uk-nav-default sideNavBottom">
                         <li class="item"><a href="#">konstnärsdatabasen</a></li>
                         <li class="item"><a href="#">User Profile</a></li>
                         <li class="item"><a href="#">Change language</a></li>
@@ -179,9 +179,9 @@
                         </nav> 
                     </header> 
                     
-                    <div class="d-flex flex-column flex-grow-1">
+                    <div class="table-pagisition-wrapper">
                         <!---------- table ----------------->
-                        <div class="uk-overflow-auto table-parent position-relative w-100">
+                        <div class="uk-overflow-auto table-parent position-relative w-100 hidden-scrollbar bg-white">
                             <table class="uk-table uk-table-striped my-table">
                                 <thead>
                                     <tr>
@@ -190,7 +190,7 @@
                                                 <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </th>
-                                        <th></th>
+                                        <th class="imgThumb-th"></th>
                                         <th class="">
                                             <label class="label-text" for="">ID-HOMHER</label>
                                             <div class="uk-inline">
