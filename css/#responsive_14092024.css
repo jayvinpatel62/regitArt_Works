@@ -1,4 +1,4 @@
-@media (max-width:1800px){
+@media (max-width: 1023px){
 
     .mainmenu {
         justify-content: flex-end;
@@ -232,7 +232,7 @@
     }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1024px) {
     .mainmenu {
         .uk-navbar-nav {
             gap: 54px;
@@ -295,7 +295,7 @@
     }
 
 }
-@media (max-width:639px) {
+@media (max-width:640px) {
     .grid-wrapper {
         display: grid;
         grid-template-areas:
@@ -313,7 +313,7 @@
     
   
 }
-@media  (min-width:640px) and (max-width:1800px) {
+@media  (min-width:640px) and (max-width:1024px) {
     .toggleSidebar{
         display: none !important;
     }
@@ -338,7 +338,7 @@
         border-radius: var(--radius) !important;
    }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1200px) {
     .main {
         flex-grow: 1;
         max-width: calc(100% - calc(var(--sidepanel-width) + 20px));

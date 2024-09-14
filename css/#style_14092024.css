@@ -434,7 +434,6 @@ table .filterDropdown{
         font-weight: 500;
         color: var(--text-color);
         font-family: var(--font-primary);
-        text-decoration: none;
     }
     td{
         white-space: nowrap;
@@ -532,23 +531,13 @@ table .filterDropdown{
         font-size: 12px;
         width: 30px;
         height: 30px;
-        border: 1px solid #DEDEDE;
+        border: 1px solid var(--muted-color);
         padding: 0;
         a{
             padding: 10px;
-            color: var(--_color);
         }
         &.uk-active{
             border: 1px solid var(--primary-color);
-        }
-        &.disabled{
-                background: #DEDEDE;
-                color: white;
-        }
-        &.PagedList-skipToNext{
-            a{
-                color: #C4CDD5 !important;
-            }
         }
     }
 }
