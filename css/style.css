@@ -340,6 +340,7 @@ table .filterDropdown{
     box-shadow: 4px 4px 4px 0px #00000040;
     position: relative;
     font-family: var(--font-primary);
+    max-height: calc(100vh - 183px);
     .offset-sidebar{
         /* padding-top: 60px; */
     }
@@ -486,7 +487,7 @@ table .filterDropdown{
             align-items: center;
             vertical-align: middle;
             &:last-child{
-                    border: none !important;
+                    /* border: none !important; */
             }
         }
         td{
@@ -2077,7 +2078,7 @@ table .filterDropdown{
         }
     } 
   }
- input.form-control,textarea.form-control,select.form-select{
+ input.form-control,textarea.form-control,select.form-select,select.form-control{
     border-color: #A5A1A4 !important;
  }
  .form-control[contenteditable]{
@@ -2139,7 +2140,11 @@ table .filterDropdown{
 }
 .img-box-120{
     height: 120px;
-    width: 120px;
+    width: 100px;
+}
+.img-box-190{
+    height: 120px;
+    width: 190px;
 }
 .starImgbox-wrapper{
     .star-bookmark{
@@ -2805,4 +2810,62 @@ button.context-tooltip{
     flex-direction: column;
     flex-grow: 1;
     gap: 11px;
+}
+
+
+
+
+.ginfosplit-grid-wrapper{
+    display: grid;
+    grid-template-columns: auto 545px;
+    .ginfoLeftWrapper{
+        .contain{
+            padding-left: 32px;
+            padding-top: 36px;
+            padding-right: 45px;
+            padding-bottom: 36px;
+        }
+    }
+    .ginfoRightWrapper{
+       .contain{
+            padding-left: 45px;
+            padding-top: 36px;
+            padding-right: 45px;
+            padding-bottom: 36px;
+       }
+    }
+}
+.ginfoInput{
+    display: grid;
+    grid-template-columns: 120px 250px;
+    gap: 20px;
+    justify-content: flex-start;
+    .form-control{
+        max-width: 250px;
+    }
+}
+.ginfo-grid-2col{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 77px;
+}
+.listor-grid{
+    display: grid;
+    grid-template-columns: 120px 300px 300px;
+    column-gap: 38px;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+.mb-45{
+    margin-bottom: 45px;
+}
+.fw-700{
+    font-weight: 700;
 }
