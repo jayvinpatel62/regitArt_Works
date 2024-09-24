@@ -171,7 +171,8 @@ body{
    
     padding-block: 36px;
     padding-inline: 56px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
     .logo-side-wrapper{
         grid-area: logo-wrapper;
     }
@@ -340,7 +341,7 @@ table .filterDropdown{
     box-shadow: 4px 4px 4px 0px #00000040;
     position: relative;
     font-family: var(--font-primary);
-    max-height: calc(100vh - 183px);
+    max-height: 100vh;
     .offset-sidebar{
         /* padding-top: 60px; */
     }
@@ -417,7 +418,6 @@ table .filterDropdown{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
 }
 
 .table-parent {
@@ -1529,7 +1529,7 @@ table .filterDropdown{
             font-weight: 400;
        }
        &.min-224{
-        min-height: 224px !important;
+            height: 224px;
        }
     }
     .searchbox{
@@ -1722,7 +1722,7 @@ table .filterDropdown{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 40px;
+    margin-top: 36px;
 }
 .searchbox-head{
     margin-left: auto;
@@ -1840,7 +1840,7 @@ table .filterDropdown{
 .action-fab-tools{
     display: flex;
     align-items: center;
-    gap:16px;
+    gap:10px;
     --_color:#40403F;
     .tool-item{
         --_size:28px;
@@ -2149,6 +2149,8 @@ table .filterDropdown{
 .starImgbox-wrapper{
     .star-bookmark{
         font-size: 20px;
+        display: flex;
+        align-items: center;
     }
     a:hover{
         text-decoration: none !important;
@@ -2161,7 +2163,7 @@ table .filterDropdown{
 .starImgGrid{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px 30px;
 }
 .flex-full{
     width: 100%;
@@ -2483,7 +2485,8 @@ table .filterDropdown{
   #toggleGen-BtnsGroup.setPosTop{
     position: absolute;
     padding-inline-start: 0;
-    top: 80px;
+    top: 31px;
+    left: 0;
   }
 
   input[type="date"]::-webkit-calendar-picker-indicator {
@@ -2818,21 +2821,30 @@ button.context-tooltip{
 .ginfosplit-grid-wrapper{
     display: grid;
     grid-template-columns: auto 545px;
+    @media (max-width:1700px){
+        grid-template-columns: auto auto;
+    }
+    @media (max-width:1400px){
+        grid-template-columns: auto;
+    }
     .ginfoLeftWrapper{
         .contain{
             padding-left: 32px;
-            padding-top: 36px;
+            padding-top: 30px;
             padding-right: 45px;
-            padding-bottom: 36px;
+            padding-bottom: 30px;
         }
     }
     .ginfoRightWrapper{
        .contain{
             padding-left: 45px;
-            padding-top: 36px;
+            padding-top: 30px;
             padding-right: 45px;
-            padding-bottom: 36px;
+            padding-bottom: 21px;
        }
+       @media (max-width:1400px){
+       border-top:1px solid #DDDCDC;
+    }
     }
 }
 .ginfoInput{
@@ -2843,16 +2855,34 @@ button.context-tooltip{
     .form-control{
         max-width: 250px;
     }
+    &.ginfoInput205{
+        grid-template-columns: 205px 250px;
+    }
+    &.ginfoInput205-auto{
+        grid-template-columns: 205px auto;
+        .form-control{
+            max-width: 100%;
+        }
+
+    }
 }
 .ginfo-grid-2col{
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 77px;
+    @media (max-width:1700px){
+        grid-template-columns: auto ;
+    }
+    
 }
 .listor-grid{
     display: grid;
     grid-template-columns: 120px 300px 300px;
     column-gap: 38px;
+    @media (max-width:1800px){
+        grid-template-columns: auto ;
+        row-gap: 38px;
+    }
 }
 .mb-15{
     margin-bottom: 15px;
@@ -2868,4 +2898,115 @@ button.context-tooltip{
 }
 .fw-700{
     font-weight: 700;
+}
+.starNradioButton{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.inputCircle{
+    --_size:18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    .form-check-input{
+        width: var(--_size);
+        height: var(--_size);
+        border-radius: 60px !important;
+        border: 1px solid #706F6F;
+        background-color: white;
+        -webkit-print-color-adjust: exact;
+
+        &:focus {
+            border-color: var(--primary-color);
+            outline: 0;
+            box-shadow: 0 0 0 .25rem rgba(225, 163, 80, .25);
+        }
+
+        &:checked {
+            background-color:var(--primary-color);
+            border-color:var(--primary-color);
+            background-image: none;
+        }
+    }
+    &.size-14{
+        --_size:14px;
+    }
+    &.size-16{
+        --_size:16px;
+    }
+    &.size-18{
+        --_size:18px;
+    }
+    &.size-20{
+        --_size:20px;
+    }
+    &.size-24{
+        --_size:24px;
+    }
+}
+.contain-btns{
+    padding-top: 20px !important;
+    padding-bottom: 34px !important;
+}
+.documentContain{
+   padding-top: 20px !important;
+   padding-bottom: 40px;
+}
+.main{
+    position: relative;
+}
+
+.list {
+    position:absolute;
+    left:0px;
+    top:0px;
+  	min-width:3500px;
+    margin-top:0px;
+}
+
+.list li{
+	display:table-cell;
+    position:relative;
+    text-align:center;
+    cursor:grab;
+    cursor:-webkit-grab;
+    color:#efefef;
+    vertical-align:middle;
+}
+.tabScrollerMain{
+    width: 100%;
+}
+.myTabscroller {
+  text-align:center;
+  cursor:pointer;
+  display:none;
+  padding:7px;
+  padding-top:13px;
+  white-space:no-wrap;
+  vertical-align:middle;
+  background-color:#fff;
+  position: absolute;
+  z-index: 99;
+  &.scroller-right{
+    right:0;
+  }
+  &.scroller-left{
+    left:0;
+  }
+}
+.tabScrollerMain
+{
+    position: relative;
+}
+.tabScrollerwrapper{
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
+	padding:5px;
+  	height:50px;
+}
+.h-full{
+    height: 100%;
 }
