@@ -2863,6 +2863,63 @@ button.context-tooltip{
         .form-control{
             max-width: 100%;
         }
+    }
+    &.ginfoInput205-full{
+        grid-template-columns: 205px 1fr;
+        .form-control{
+            max-width: 100%;
+        }
+    }
+    &.ginfoInput225{
+        grid-template-columns: 225px 250px;
+        @media (max-width:992px){
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+    &.ginfoInput225-auto{
+        grid-template-columns: 225px auto;
+        @media (max-width:992px){
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .form-control{
+            max-width: 100%;
+        }
+
+    }
+    &.ginfoInput225-full{
+        grid-template-columns: 225px 1fr;
+        @media (max-width:992px){
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .form-control{
+            max-width: 100%;
+        }
+
+    }
+    &.ginfoInput225-380{
+        grid-template-columns: 225px 380px;
+        @media (max-width:992px){
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+    &.ginfoInput225-380-auto{
+        grid-template-columns: 225px auto;
+        @media (max-width:992px){
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .form-control{
+            max-width: 100%;
+        }
+
+    }
+    &.ginfoInput225-380-full{
+        grid-template-columns: 225px 1fr;
+        @media (max-width:992px){
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .form-control{
+            max-width: 100%;
+        }
 
     }
 }
@@ -2889,6 +2946,9 @@ button.context-tooltip{
 }
 .mb-20{
     margin-bottom: 20px;
+}
+.mb-38{
+    margin-bottom: 38px;
 }
 .mb-40{
     margin-bottom: 40px;
@@ -3009,4 +3069,13 @@ button.context-tooltip{
 }
 .h-full{
     height: 100%;
+}
+.w-full{
+    width: 100%;
+}
+.contain-inPadding{
+    padding-left: 32px;
+    padding-top: 30px;
+    padding-right: 45px;
+    padding-bottom: 30px;
 }
