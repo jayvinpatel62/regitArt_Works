@@ -118,11 +118,11 @@
     }
     .grid-wrapper{
         display: grid;
-        grid-template-areas: "logo-wrapper main" "logo-wrapper  main" "footer footer";
+        grid-template-areas: "logo-wrapper main" "logo-wrapper  main";
     }
     .overview-page{
         .grid-wrapper{
-            grid-template-areas: "logo-wrapper logo-wrapper" "main main" "footer footer";
+            grid-template-areas: "logo-wrapper logo-wrapper" "main main";
         }
     }
 
@@ -301,8 +301,7 @@
         display: grid;
         grid-template-areas:
         "logo-wrapper logo-wrapper"
-        "main main"
-        "footer footer";
+        "main main";
     }
     .header {
         background: none;

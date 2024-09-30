@@ -341,7 +341,8 @@ table .filterDropdown{
     box-shadow: 4px 4px 4px 0px #00000040;
     position: relative;
     font-family: var(--font-primary);
-    max-height: 100vh;
+    max-height: calc(100vh - 149px);
+    min-height: 700px;
     .offset-sidebar{
         /* padding-top: 60px; */
     }
@@ -429,6 +430,9 @@ table .filterDropdown{
 .my-table{
     table-layout: fixed;
     margin-bottom: 0px !important;
+    @media (max-width:639px){
+        table-layout: auto;
+    }
     /* min-height: 759px; */
     .label-text{
         font-size: 14px;
@@ -676,6 +680,7 @@ table .filterDropdown{
     &.tileview{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(var(--size-grid-item), 1fr));
+        gap: 22px;
     }
 
     .grid-item{
@@ -716,6 +721,8 @@ table .filterDropdown{
             li{
                 margin: 0;
                 font-size: 14px;
+                font-family: var(--font-helventica);
+                line-height: 1;
 
             }
         }
@@ -1531,6 +1538,9 @@ table .filterDropdown{
        &.min-224{
             height: 224px;
        }
+       &.min-210{
+        height: 210px;
+        }
     }
     .searchbox{
         width: 100%;
@@ -1722,13 +1732,14 @@ table .filterDropdown{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 36px;
+    margin-top: 30px;
 }
 .searchbox-head{
     margin-left: auto;
     max-width:362px;
     width: 100%;
     position: relative;
+    bottom: 7px;
    
     &.absolute{
         position: absolute;
@@ -2127,20 +2138,17 @@ table .filterDropdown{
     }
     
 }
-.img-box-270{
-    width: 270px;
-    height: 270px;
-}
-.img-object-fit{
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.img-box-90{
+    height: 90px;
+    width: 80px;
 }
 .img-box-120{
     height: 120px;
     width: 100px;
+}
+.img-box-90-wide{
+    height: 90px;
+    width: 170px;
 }
 .img-box-190{
     height: 120px;
@@ -2164,6 +2172,81 @@ table .filterDropdown{
     display: flex;
     flex-wrap: wrap;
     gap: 20px 30px;
+    grid-template-columns: auto auto auto;
+    gap: 20px 30px;
+    @media (min-width:1400px){
+        .starImgbox-wrapper:first-child{
+            flex-grow: 1;
+            width: 100%;
+        }
+        
+        .infoRightImg1{
+            width: 240px;
+        }
+        .infoRightImg2{
+            width:90px;
+        }
+        .infoRightImg3{
+            width: 170px;
+        }
+    }
+    @media (max-width:1399px){
+        .infoRightImg1,.infoRightImg2,.infoRightImg3{
+            --size:180px;
+        }
+        .infoRightImg3{
+            width: 190px;
+        }
+       
+    }
+    @media (max-width:768px){
+        grid-template-columns: 1fr;
+        .infoRightImg1,.infoRightImg2,.infoRightImg3{
+            --size:auto;
+            /* aspect-ratio:1/1; */
+            width: 100%;
+        }
+       
+    }
+    
+}
+
+.infoRightImg1{
+    overflow: hidden;
+    --size:240px;
+    height:var(--size);
+    aspect-ratio:1/1;
+    
+}
+.infoRightImg2,.infoRightImg3{
+    overflow: hidden;
+    --size:90px;
+   
+    height:var(--size);
+   
+}
+.img-box-240{
+    --size:240px ;
+    width: var(--size);
+    height:var(--size);
+}
+.img-box-250{
+    --size:250px ;
+    width: var(--size);
+    height:var(--size);
+}
+.img-box-270{
+    --size:270px ;
+    width: var(--size);
+    height:var(--size);
+}
+
+.img-object-fit{
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 .flex-full{
     width: 100%;
@@ -2847,9 +2930,14 @@ button.context-tooltip{
     }
     }
 }
+.infInpuBoxtWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 .ginfoInput{
     display: grid;
-    grid-template-columns: 120px 250px;
+    grid-template-columns: 140px 250px;
     gap: 20px;
     justify-content: flex-start;
     .form-control{
@@ -2927,6 +3015,7 @@ button.context-tooltip{
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 77px;
+    gap: 20px;
     @media (max-width:1700px){
         grid-template-columns: auto ;
     }
@@ -2947,6 +3036,9 @@ button.context-tooltip{
 .mb-20{
     margin-bottom: 20px;
 }
+.mb-30{
+    margin-bottom: 30px;
+}
 .mb-38{
     margin-bottom: 38px;
 }
@@ -2954,7 +3046,7 @@ button.context-tooltip{
     margin-bottom: 40px;
 }
 .mb-45{
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 .fw-700{
     font-weight: 700;
@@ -3007,8 +3099,8 @@ button.context-tooltip{
     }
 }
 .contain-btns{
-    padding-top: 20px !important;
-    padding-bottom: 34px !important;
+    padding-top: 15px !important;
+    padding-bottom: 30px !important;
 }
 .documentContain{
    padding-top: 20px !important;
@@ -3078,4 +3170,91 @@ button.context-tooltip{
     padding-top: 30px;
     padding-right: 45px;
     padding-bottom: 30px;
+}
+#accordianContentToggle .uk-accordion>:nth-child(n+2){
+    margin-top: 80px;
+}
+
+.table-alerttab{
+    tr{
+        td{
+            padding: 10px 12px;
+        }
+    }
+}
+
+.bellDropdown{
+    padding: 5px 0 !important;
+    border: 1px solid #C9C9C9;
+    border-radius: 4px;
+    min-width: var(--dropdown-width) !important;
+    box-shadow: 4px 4px 12px 0px #00000029;
+    position: absolute;
+    width: 190px;
+    &::before{
+        content: '';
+        position: absolute;
+        filter: drop-shadow(-0px -1px 1px #00000050);
+        bottom: 100%;
+        right: auto;
+        left: 5px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+    .uk-nav{
+        padding: 0;
+        font-family: var(--font-helventica);
+       
+        .bell-noti-a{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 500;
+            padding: 6px 10px;
+            border-bottom: 1px solid #ccc !important;
+            
+            &:hover{
+                background: #F2F2F2;
+            }
+            .link{
+                font-weight: bold;
+                color: var(--_color);
+                text-decoration: underline;
+            }
+        }
+        >li>a{
+            font-size: 10px;
+            font-weight: 500;
+            padding: 6px 10px;
+           
+            &:hover{
+                background: #F2F2F2;
+            }
+        }
+        li:last-child{
+            .bell-noti-a{
+                border-bottom: none !important;
+            }
+            
+        }
+    }
+    .close-cstm {
+        --size: 18px;
+        background: #D9D9D9;
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--size);
+        color: white;
+        right: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        
+    }
+    
 }
