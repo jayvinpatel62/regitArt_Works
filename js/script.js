@@ -361,6 +361,8 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
+
 //-------------- menu dropdown custom -------------------//
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -434,3 +436,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+//-------------- bell dropdown custom -------------------//
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with the class 'menu-button'
+  const bellBtn = document.getElementById('bellNotify');
+  const bellDropdown = document.querySelector('.bellDropdown');
+
+  // Function to toggle menu visibility
+  function toggleMenu(event) {
+      const rect = event.target.getBoundingClientRect(); // Get the bounding rectangle of the clicked element
+      bellDropdown.style.left = `${rect.left - 0}px`; // Set the menu's left position
+      bellDropdown.style.top = `${rect.bottom + 10}px`; // Set the menu's top position
+      
+      if (bellDropdown.classList.contains('hidden')) {
+        bellDropdown.classList.remove('hidden');
+      } else {
+        bellDropdown.classList.add('hidden');
+      }
+  }
+  
+  // Add click event listener to each button
+  bellBtn.addEventListener('click', toggleMenu);
+
+  
+});
