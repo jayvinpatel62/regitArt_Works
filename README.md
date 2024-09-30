@@ -1,6 +1,7 @@
 # regitArt Final version
 preview link
 https://www.figma.com/design/vzqWCBo6TbrJK8OyGFYGMi/RegitArt-Final-Version-(Copy)?node-id=123-72&t=sntvM7DndR0XHptu-1
+
 Proto type
 https://www.figma.com/proto/vzqWCBo6TbrJK8OyGFYGMi/RegitArt-Final-Version-(Copy)?page-id=6%3A11948&node-id=6-11949&node-type=canvas&viewport=1015%2C477%2C0.08&t=RVMiVMuTgd1EgyeM-1&scaling=min-zoom&content-scaling=fixed
 
