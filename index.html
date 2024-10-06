@@ -39,7 +39,7 @@
                         <i class="bi bi-list"></i>
                     </button>
                     <a href="index.html" class="logo">
-                        <img  loading="lazy" src="assets/logo.png" />
+                        <img src="assets/logo.png" />
                     </a>
                 </div>
 
@@ -51,7 +51,7 @@
                         </span>
                     </button>
                     <a href="javascript://" class="notifiaction-icon" id="bellNotify">
-                        <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                        <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
                     </a>
                     <div class="offset-sidebar">
                             <ul class="uk-nav uk-nav-default" uk-nav>
@@ -66,7 +66,14 @@
                                         <li class="sub-item"><a href="#">LISTOR</a></li>
                                     </ul>
                                 </li>
-                                <li class="item"><a href="#">Artists</a></li>
+                                <li class="item uk-parent">
+                                    <a href="#">Artists</a>
+                                    <ul class="uk-nav-sub">
+                                        <li class="sub-item"><a href="location.html">ADDRESS BOOK</a></li>
+                                        <li class="sub-item"><a href="artist.html">ARTISTS</a></li>
+                                        <li class="sub-item"><a href="contact.html">CONTACTS</a></li>
+                                    </ul>
+                                </li>
                                 <li class="item"><a href="#">Reports</a></li>
                                 <li class="item"><a href="#">Admin</a></li>
                                 <li class="item"><a href="#">Help</a></li>
@@ -86,9 +93,9 @@
             <div class="main main-wrapper" >
                
                     <!---------- header ----------------->
-                    <header class="header">
-                        <nav class="mainmenu px-3 py-2">
-                            <div class="filter-uk-navbar floating-sidebar right" >
+                    <header class="header listpage">
+                        <nav class="mainmenu">
+                            <div class="filter-uk-navbar sidebar-right" >
                                 <button class="close-floating" type="button">
                                     <i class="bi bi-x icon"></i>
                                 </button>
@@ -597,7 +604,35 @@
                                             <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
                                         </td>
                                     </tr>
-                                   
+                                    <tr>
+                                        <td>
+                                            <div class="flagDiv">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/1.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            11
+                                        </td>
+                                        <td>Anna Andersson</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                    </tr>
                                   
                                 </tbody>
                             </table>

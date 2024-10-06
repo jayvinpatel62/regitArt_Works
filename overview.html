@@ -40,37 +40,47 @@
                         <img src="assets/logo.png" />
                     </a>
                 </div>
+
                 <!---------- sidebar ----------------->
-                <aside class="sidebar floating-sidebar flex-grow-1" >
+                <aside class="sidebar floating-sidebar left grow-1" >
                     <button class="close-floating" type="button">
-                        <i class="bi bi-x icon"></i>
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                        </span>
                     </button>
-                    <a href="" class="notifiaction-icon">
+                    <a href="javascript://" class="notifiaction-icon" id="bellNotify">
                         <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
                     </a>
                     <div class="offset-sidebar">
                             <ul class="uk-nav uk-nav-default" uk-nav>
-                                <li class="item"><a href="overview.html">Overview</a></li>
-                                <li class="item uk-parent uk-open">
-                                    <a class="uk-active" href="artwork_tileview.html">Artworks</a>
+                                <li class="item"><a class="uk-active" href="overview.html">Overview</a></li>
+                                <li class="item uk-parent">
+                                    <a href="artwork_tileview.html">Artworks</a>
                                     <ul class="uk-nav-sub">
-                                        <li class="sub-item"><a href="artwork_tileview.html">HISTORIK</a></li>
-                                        <li class="sub-item"><a href="#">PAPPERSKORG</a></li>
+                                        <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
+                                        <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
                                         <li class="sub-item"><a href="#">UTLÅNINGAR</a></li>
                                         <li class="sub-item"><a href="#">INVENTERINGSLISTOR</a></li>
                                         <li class="sub-item"><a href="#">LISTOR</a></li>
                                     </ul>
                                 </li>
-                                <li class="item"><a href="#">Artists</a></li>
+                                <li class="item uk-parent">
+                                    <a href="#">Artists</a>
+                                    <ul class="uk-nav-sub">
+                                        <li class="sub-item"><a href="#">ADDRESS BOOK</a></li>
+                                        <li class="sub-item"><a href="artist.html">ARTISTS</a></li>
+                                        <li class="sub-item"><a href="#">CONTACTS</a></li>
+                                    </ul>
+                                </li>
                                 <li class="item"><a href="#">Reports</a></li>
                                 <li class="item"><a href="#">Admin</a></li>
                                 <li class="item"><a href="#">Help</a></li>
                             </ul>
                     </div>
 
-                    <ul class="uk-nav uk-nav-default">
+                    <ul class="uk-nav uk-nav-default sideNavBottom">
                         <li class="item"><a href="#">konstnärsdatabasen</a></li>
-                        <li class="item"><a href="#" uk-toggle="target: #modal-changePass">User Profile</a></li>
+                        <li class="item"><a href="#">User Profile</a></li>
                         <li class="item"><a href="#">Change language</a></li>
                         <li class="item"><a href="#">Log Out</a></li>
                     </ul>
@@ -78,7 +88,7 @@
             </div>
 
             <!---------- main ----------------->
-            <main class="main flex-grow-1">
+            <main class="main main-wrapper">
                <div class="innerBetween bg-white-box">
                     <div class="overview-wrapper overview-grid">
                         <div class="overview-item overview-1">
