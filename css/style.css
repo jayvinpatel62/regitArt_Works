@@ -3440,9 +3440,11 @@ button.context-tooltip{
             }
         }
         th:first-child,th:nth-child(2){
-            
             @media (min-width:1400px){
-                width: 12% !important;
+                width: 12% ;
+            }
+            @media (min-width:1800px){
+                width: 10% ;
             }
             
         }
@@ -3490,5 +3492,17 @@ button.context-tooltip{
             } 
                 
         }
+    }
+}
+.locationsGrids{
+    .location-item{
+        @media (min-width:1270px){
+            max-width:380px !important;
+        } 
+    }
+    .loction-padd{
+        @media (min-width:1270px){
+            padding-right: 100px;
+        } 
     }
 }
