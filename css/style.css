@@ -3423,6 +3423,7 @@ button.context-tooltip{
     }
 }
 .table-historik{
+    table-layout: fixed;
     @media (max-width:1170px){
         table-layout: auto;
     } 
@@ -3432,14 +3433,27 @@ button.context-tooltip{
                 white-space: nowrap;
             }
             input{
-                max-width: 132px;
+                width: 100%;
+                @media (min-width:1360px){
+                    max-width: 132px;
+                } 
             }
+        }
+        th:first-child,th:nth-child(2){
+            
+            @media (min-width:1400px){
+                width: 12% !important;
+            }
+            
+        }
+        
+        td:first-child{
+            text-align: center;
         }
        
         th:last-child,th:nth-last-child(2){
-            max-width: 132px !important;
             @media (min-width:1600px){
-                max-width:70px !important;
+                width: 12% !important;
             } 
         }
     }
