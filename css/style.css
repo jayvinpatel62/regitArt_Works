@@ -2964,9 +2964,12 @@ button.context-tooltip{
             padding-right: 45px;
             padding-bottom: 21px;
        }
-       @media (max-width:1400px){
-       border-top:1px solid #DDDCDC;
-    }
+       @media (max-width: 1560px){
+            border-top:1px solid #DDDCDC;
+        }
+        @media (min-width: 1561px){
+            border-left:1px solid #DDDCDC;
+        }
     }
 }
 .infInpuBoxtWrapper{
@@ -2978,18 +2981,34 @@ button.context-tooltip{
 }
 .ginfoInput{
     display: grid;
-    grid-template-columns: 140px 250px;
+    grid-template-columns: 140px 1fr;
     gap: 20px;
     justify-content: flex-start;
     
     @container ginfoLeftWrapper (width < 900px){
-        grid-template-columns: 140px 1fr
+        grid-template-columns: 140px 1fr;
     }
     @container ginfoLeftWrapper (width < 480px){
         grid-template-columns: 1fr;
     }
     .form-control{
         max-width: 100%;
+    }
+    &.ginfoInput140-auto{
+        grid-template-columns: 140px auto;
+
+        .form-control{
+            max-width: 100%;
+        }
+    }
+    &.ginfoInput140-1fr{
+        grid-template-columns: 140px 1fr;
+        @container ginfoLeftWrapper (width < 480px){
+            grid-template-columns: 1fr;
+        }
+        .form-control{
+            max-width: 100%;
+        }
     }
     &.ginfoInput205{
         grid-template-columns: 205px 250px;
