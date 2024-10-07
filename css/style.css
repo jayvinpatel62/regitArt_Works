@@ -3458,12 +3458,17 @@ button.context-tooltip{
                 display: flex !important;
                 align-items: center;
                 justify-content: center;
-                min-width: 30px
+                min-width: 30px;
+                padding: 0;
+                input{
+                    margin:auto
+                }
             }
         }
        
         th:first-child,td:first-child{
-            max-width:40px !important;
+            width: 40px;
+            max-width: 30px;
             padding: 5px;
             text-align: center;
             @media (max-width:600px){
