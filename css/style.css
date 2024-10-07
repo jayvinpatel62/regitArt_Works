@@ -3422,3 +3422,54 @@ button.context-tooltip{
         min-height: calc(100vh - 244px);
     }
 }
+.table-historik{
+    @media (max-width:1170px){
+        table-layout: auto;
+    } 
+    tr{
+        th{
+            .label-text{
+                white-space: nowrap;
+            }
+            input{
+                max-width: 132px;
+            }
+        }
+       
+        th:last-child,th:nth-last-child(2){
+            max-width: 132px !important;
+            @media (min-width:1600px){
+                max-width:70px !important;
+            } 
+        }
+    }
+}
+.table-papperskorg{
+    tr{
+        th{
+            .label-text{
+                white-space: nowrap;
+            }
+        }
+        td{
+            .form-check {
+                margin: auto;
+                text-align: center;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                min-width: 30px
+            }
+        }
+       
+        th:first-child,td:first-child{
+            max-width:40px !important;
+            padding: 5px;
+            text-align: center;
+            @media (max-width:600px){
+                width:50px !important;
+            } 
+                
+        }
+    }
+}
