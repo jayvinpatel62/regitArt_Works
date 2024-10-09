@@ -194,18 +194,14 @@
                                     <tr>
                                         <th class="flag">
                                             <div class="flagDiv">
-                                                <img src="/assets/icons/flag-normal.svg" alt="" class="img-fluid">
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </th>
                                         <th class="imgThumb-th"></th>
                                         <th class="">
                                             <label class="label-text" for="">ID-HOMHER</label>
-                                            <div class="uk-inline custom-select">
-                                                <span class="uk-form-icon uk-form-icon-flip arrow"  >
-                                                    <svg id="Capa_1" enable-background="new 0 0 58.026 58.026"  viewBox="0 0 58.026 58.026"  xmlns="http://www.w3.org/2000/svg"><g><path id="XMLID_467_" d="m29.013 46.019c-1.1 0-2.1-.4-2.9-1.2l-25-26c-1.5-1.6-1.5-4.1.1-5.7 1.6-1.5 4.1-1.5 5.7.1l22.1 23 22.1-23c1.5-1.6 4.1-1.6 5.7-.1s1.6 4.1.1 5.7l-25 26c-.8.8-1.8 1.2-2.9 1.2z"/></g></svg>
-                                                </span>
-                                                <select class="uk-select custom-arrow" data-column="Arttype" data-condition="=" data-value="Fast konst" id="Arttype" name="Arttype" onchange="DropDownChange(this)" >
-                                                    <option value="">-</option>
+                                            <div class="uk-inline">
+                                                <select data-column="Arttype" data-condition="=" data-value="Fast konst" id="Arttype" name="Arttype" onchange="DropDownChange(this)" class="uk-input"><option value="">None</option>
                                                     <option selected="selected" value="Fast konst">Fast konst</option>
                                                     <option value="Lös konst">Lös konst</option>
                                                 </select>
@@ -213,52 +209,46 @@
                                         </th>
                                         <th>
                                             <label class="label-text" for="">KONSTNÄR</label>
-                                            <div class="uk-inline custom-select active">
-                                                <span class="uk-form-icon uk-form-icon-flip arrow"  >
-                                                    <svg id="Capa_1" enable-background="new 0 0 58.026 58.026"  viewBox="0 0 58.026 58.026"  xmlns="http://www.w3.org/2000/svg"><g><path id="XMLID_467_" d="m29.013 46.019c-1.1 0-2.1-.4-2.9-1.2l-25-26c-1.5-1.6-1.5-4.1.1-5.7 1.6-1.5 4.1-1.5 5.7.1l22.1 23 22.1-23c1.5-1.6 4.1-1.6 5.7-.1s1.6 4.1.1 5.7l-25 26c-.8.8-1.8 1.2-2.9 1.2z"/></g></svg>
-                                                </span>
-                                                <select class="uk-select custom-arrow" data-column="Arttype" data-condition="=" data-value="Fast konst" id="Arttype" name="Arttype" onchange="DropDownChange(this)" >
-                                                    <option value="">-</option>
-                                                    <option selected="selected" value="Fast konst">Fast konst</option>
-                                                    <option value="Lös konst">Lös konst</option>
-                                                </select>
+                                            <div class="uk-inline">
+                                                <button class="uk-form-icon uk-form-icon-flip filterDemo"  >
+                                                    <i class="bi bi-funnel"></i>
+                                                </button>
+                                                <input class="uk-input" type="text"  >
                                             </div>
                                         </th>
                                         <th>
                                             <label class="label-text" for="">TITEL</label>
-                                            <div class="uk-inline custom-select">
-                                                <span class="uk-form-icon uk-form-icon-flip arrow"  >
-                                                    <svg id="Capa_1" enable-background="new 0 0 58.026 58.026"  viewBox="0 0 58.026 58.026"  xmlns="http://www.w3.org/2000/svg"><g><path id="XMLID_467_" d="m29.013 46.019c-1.1 0-2.1-.4-2.9-1.2l-25-26c-1.5-1.6-1.5-4.1.1-5.7 1.6-1.5 4.1-1.5 5.7.1l22.1 23 22.1-23c1.5-1.6 4.1-1.6 5.7-.1s1.6 4.1.1 5.7l-25 26c-.8.8-1.8 1.2-2.9 1.2z"/></g></svg>
-                                                </span>
-                                                <select class="uk-select custom-arrow" data-column="Arttype" data-condition="=" data-value="Fast konst" id="Arttype" name="Arttype" onchange="DropDownChange(this)" >
-                                                    <option value="">-</option>
-                                                    <option selected="selected" value="Fast konst">Fast konst</option>
-                                                    <option value="Lös konst">Lös konst</option>
-                                                </select>
+                                            <div class="uk-inline">
+                                                <!-- <button class="uk-form-icon uk-form-icon-flip filterDemo"  >
+                                                    <i class="bi bi-funnel"></i>
+                                                </button> -->
+                                                <input class="uk-input" type="date"  >
                                             </div>
                                         </th>
                                         <th>
                                             <label class="label-text" for="">BYGGNAD</label>
                                             <div class="uk-inline">
-                                                <span class="uk-form-icon uk-form-icon-flip filter-icon filter-icon-active">
-                                                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M14.6666 2H1.33325L6.66659 8.30667V12.6667L9.33325 14V8.30667L14.6666 2Z" fill="#CE754C"/>
-                                                    </svg>
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
                                                 </span>
-                                                <select class="uk-select custom-arrow" data-column="Arttype" data-condition="=" data-value="Fast konst" id="Arttype" name="Arttype" onchange="DropDownChange(this)" >
-                                                    <option value="">-</option>
-                                                    <option selected="selected" value="Fast konst">Fast konst</option>
-                                                    <option value="Lös konst">Lös konst</option>
-                                                </select>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </th>
                                         <th>
                                             <label class="label-text" for="">ANTECKNINGAR</label>
                                             <div class="uk-inline" >
-                                                <span class="uk-form-icon uk-form-icon-flip filter-icon">
-                                                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M14.6666 2H1.33325L6.66659 8.30667V12.6667L9.33325 14V8.30667L14.6666 2Z" fill="#CE754C"/>
-                                                    </svg>
+                                                <span class="uk-form-icon uk-form-icon-flip ">
+                                                    <i class="bi bi-funnel"></i>
                                                 </span>
                                                 <input class="uk-input" type="text"  >
                                                 <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
@@ -272,20 +262,93 @@
                                                 </div>
                                             </div>
                                         </th>
-                                        
+                                        <th>
+                                            <label class="label-text" for="">RUM</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">KONSTPORTAL</label>
+                                            <div class="uk-inline " >
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">KONSTNÄR</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <label class="label-text" for="">SKADAD</label>
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon uk-form-icon-flip">
+                                                    <i class="bi bi-funnel"></i>
+                                                </span>
+                                                <input class="uk-input" type="text"  >
+                                                <div class="uk-dropdown filterDropdown" uk-drop="mode: click;pos:top-left;inset: false;boundary: !.uk-input;target: !.uk-inline;animation: uk-animation-slide-top-small; animate-out: true" >
+                                                    <ul class="uk-nav uk-dropdown-nav">
+                                                        <li><a href="#">NO FILTER</a></li>
+                                                        <li><a href="#">EQUAL TO</a></li>
+                                                        <li><a href="#">NOT EQUAL TO</a></li>
+                                                        <li><a href="#">IS EMPTY</a></li>
+                                                        <li><a href="#">IS NOT EMPTY</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody uk-lightbox>
                                     <tr class="tr-click-model">
                                         <td>
                                             <div class="flagDiv tr-click-model">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                   <img src="/assets/icons/flag-normal.svg" alt="" class="img-fluid">
+                                                <a href="" class="flagTrigger" >
+                                                    <img   src="assets/icons/flag.png" alt="" class="img-fluid">
                                                 </a>
                                             </div>
                                         </td>
                                         <td>
                                             <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable ">
+                                                
                                                 <img  src="assets/1.jpg" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
@@ -296,13 +359,22 @@
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Bibiloteset</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                    
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <img src="/assets/icons/flag-active.svg" alt="" class="img-fluid">
-                                                 </a>
+                                                <img  src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
@@ -317,190 +389,248 @@
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a  href="assets/3.png" data-caption="11. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img data-src="assets/3.png" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
-                                        <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                        <td class="text-center" >
+                                            <span class="openNewTab">11</span>
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon active" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a href="assets/4.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/4.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
                                         <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                            <span class="openNewTab">12</span>
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a href="assets/5.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/5.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
                                         <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                            <span class="openNewTab">13</span>
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a href="assets/7.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/7.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
                                         <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                            11
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a href="assets/8.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/8.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
                                         <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                            11
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a href="assets/9.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/9.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
                                         <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                            11
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/1.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
                                         <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                            11
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="flagDiv">
-                                                <a href="" class="flagTrigger flag-icon" >
-                                                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1 11.8333C1 11.8333 1.83333 11 4.33333 11C6.83333 11 8.5 12.6667 11 12.6667C13.5 12.6667 14.3333 11.8333 14.3333 11.8333V1.83333C14.3333 1.83333 13.5 2.66667 11 2.66667C8.5 2.66667 6.83333 1 4.33333 1C1.83333 1 1 1.83333 1 1.83333V11.8333ZM1 11.8333V17.6667" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </a>
+                                                <img  loading="lazy" src="assets/icons/flag.png" alt="" class="img-fluid">
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="assets/2.jpg" data-caption="10. Anna Andersson, Gräset finns" class="imgTable">
-                                                <img data-src="assets/2.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
+                                            <a href="assets/1.jpg" data-caption="8. Anna Andersson, Gräset finns" class="imgTable">
+                                                <img  data-src="assets/1.jpg" src="assets/loader.gif" alt="" class="img-fluid lazyload">
                                             </a>
                                         </td>
                                         <td class="text-center">
-                                            <span data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-title="OPEN IN NEW TAB">10</span>
+                                            11
                                         </td>
                                         <td>Anna Andersson</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
+                                        <td>Anna Andersson</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
+                                        <td>
+                                            2013-04-23
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input custom-tb-check" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked>
+                                        </td>
                                     </tr>
                                   
                                 </tbody>
