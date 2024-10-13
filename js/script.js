@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Handle menu button clicks to toggle the dropdown
-  const menuButtons = document.querySelectorAll('.navlink');
+  const menuButtons = document.querySelectorAll('.onSubmenu .navlink');
   menuButtons.forEach(button => {
     button.addEventListener('click', function(event) {
       event.preventDefault(); // Prevent the default link behavior
@@ -457,6 +457,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add click event listener to each button
   bellBtn.addEventListener('click', toggleMenu);
+ 
+});
+
 
   
-});
