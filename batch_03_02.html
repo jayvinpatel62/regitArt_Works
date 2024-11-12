@@ -383,6 +383,18 @@
                                             <div class="text-title">Listor</div>
                                             <div class="excelExportWrapper currentPageElds">
                                                 <div class="box min-224 bg-white">
+                                                    <div class="searchbox addon border">
+                                                        <input type="search" name="" id="" placeholder="Search">
+                                                        <span class="icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="var(--text-color)"
+                                                                viewBox="0 0 256 256">
+                                                                <path
+                                                                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                                                                </path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
                                                     <div class="item-wrapper scroller-200">
                                                         <div class="d-block form-check custom-form-check">
                                                             <input class="form-check-input" type="checkbox" name="currentPageElds item" id="Inköpsår" checked>
@@ -496,18 +508,18 @@
 
                                     </div>
                                     <div class="contain contain-btns">
-                                        <div class="d-flex align-items-center gap-3 flex-wrap btn-josefin btn-flex-group"
+                                        <div class="d-flex align-items-center gap-15px flex-wrap btn-josefin btn-flex-group"
                                             id="toggleGen-BtnsGroup">
                                             <button class="btn btn-outline-light-gray radius-8 bg-white">SAVE</button>
-                                            <button class="btn btn-outline-light-gray radius-8 bg-white">SAVE AND
+                                            <button class="btn btn-outline-light-gray radius-8 bg-white" style="min-width: 150px;">SAVE AND
                                                 CLOSE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white"
-                                                uk-toggle="target: #modal-deleteWorks">DELETE</button>
+                                                uk-toggle="target: #modal-deleteWorks" style="min-width: 120px;">DELETE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white"
-                                                uk-toggle="target: #modal-duplicate-work">DUPLICATE</button>
+                                                uk-toggle="target: #modal-duplicate-work" style="min-width: 120px;">DUPLICATE</button>
                                             <button class="btn btn-outline-light-gray radius-8 bg-white"
-                                                uk-toggle="target:#modal-createPrintPDF">PRINT PDF</button>
-                                            <button class="btn btn-outline-light-gray radius-8 bg-white">HISTORY</button>
+                                                uk-toggle="target:#modal-createPrintPDF" style="min-width: 140px;">PRINT PDF</button>
+                                            <button class="btn btn-outline-light-gray radius-8 bg-white" style="min-width: 120px;">HISTORY</button>
                                             <div class="d-flex align-items-center gap-2">
                                                 <button class="btn btn-outline-light-gray btn-fab fab-32 bg-white"
                                                     id="arrowDownClick">
@@ -1028,10 +1040,10 @@
                                                     </svg>
                                                 </button>
                                             </div>
-                                            <div class="starImgGrid">
+                                            <div class="starImgGrid grid-template">
                                                 <div class="starImgbox-wrapper">
-                                                    <div class="img-object-fit infoRightImg1 mb-15">
-                                                        <img src="assets/1.jpg" alt="" class="img-fluid">
+                                                    <div class="inn-img-box img-box-270 flex-full mb-15">
+                                                        <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFydHxlbnwwfHwwfHx8MA%3D%3D" alt="" class="img-fluid">
                                                     </div>
                                                     <div class="starNradioButton">
                                                         <a href="" class="star-bookmark primary-color">
@@ -1049,8 +1061,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="starImgbox-wrapper">
-                                                    <div class="img-object-fit infoRightImg2 mb-15">
-                                                        <img src="assets/1.jpg" alt="" class="img-fluid">
+                                                    <div class="inn-img-box img-box-120 mb-15">
+                                                        <img src="https://images.unsplash.com/photo-1579541814924-49fef17c5be5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXJ0fGVufDB8fDB8fHww" alt="" class="img-fluid">
                                                     </div>
                                                     <div class="starNradioButton">
                                                         <a href="" class="star-bookmark primary-color">
@@ -1068,8 +1080,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="starImgbox-wrapper">
-                                                    <div class="img-object-fit infoRightImg3 mb-15">
-                                                        <img src="assets/1.jpg" alt="" class="img-fluid">
+                                                    <div class="inn-img-box img-box-120 mb-15">
+                                                        <img src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGFydHxlbnwwfHwwfHx8MA%3D%3D" alt="" class="img-fluid">
                                                     </div>
                                                     <div class="starNradioButton">
                                                         <a href="" class="star-bookmark primary-color">
@@ -2456,13 +2468,13 @@
         <button type="button" class="btn-close close-cstm" data-bs-dismiss="offcanvas" aria-label="Close">
             <i class="bi bi-x icon"></i>
         </button>
-        <div class="offcanvas-body">
-            <div class="p-3">
+        <div class="offcanvas-body p-0">
+            <div class="p-0">
                 <div class="d-flex align-items-center gap-3 flex-wrap" id="locationBtns">
-                    <button class="btn btn-outline-light-gray radius-8">SAVE</button>
-                    <button class="btn btn-outline-light-gray radius-8" id="saveandclose">SAVE AND CLOSE</button>
+                    <button class="btn btn-outline-light-gray radius-8" style="min-width: 140px;">SAVE</button>
+                    <button class="btn btn-outline-light-gray radius-8" id="saveandclose" style="min-width: 210px;">SAVE AND CLOSE</button>
                 </div>
-                <br>
+                <div class="spacer-80"></div>
                 <div class="d-flex flex-column gap-3">
                     <div class="dropdown-drop">
                         <button class="btn title">
