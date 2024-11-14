@@ -468,3 +468,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   
+
+//-------------- left sidebar menu active -------------------//
+document.querySelectorAll('.uk-main-sidebar-nav li').forEach(item => {
+  item.addEventListener('click', function () {
+      // Remove uk-active from all items
+      document.querySelectorAll('.uk-main-sidebar-nav li').forEach(li => li.classList.remove('uk-active'));
+      
+      // Add uk-active to the clicked item
+      this.classList.add('uk-active');
+  });
+});
+document.querySelectorAll('.uk-nav-sub li').forEach(item => {
+  item.addEventListener('click', function () {
+      // Remove uk-active from all items
+      document.querySelectorAll('.uk-nav-sub li').forEach(li => li.classList.remove('active'));
+      
+      // Add uk-active to the clicked item
+      this.classList.add('active');
+  });
+})
