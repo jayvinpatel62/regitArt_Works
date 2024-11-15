@@ -2308,7 +2308,7 @@ table .filterDropdown{
 .primary-color{
     color: var(--primary-color);
 }
-
+/*---------- update 15112024 jayvin ------*/
 .starImgGrid{
     display: flex;
     flex-wrap: wrap;
@@ -2325,9 +2325,41 @@ table .filterDropdown{
     &.grid-template{
         display: grid;
         gap: 20px;
-        width: 270px;
-        grid-template-columns: auto auto;
-        grid-template-rows: 1fr;
+        
+        
+        @media screen and (min-width:1560px) {
+            width: 270px;
+            grid-template-columns: auto auto;
+            grid-template-rows: 1fr;
+            .starImgbox-wrapper:first-child{
+                .inn-img-box{
+                    height: 270px;
+                    width: 100%;
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+        @media screen and (max-width:1559px) {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            .inn-img-box{
+                height:120px;
+                width: 120px !important;
+            }
+        }
+        
+        .inn-img-box{
+            height:120px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+        .inn-img-box{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        
     }
     .flex-full {
         width: 100%;
@@ -2384,7 +2416,7 @@ table .filterDropdown{
     }
     
 }
-
+/*---------- update 15112024 jayvin end ------*/
 .infoRightImg1{
     overflow: hidden;
     --size:240px;
