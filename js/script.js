@@ -95,14 +95,22 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 // Get all dropdown buttons
 const mydropdowns = document.querySelectorAll('.dropdown-drop');
 
+
 // Loop through each dropdown
 mydropdowns.forEach(function(dropdown) {
   let button = dropdown.querySelector('.dropdown-drop .btn');
+  let arrowbutton = dropdown.querySelector('.dropdown-drop .arrow');
   let dropdownContent = dropdown.querySelector('.dropdown-content');
 
   // Toggle dropdown content visibility on button click
   button.addEventListener('click', function() {
     dropdownContent.classList.toggle('show');
+    arrowbutton.classList.toggle('rotate');
+    
+  });
+  arrowbutton.addEventListener('click', function() {
+    dropdownContent.classList.toggle('show');
+    this.classList.toggle('rotate');
   });
 
   // Close dropdown when clicking outside of it
