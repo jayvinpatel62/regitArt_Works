@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+            user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png"> <!-- toral18012023-->
+    <title>RegitArt</title>
+
+    <script src="js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/css/uikit.min.css" />
+
+    <!-- phosphor-icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+
+    <!-- rich text editor -->
+    <link rel="stylesheet" href="richtexteditor/rte_theme_default.css" />
+    <script type="text/javascript" src="richtexteditor/rte.js"></script>
+    <script type="text/javascript" src='richtexteditor/plugins/all_plugins.js'></script>
+   
+      
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <div class="wrapper grid-wrapper">
+        <!---------- left side logo wrapper ----------------->
+        <div class="logo-side-wrapper">
+            <!---------- logo ----------------->
+            <div class="logo-wrapper">
+                <button class="btn toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a href="index.html" class="logo">
+                    <img loading="lazy" src="assets/logo.png" />
+                </a>
+            </div>
+
+            <!---------- sidebar ----------------->
+            <aside class="sidebar floating-sidebar left grow-1">
+                <button class="close-floating" type="button">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--text2-light-color)"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <a href="javascript://" class="notifiaction-icon" id="bellNotify">
+                    <img  loading="lazy" src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                </a>
+                <div class="offset-sidebar">
+                    <ul class="uk-nav uk-nav-default" uk-nav>
+                        <li class="item"><a href="overview.html">Overview</a></li>
+                        <li class="item uk-parent uk-open">
+                            <a class="uk-active" href="artwork_tileview.html">Artworks</a>
+                            <ul class="uk-nav-sub">
+                                <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
+                                        <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
+                                        <li class="sub-item"><a href="loan_b4_8_1.html">UTLÅNINGAR</a></li>
+                                        <li class="sub-item"><a class="uk-active" href="inventory_list_b4_9_2.html">INVENTERINGSLISTOR</a></li>
+                                        <li class="sub-item"><a href="list_b4_9_1.html">LISTOR</a></li>
+                            </ul>
+                        </li>
+                        <li class="item"><a href="#">Artists</a></li>
+                        <li class="item"><a href="#">Reports</a></li>
+                        <li class="item"><a href="#">Admin</a></li>
+                        <li class="item"><a href="#">Help</a></li>
+                    </ul>
+                </div>
+
+                <ul class="uk-nav uk-nav-default sideNavBottom">
+                    <li class="item"><a href="#">konstnärsdatabasen</a></li>
+                    <li class="item"><a href="#">User Profile</a></li>
+                    <li class="item"><a href="#">Change language</a></li>
+                    <li class="item"><a href="#">Log Out</a></li>
+                </ul>
+            </aside>
+        </div>
+        <!---------- left side logo wrapper close----------------->
+        <!---------- main ----------------->
+        <main class="main main-wrapper">
+            <div class="innerBetween h-full">
+                <div class="tab-with-search-nav singleSearchBar">
+
+                    <ul id="tabNavSwitcher" class="uk-subnav uk-subnav-pill custom-tab--nav"
+                        uk-switcher="connect: #tab-content; animation: uk-animation-fade">
+                        <li class="tab-nav-item"><a href="#">INVENTORY LIST</a></li>
+                        <li class="tab-nav-item"><a href="#">HISTORY</a></li>
+                    </ul>
+                </div>
+
+                <div class="tab-content-wrapper bg-white-box p-0 h-full">
+                    <div id="tab-content" class="uk-switcher h-full">
+
+                        <!------ tab INVENTORY LIST------->
+                        <div class="inventoryList tab-inner-content h-full">
+                            <div class="tabinn-padding">
+                               <div class="mb-40">
+                                    <div class="d-flex align-items-center gap-15px flex-wrap btn-josefin btn-flex-group">
+                                        <button class="btn btn-outline-light-gray radius-8 bg-white">SAVE</button>
+                                        <button class="btn btn-outline-light-gray radius-8 bg-white" style="min-width: 150px;">SAVE AND
+                                            CLOSE</button>
+                                        <button class="btn btn-outline-light-gray radius-8 bg-white"
+                                            uk-toggle="target: #modal-SendEmailInventory" style="min-width: 120px;">SEND LIST TO RECEIVER</button>
+                                    </div>
+                                </div>
+                               
+                                <div class="ginfo-grid-2col mb-3">
+                                    <div class="infInpuBoxtWrapper">
+                                        <div class="d-block form-check custom-form-check">
+                                            <input class="form-check-input" type="checkbox" name="setreminder" id="setreminder">
+                                            <label for="setreminder">Set reminder</label>
+                                        </div>
+                                        <div class="ginfoInput ginfoInput170-450">
+                                            <label for="Nameofloan">Name of loan:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="ginfoInput ginfoInput170-450">
+                                            <label for="Konstnär">Description:</label>
+                                            <textarea class="form-control w-full" rows="5" style="height: 100px;" name="" id=""></textarea>
+                                        </div>
+                                        <div class="ginfoInput ginfoInput170-450">
+                                            <label for="Konstnär">Information to user on page:</label>
+                                            <textarea class="form-control w-full" rows="5" style="height: 100px;" name="" id=""></textarea>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="infInpuBoxtWrapper">
+                                        <div class="ginfoInput ginfoInput165-372 align-v-center">
+                                            <label for="startdate">Created:</label>
+                                            <input type="date" class="form-control" placeholder="">
+                                        </div>
+                                        <div class="ginfoInput ginfoInput165-372 align-v-center">
+                                            <label for="enddate">Date due:</label>
+                                            <input type="date" class="form-control" placeholder="">
+                                        </div>
+                                        <div class="ginfoInput ginfoInput165-372 align-v-center">
+                                            <label for="Receiver">Receiver</label>
+                                            <div class="dropdown-drop">
+                                                <input type="text" class="form-control btn text-start">
+                                                
+                                                <div class="dropdown-content text-left">
+                                                    <div class="items-list">
+                                                        <div class="input-group-addon icon-right border-0">
+                                                            <input type="search" name="" id="" placeholder="Search">
+                                                            <span class="icon">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    width="16" height="16"
+                                                                    fill="var(--text2-light-color)"
+                                                                    viewBox="0 0 256 256">
+                                                                    <path
+                                                                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                                                                    </path>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <div class="items-list scroller-165">
+                                                            <button type="button"
+                                                                class="item text-start"
+                                                                data-item="item1">
+                                                                Bertil Bertsson/b.bertsson@kommun.se
+                                                            </button>
+                                                            <button type="button"
+                                                                class="item text-start"
+                                                                data-item="item2">
+                                                                Cecilia Coder/cecilia.cedor2@bro.se
+                                                            </button>
+                                                            <button type="button"
+                                                                class="item text-start"
+                                                                data-item="item3">
+                                                                Daniel Danielsson/d.d@kommun
+                                                            </button>
+                                                            <button type="button"
+                                                                class="item text-start"
+                                                                data-item="item4">
+                                                                Eva Evertsson/eevertsson@kommun.se
+                                                            </button>
+                                                            <button type="button"
+                                                                class="item text-start"
+                                                                data-item="item5">
+                                                                Felix Friden
+                                                            </button>
+                                                        </div>
+                                                        <a href="" class="item-option">
+                                                            <span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="icon" width="16" height="16"
+                                                                    fill="var(--text2-light-color)"
+                                                                    viewBox="0 0 256 256">
+                                                                    <path
+                                                                        d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z">
+                                                                    </path>
+                                                                </svg>
+                                                            </span>
+                                                            Add or edit artists
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                       
+                                        </div>
+                                        <div class="ginfoInput ginfoInput165-372 align-v-center">
+                                            <div class="d-block form-check custom-form-check">
+                                                <input class="form-check-input" type="checkbox" name="setreminder" id="setreminder">
+                                                <label for="setreminder">Set reminder</label>
+                                            </div>
+                                            <div class="d-flex gap-2 align-v-center">
+                                                <input type="text" class="form-control numSelect" style="width: 40px;">
+                                                <label for="sdsd">days before end of loan</label>
+                                            </div>
+                                        </div>
+                                        <div class="ginfoInput ginfoInput165-372 align-v-center">
+                                            <label for="sendreminderto">Send reminder to:</label>
+                                            <div class="uk-inline custom-select v2">
+                                                <span class="uk-form-icon uk-form-icon-flip arrow"  >
+                                                    <svg id="Capa_1" enable-background="new 0 0 58.026 58.026"  viewBox="0 0 58.026 58.026"  xmlns="http://www.w3.org/2000/svg"><g><path id="XMLID_467_" d="m29.013 46.019c-1.1 0-2.1-.4-2.9-1.2l-25-26c-1.5-1.6-1.5-4.1.1-5.7 1.6-1.5 4.1-1.5 5.7.1l22.1 23 22.1-23c1.5-1.6 4.1-1.6 5.7-.1s1.6 4.1.1 5.7l-25 26c-.8.8-1.8 1.2-2.9 1.2z"/></g></svg>
+                                                </span>
+                                                <select class="uk-select custom-arrow" data-column="Arttype" data-condition="=" data-value="Fast konst" id="Arttype" name="Arttype" onchange="DropDownChange(this)" >
+                                                    <option value="">-</option>
+                                                    <option selected="selected" value="Fast konst">Fast konst</option>
+                                                    <option value="Lös konst">Lös konst</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link-inline my-28 relative cursor addWorkFrom-trigger" id="addWorkFrom-trigger">
+                                    <img src="assets/icons/plus-icon.svg" alt="" class="icon-size size-24">
+                                    <span class="fs-16 josefin">ADD WORKS FROM</span>
+                                    <div class="uk-dropdown global-dropdown addWorkFrom-dropdown hidden">
+                                        <ul class="uk-nav uk-dropdown-nav striped">
+                                            <li><a href="#">LIST</a></li>
+                                            <li><a href="#">FLAGGED WORKS</a></li>
+                                            <li><a href="#modal-advanceSearchInventory" uk-toggle>ADVANCED SEARCH</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!---------- table ----------------->
+                                <div class="uk-overflow-auto table-parent position-relative bg-white grow-1 w-100 hidden-scrollbar">
+                                    <table class="uk-table uk-table-striped my-table table-loan_b4_8_2 th-16">
+                                            <tr>
+                                                <th>
+                                                    &nbsp;
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block text-start" for="">ID NUMBER</label>
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block" for="">ARTIST</label>
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block" for="">TITLE</label>
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block" for="">MEDIUM</label>
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block" for="">CITY</label>
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block" for="">BUILDING</label>
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block" for="">FLOOR</label>
+                                                </th>
+                                                <th>
+                                                    <label class="label-text d-block" for="">RETURNED</label>
+                                                </th>
+                                                <th class="acc-rrow">
+                                                    &nbsp;
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <a href=""><img src="assets/icons/delete-circle-icon.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>RIW-456</td>
+                                                <td>Sandor Sandström</td>
+                                                <td>Sanden finns</td>
+                                                <td>Painting</td>
+                                                <td>City1</td>
+                                                <td>Building1</td>
+                                                <td></td>
+                                                <td>NO</td>
+                                                <td class="acc-rrow"><a href=""><img src="assets/icons/arrow-down.svg" alt="" class="img-fluid"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <a href=""><img src="assets/icons/delete-circle-icon.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>RIW-456</td>
+                                                <td>Sandor Sandström</td>
+                                                <td>Sanden finns</td>
+                                                <td>Painting</td>
+                                                <td>City1</td>
+                                                <td>Building1</td>
+                                                <td></td>
+                                                <td>NO</td>
+                                                <td class="acc-rrow"><a href=""><img src="assets/icons/arrow-down.svg" alt="" class="img-fluid"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <a href=""><img src="assets/icons/delete-circle-icon.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>RIW-456</td>
+                                                <td>Sandor Sandström</td>
+                                                <td>Sanden finns</td>
+                                                <td>Painting</td>
+                                                <td>City1</td>
+                                                <td>Building1</td>
+                                                <td></td>
+                                                <td>NO</td>
+                                                <td class="acc-rrow"><a href=""><img src="assets/icons/arrow-down.svg" alt="" class="img-fluid"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <a href=""><img src="assets/icons/delete-circle-icon.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>RIW-456</td>
+                                                <td>Sandor Sandström</td>
+                                                <td>Sanden finns</td>
+                                                <td>Painting</td>
+                                                <td>City1</td>
+                                                <td>Building1</td>
+                                                <td></td>
+                                                <td>NO</td>
+                                                <td class="acc-rrow"><a href=""><img src="assets/icons/arrow-down.svg" alt="" class="img-fluid"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <a href=""><img src="assets/icons/delete-circle-icon.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>RIW-456</td>
+                                                <td>Sandor Sandström</td>
+                                                <td>Sanden finns</td>
+                                                <td>Painting</td>
+                                                <td>City1</td>
+                                                <td>Building1</td>
+                                                <td></td>
+                                                <td>NO</td>
+                                                <td class="acc-rrow"><a href=""><img src="assets/icons/arrow-down.svg" alt="" class="img-fluid"></a></td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!------ tab HISTORY ------->
+                        <div class="historyTab tab-inner-content h-full">
+                            <div class="tabinn-padding">
+                               
+                                <div class="uk-overflow-auto table-parent position-relative bg-white grow-1 w-100 hidden-scrollbar">
+                                    <table class="uk-table uk-table-striped my-table table-history-invetory th-16">
+                                            <tr>
+                                                <th width="200px"> <label class="label-text d-block text-start" for="">DATE SENT</label></th>
+                                                <th> <label class="label-text d-block text-start" for="">VIEW MAIL</label></th>
+                                                <th> <label class="label-text d-block text-start" for="">DOWNLOAD ATTACHED DOCUMENT</label></th>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>2024-04-01</td>
+                                                <td class="text-left">
+                                                    <a href="javascript://" uk-toggle="target: #modal-EmailDetails"><img src="assets/icons/ic_outline-email.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>attachment1.pdf</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2024-04-01</td>
+                                                <td class="text-left">
+                                                    <a href="javascript://" uk-toggle="target: #modal-EmailDetails"><img src="assets/icons/ic_outline-email.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>attachment1.pdf</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2024-04-01</td>
+                                                <td class="text-left">
+                                                    <a href="javascript://" uk-toggle="target: #modal-EmailDetails"><img src="assets/icons/ic_outline-email.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>attachment1.pdf</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2024-04-01</td>
+                                                <td class="text-left">
+                                                    <a href="javascript://" uk-toggle="target: #modal-EmailDetails"><img src="assets/icons/ic_outline-email.svg" alt="" class="img-fluid"></a>
+                                                </td>
+                                                <td>attachment1.pdf</td>
+                                            </tr>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!---------- main close----------------->
+    </div>
+    <footer class="footer copyright">@2024 REGITART | ALL RIGHTS RESERVED</footer>
+
+
+     <!---------- modal-advanceSearchInventory ----------------->
+     <div id="modal-advanceSearchInventory" class="uk-flex-top no-backdrop" uk-modal>
+        <div class="uk-modal-dialog custom-dialog custom-dialog-450 uk-modal-body uk-margin-auto-vertical">
+            <div class="draggable draggable-area"></div>
+            <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+    
+            <div>
+                <h1 class="modal-title text-start uppr">ADVANCED SEARCH</h1>
+                <br>
+               
+                <div class="col-12" style="min-height: 270px;">
+                    <div class="dropdown-drop">
+                        <input type="text" class="form-control btn text-start" value="Saved search 65">
+                        
+                        <div class="dropdown-content text-left">
+                            <div class="items-list">
+                                <div class="input-group-addon icon-right border-0">
+                                    <input type="search" name="" id="" placeholder="Search">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            width="16" height="16"
+                                            fill="var(--text2-light-color)"
+                                            viewBox="0 0 256 256">
+                                            <path
+                                                d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="items-list scroller-165">
+                                    <a href="javascript://" class="item">
+                                       Saved search 1
+                                    </a>
+                                    <a href="javascript://" class="item">
+                                        Saved search 2
+                                     </a>
+                                     <a href="javascript://" class="item">
+                                        Saved search 3
+                                     </a>
+                                     <a href="javascript://" class="item">
+                                        Saved search 4
+                                     </a>
+                                     <a href="javascript://" class="item">
+                                        Saved search 5
+                                     </a>
+                                     <a href="javascript://" class="item">
+                                        Saved search 6
+                                     </a>
+                                </div>
+                                <!-- <ul class="items-list scroller-165">
+                                    <li class="item">
+                                       Saved search 1
+                                    </li>
+                                    <li class="item">
+                                        Saved search 2
+                                     </li>
+                                     <li class="item">
+                                        Saved search 3
+                                     </li>
+                                     <li class="item">
+                                        Saved search 4
+                                     </li>
+                                     <li class="item">
+                                        Saved search 5
+                                     </li>
+                                     <li class="item">
+                                        Saved search 6
+                                     </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <br>
+                <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                    <a href="" class="btn btn-flex btn-green btn-140 uppr">IMPORT TO LIST</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!---------- modal-SendEmailInventory ----------------->
+     <div id="modal-SendEmailInventory" class="uk-flex-top no-backdrop" uk-modal>
+        <div class="uk-modal-dialog custom-dialog custom-dialog-740 uk-modal-body uk-margin-auto-vertical">
+            <div class="draggable draggable-area"></div>
+            <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+    
+            <div>
+                <div class="sendEmail-padding">
+                    <h1 class="modal-title text-center uppr">SEND INVENTORY LIST VIA EMAIL</h1>
+                    <br>
+                    <br>
+                    <div class="d-flex flex-column gap-2" >
+                        <div class="ginfoInput ginfoInput130-400">
+                            <label for="to">To:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="ginfoInput ginfoInput130-400">
+                            <label for="cc">CC:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="ginfoInput ginfoInput130-400">
+                            <label for="title">Title:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="ginfoInput ginfoInput130-400">
+                            <div>
+                                <label for="to">Content:</label>
+                                <br>
+                                <br>
+                                <div>
+                                    <img src="assets/editor-icons/ph_files-thin.svg" alt="">
+                                    <label for="to">Choose Template</label>
+                                </div>
+                                <br>
+                                <div class="relative">
+                                    <ul uk-accordion class="arrow accordian-createpdf acc-chooseTmep">
+                                        <li class="uk-open">
+                                            <a class="uk-accordion-title fs-12" href>Choose template</a>
+                                            <div class="uk-accordion-content scroller-170">
+                                                <div class="paper-size-btns">
+                                                    <a href="" class="link">My template 1</a>
+                                                    <a href="" class="link">My template 2</a>
+                                                    <a href="" class="link">My template 3</a>
+                                                    <a href="" class="link">My template 4</a>
+                                                    <a href="" class="link">My template 5</a>
+                                                    <a href="" class="link">My template 6</a>
+                                                    <a href="" class="link">My template 7</a>
+                                                    <a href="" class="link">My template 8</a>
+                                                    <a href="" class="link">My template 9</a>
+                                                    <a href="" class="link">My template 10</a>
+                                                </div>
+            
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="my-rich_editor1" style="width: 100%">
+                                <p>Hello world!</p>
+                            </div>
+                            <!-- <div class="editor-box-border">
+                                <div class="padd-12px d-flex flex-column gap-2 border-bottom">
+                                    <div class="editor-controller gap-10">
+                                        <div class="d-flex">
+                                            <select class="form-select form-select-editor form-select128 flex-grow-1">
+                                                <option value="v1">Helvetica</option>
+                                                <option value="v1">Helvetica</option>
+                                                <option value="v1">Helvetica</option>
+                                            </select>
+                                            <select class="form-select form-select-editor form-select54">
+                                                <option value="v1">12</option>
+                                                <option value="v1">13</option>
+                                                <option value="v1">14</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex gap-6">
+                                                <span class="icon-editor cursor">
+                                                    <img src="assets/editor-icons/Bold.svg" alt="" class="img-fluid">
+                                                </span> 
+                                                <span class="icon-editor cursor">
+                                                    <img src="assets/editor-icons/Italic.svg" alt="" class="img-fluid">
+                                                </span>   
+                                                <span class="icon-editor cursor">
+                                                    <img src="assets/editor-icons/Underline.svg" alt="" class="img-fluid">
+                                                </span>                                  
+                                        </div>
+                                        <div class="d-flex gap-6">
+                                            <span class="icon-editor cursor">
+                                                <img src="assets/editor-icons/Key point list.svg" alt="" class="img-fluid">
+                                            </span> 
+                                            <span class="icon-editor cursor">
+                                                <img src="assets/editor-icons/left-align.svg" alt="" class="img-fluid">
+                                            </span>   
+                                            <span class="icon-editor cursor">
+                                                <img src="assets/editor-icons/center-align.svg" alt="" class="img-fluid">
+                                            </span>  
+                                            <span class="icon-editor cursor">
+                                                <img src="assets/editor-icons/right-align.svg" alt="" class="img-fluid">
+                                            </span>                                   
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-outline-light-gray radius-8 bg-white">ADD DOCUMENT</button>
+                                    </div>
+                                </div>
+                                <textarea class="form-control no-border" id="" cols="10" rows="10"></textarea>
+                            </div> -->
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="d-flex align-items-center justify-content-center gap-2 text-center">
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">SAVE EMAIL TEMPLATE</a>
+                        <a href="" class="btn btn-flex btn-green btn-140 uppr">SEND</a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+     <!---------- modal-mailDetails ----------------->
+     <div id="modal-EmailDetails" class="uk-flex-top no-backdrop" uk-modal>
+        <div class="uk-modal-dialog custom-dialog custom-dialog-740 uk-modal-body uk-margin-auto-vertical">
+            <div class="draggable draggable-area"></div>
+            <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+    
+            <div>
+               
+                <div class="email-detail-padding">
+                    <h1 class="modal-title text-center uppr">EMAIL DETAILS</h1>
+                    <div class="spacer-43"></div>
+                    <div class="helvetica fs-16">
+                        <div class="row align-items-center">
+                            <div class="col col-md-7">
+                                <div class="text-subject fs-20 "><span>Subject:&nbsp; </span><span>Work Update for RW-678</span></div>
+                            </div>
+                            <div class="col col-md-5 text-md-end">
+                                <span>Thu, May 23, 2024 at 8:15 PM</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <span>Joakim</span>
+                            <span>
+                                &lt;joakim@email.com&gt;
+                            </span>
+                        </div>
+                        <br>
+                        <div>
+                            <span>Reply-To: &nbsp;</span>
+                            <span>
+                                Olivia Nordell 
+                                <span>&lt;olivia.nordell@email.com&gt;</span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>To: &nbsp;</span>
+                            <span>
+                                olivia.nordell@email.com
+                            </span>
+                        </div>
+                        <br>
+                        <div>
+                            <p>
+                                Dear Olivia,
+                                <br>
+                                <br>
+                            
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                                type specimen book.
+                                <br>
+                                <br>
+                            
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                Lorem Ipsum.
+                                <br>
+                                <br>
+                            
+                                Regards,
+                                <br>
+                                Joakim
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+     <!----------- tooltip popovermenu ---------->
+     <div class="pop-menu" id="tooltip-context">
+        <a class="menu-item" data-action="action1">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text2-light-color)"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z">
+                    </path>
+                </svg>
+            </span>
+            Edit
+        </a>
+        <a class="menu-item" data-action="action2" uk-toggle="target: #modal-deletevalue">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text2-light-color)"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z">
+                    </path>
+                </svg>
+            </span>
+            Delete
+        </a>
+    </div>
+    <div class="uk-dropdown bellDropdown hidden">
+        <ul class="uk-nav uk-dropdown-nav">
+            <li>
+                <div class="bell-noti-a">
+                    <span>New alert in <a href="javascript://" class="bold link">RIW-456</a></span>
+                    <span>2024-01-24 14:46</span>
+                    <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+                </div>
+            </li>
+            <li>
+                <div class="bell-noti-a">
+                    <span>Ny notis i <a href="javascript://" class="bold link">inventeringslista</a></span>
+                    <span>2024-01-24 14:46</span>
+                    <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+                </div>
+            </li>
+            <li>
+                <div class="bell-noti-a">
+                    <span>Ny notis i <a href="javascript://" class="bold link">utlaning</a></span>
+                    <span>2024-01-24 14:46</span>
+                    <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+                </div>
+            </li>
+            <li>
+                <div class="bell-noti-a">
+                    <span>Ny notis i <a href="javascript://" class="bold link">RIW-455</a></span>
+                    <span>2024-01-24 14:46</span>
+                    <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+                </div>
+            </li>
+            <li>
+                <div class="bell-noti-a">
+                    <span>Ny notis i <a href="javascript://" class="bold link">utlaning</a></span>
+                    <span>2024-01-24 14:46</span>
+                    <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit-icons.min.js"></script>
+
+    <!--Common script -->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+         $(document).ready(function(){
+        $('.addWorkFrom-trigger').click(function(){
+            $('.addWorkFrom-dropdown').toggleClass('hidden'); // Toggle the 'hidden' class
+        });
+        });
+    </script>
+    <script>
+        var editor1cfg = {}
+        editor1cfg.toolbar = "basic";
+        // editor1cfg.showFloatTextToolBar = false;
+        // editor1cfg.showSelectedBlock = false;
+        var editor1 = new RichTextEditor("#my-rich_editor1", editor1cfg);
+        
+        //editor1.setHTMLCode("Use inline HTML or setHTMLCode to init the default content.");
+    </script>
+
+
+</body>
+
+</html>

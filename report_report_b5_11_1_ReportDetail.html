@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+            user-scalable=0" name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png"> <!-- toral18012023-->
+        <title>RegitArt</title>
+
+        <script src="js/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/css/uikit.min.css" />
+
+        <!-- phosphor-icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+       
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="wrapper grid-wrapper">
+            <div class="logo-side-wrapper">
+                <!---------- logo ----------------->
+                <div class="logo-wrapper">
+                    <button class="btn toggleSidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.png" />
+                    </a>
+                </div>
+
+                <!---------- sidebar ----------------->
+                <aside class="sidebar floating-sidebar left grow-1" >
+                    <button class="close-floating" type="button">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                        </span>
+                    </button>
+                    <a href="javascript://" class="notifiaction-icon" id="bellNotify">
+                        <img src="assets/icons/bell.png" class="img-fluid" style="width: 30px;" />
+                    </a>
+                    <div class="offset-sidebar">
+                        <ul class="uk-nav uk-main-sidebar-nav uk-nav-default" uk-nav>
+                            <li class="item"><a href="overview.html">Overview</a></li>
+                            <li class="item uk-parent">
+                                <a href="artwork_tileview.html">Artworks</a>
+                                <ul class="uk-nav-sub">
+                                    <li class="sub-item"><a href="historik.html">HISTORIK</a></li>
+                                    <li class="sub-item"><a href="papperskorg.html">PAPPERSKORG</a></li>
+                                    <li class="sub-item"><a href="loan_b4_8_1.html">UTLÅNINGAR</a></li>
+                                    <li class="sub-item"><a href="inventory_list_b4_9_2.html">INVENTERINGSLISTOR</a></li>
+                                    <li class="sub-item"><a href="list_b4_9_1.html">LISTOR</a></li>
+                                </ul>
+                            </li>
+                            <li class="item uk-parent">
+                                <a href="#">Artists</a>
+                                <ul class="uk-nav-sub">
+                                    <li class="sub-item"><a href="location.html">ADDRESS BOOK</a></li>
+                                    <li class="sub-item"><a href="artist.html">ARTISTS</a></li>
+                                    <li class="sub-item"><a href="contact.html">CONTACTS</a></li>
+                                </ul>
+                            </li>
+                            <li class="item uk-active uk-parent uk-open">
+                                <a href="#">Reports</a>
+                                <ul class="uk-nav-sub">
+                                    <li class="sub-item active"><a href="report_report_b5_11.html">REPORTS</a></li>
+                                    <li class="sub-item"><a class="text-nowrap" href="report_report_b5_document_templates.html">DOCUMENT TEMPLATE</a></li>
+                                    <li class="sub-item"><a href="report_report_b5_labels.html">LABELS</a></li>
+                                </ul>
+                            </li>
+                            <li class="item uk-parent">
+                                <a href="javascript://">Admin</a>
+                                <ul class="uk-nav-sub">
+                                    <li class="sub-item"><a href="admin_system_b4_14.html">SYSTEM SETTINGS</a></li>
+                                    <li class="sub-item"><a href="javascript://">PORTALS</a></li>
+                                    <li class="sub-item"><a href="admin_user_b5_19.html">USERS</a></li>
+                                </ul>
+                            </li>
+                            <li class="item uk-parent">
+                                <a href="javascript://">Help</a>
+                                <ul class="uk-nav-sub">
+                                    <li class="sub-item"><a href="javascript://">USER HELP</a></li>
+                                    <li class="sub-item"><a href="javascript://">FAQ</a></li>
+                                    <li class="sub-item"><a href="javascript://">UPDATE LOG</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="uk-nav uk-nav-default sideNavBottom">
+                        <li class="item"><a href="#">konstnärsdatabasen</a></li>
+                        <li class="item"><a href="#">User Profile</a></li>
+                        <li class="item"><a href="#">Change language</a></li>
+                        <li class="item"><a href="#">Log Out</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <!---------- main ----------------->
+            <main class="main main-wrapper">
+               <div class="innerBetween">
+                <header class="inner-header">
+                    
+                </header>
+                
+                <div class="bg-white p-30px radius-8 fit-height" style="height: 100%;">
+                    <div class="d-grid gap-4">
+                        <div class="func-with-searchbox row align-items-center gap-15px">
+                            <div class="col-12 col-xl-auto fs-20 helvetica">
+                                Purchased in 2019
+                            </div>
+                            <div class="col d-inline-flex align-items-center justify-content-between flex-wrap gap-15px">
+                                <div class="d-flex align-items-center gap-15px flex-wrap btn-flex-group ms-xl-auto">
+                                    <button class="btn-fab radius-8px size-52 btn-fab-outline-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M17.6498 6.35C16.9097 5.60485 16.0294 5.01356 15.0597 4.61023C14.09 4.2069 13.05 3.99951 11.9998 4C7.57977 4 4.00977 7.58 4.00977 12C4.00977 16.42 7.57977 20 11.9998 20C15.7298 20 18.8398 17.45 19.7298 14H17.6498C17.2378 15.1695 16.4731 16.1824 15.4611 16.8988C14.4491 17.6153 13.2397 18 11.9998 18C8.68977 18 5.99977 15.31 5.99977 12C5.99977 8.69 8.68977 6 11.9998 6C13.6598 6 15.1398 6.69 16.2198 7.78L12.9998 11H19.9998V4L17.6498 6.35Z" fill="#A5A1A4"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-fab radius-8px size-52 btn-fab-outline-light icon-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 19H6.425L16.2 9.225L14.775 7.8L5 17.575V19ZM3 21V16.75L16.2 3.575C16.4 3.39167 16.621 3.25 16.863 3.15C17.105 3.05 17.359 3 17.625 3C17.891 3 18.1493 3.05 18.4 3.15C18.6507 3.25 18.8673 3.4 19.05 3.6L20.425 5C20.625 5.18333 20.771 5.4 20.863 5.65C20.955 5.9 21.0007 6.15 21 6.4C21 6.66667 20.9543 6.921 20.863 7.163C20.7717 7.405 20.6257 7.62567 20.425 7.825L7.25 21H3ZM15.475 8.525L14.775 7.8L16.2 9.225L15.475 8.525Z" fill="#3D3D3D"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-fab radius-8px size-52 btn-fab-outline-light icon-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#3D3D3D"/>
+                                        </svg>
+                                    </button>
+                                
+                                    <button class="btn-fab radius-8px size-52 btn-fab-outline-light" uk-toggle="target: #modal-saveReport">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M21 7V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H17L21 7ZM19 7.85L16.15 5H5V19H19V7.85ZM12 18C12.8333 18 13.5417 17.7083 14.125 17.125C14.7083 16.5417 15 15.8333 15 15C15 14.1667 14.7083 13.4583 14.125 12.875C13.5417 12.2917 12.8333 12 12 12C11.1667 12 10.4583 12.2917 9.875 12.875C9.29167 13.4583 9 14.1667 9 15C9 15.8333 9.29167 16.5417 9.875 17.125C10.4583 17.7083 11.1667 18 12 18ZM6 10H15V6H6V10ZM5 7.85V19V5V7.85Z" fill="#9FB699"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="input-group-addon icon-left searchbox">
+                                    <input type="search" name="" id="" placeholder="Search">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!---------- table ----------------->
+                        <div class="uk-overflow-auto table-parent position-relative bg-white grow-1 border-gray w-100 hidden-scrollbar">
+                            <table class="uk-table table-bordered table-reportDetails">
+                                <tr>
+                                    <th>
+                                        <label class="label-text fs-16" for="">PLACE</label>
+                                    </th>
+                                    <th>
+                                        <label class="label-text fs-16" for="">ARTIST</label>
+                                    </th>
+                                    <th>
+                                        <label class="label-text fs-16" for="">INVENTORY DATE</label>
+                                    </th>
+                                    <th class="status-td">
+                                        <label class="label-text fs-16" for="">STATUS</label>
+                                    </th>
+                                    <th>
+                                        <label class="label-text fs-16" for="">NOTES</label>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>King's Bed School</td>
+                                    <td>Beyers, Walther</td>
+                                    <td>2024-04-01</td>
+                                    <td class="status-td">Placed</td>
+                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                </tr>
+                                <tr>
+                                    <td>BUF</td>
+                                    <td>Beyers, Walther</td>
+                                    <td>2024-04-01</td>
+                                    <td class="status-td">Placed</td>
+                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                </tr>
+                                <tr>
+                                    <td>South house</td>
+                                    <td>Beyers, Walther</td>
+                                    <td>2024-04-01</td>
+                                    <td class="status-td">Placed</td>
+                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                </tr>
+                                <tr>
+                                    <td>King's Bed School</td>
+                                    <td>Beyers, Walther</td>
+                                    <td>2024-04-01</td>
+                                    <td class="status-td">Placed</td>
+                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                </tr>
+                                <tr>
+                                    <td>South house</td>
+                                    <td>Beyers, Walther</td>
+                                    <td>2024-04-01</td>
+                                    <td class="status-td">Placed</td>
+                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                
+               </div>
+            </main>
+        </div>
+        <div class="footer copyright">@2024 REGITART | ALL RIGHTS RESERVED</div>
+
+
+         <!---------- modal-create page Layout  ----------------->
+         <div id="modal-saveReport" class="uk-flex-top no-backdrop" uk-modal>
+            <div class="uk-modal-dialog custom-dialog custom-dialog-520 uk-modal-body uk-margin-auto-vertical">
+                <div class="draggable draggable-area"></div>
+                <button class="uk-modal-close-default close-cstm" type="button" uk-close></button>
+                <div>
+                    <h1 class="modal-title text-center josefin uppr">SAVE REPORT</h1>
+
+                    <div class="p-50">
+                        <div class="inlineForm-cstm mb-24">
+                            <label for="inventeringsdatum" class="col-form-label">Report name</label>
+                            <div>
+                                <input type="text" class="form-control"  id="inventeringsdatum">
+                            </div>
+                        </div>
+
+                        <div class="inlineForm-cstm mb-24">
+                            <label for="inventeringsdatum" class="col-form-label">Description</label>
+                            <div>
+                                <input type="text" class="form-control"  id="inventeringsdatum">
+                            </div>
+                        </div>
+
+                        <div class="inlineForm-cstm align-items-start">
+                            <label for="inventeringsdatum" class="col-form-label">Visible to</label>
+                            <div>
+                                <div class="d-flex form-check custom-form-check size-14 mb-20">
+                                    <input class="form-check-input" type="radio" name="all" id="all" >
+                                    <label class="form-check-label fs-14" for="all">
+                                        All
+                                    </label>
+                                </div>
+                                <div class="d-flex form-check custom-form-check size-14">
+                                    <input class="form-check-input" type="radio" name="all" id="justme" checked>
+                                    <label class="form-check-label fs-14" for="justme">
+                                        Just Me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
+                            <a href="report_report_b5_11_3_ReportDetail-Edit.html" class="btn btn-primary text-white radius-8 fs-16" style="min-width: 140px;">Save</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.4/dist/js/uikit-icons.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+       
+        <!--Common script -->
+        <script src="js/script.js"></script>
+
+
+    </body>
+</html>
