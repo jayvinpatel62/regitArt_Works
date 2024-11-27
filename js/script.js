@@ -474,7 +474,9 @@ document.addEventListener('DOMContentLoaded', function() {
  
 });
 
-
+$('.menuOpenClose').on('click', function() {
+  $('#artistUkMenu').toggleClass('uk-open');
+});
   
 
 //-------------- left sidebar menu active -------------------//
@@ -496,3 +498,6 @@ document.querySelectorAll('.uk-nav-sub li').forEach(item => {
       this.classList.add('active');
   });
 })
+
+
+
