@@ -343,9 +343,12 @@ document.addEventListener('click', function(event) {
     menu.style.display = 'none';
   }
 });
-// ctxTooltip right click menu
+
+// ctxTooltip right click menu open new tab
 const contextTooltip = document.getElementById('ctxTooltip');
 
+let rightClickX = null;
+let rightClickY = null;
  // Show custom context menu on right-click
  document.addEventListener('contextmenu', function(event) {
   if (event.target.classList.contains('openNewTab')) {
@@ -355,12 +358,11 @@ const contextTooltip = document.getElementById('ctxTooltip');
       const rect = event.target.getBoundingClientRect();
       
       // Calculate the vertical center position of the right-clicked area
-      const y = rect.top + window.scrollY + (rect.height / 1) - (contextTooltip.offsetHeight / 1);
-      const x = rect.left + window.scrollX + (rect.width * -2) - (contextTooltip.offsetWidth / 2);
+      rightClickY = rect.top + window.scrollY + (rect.height / 0.3) - (contextTooltip.offsetHeight / 0.3);
+      rightClickX = rect.left + window.scrollX + (rect.width / 2) - (contextTooltip.offsetWidth / 2);
 
-
-      contextTooltip.style.top = `${y}px`;
-      contextTooltip.style.left = `${x}px`;
+      contextTooltip.style.top = `${rightClickY}px`;
+      contextTooltip.style.left = `${rightClickX}px`;
       contextTooltip.style.display = 'block';
 
   } else {
@@ -474,8 +476,16 @@ document.addEventListener('DOMContentLoaded', function() {
  
 });
 
-$('.menuOpenClose').on('click', function() {
+//-------------- toggle uk-nab-menu open -------------------//
+$('.menuOpenClose').click(function() {
   $('#artistUkMenu').toggleClass('uk-open');
+  var isHidden = $('#artistUkMenu .uk-nav-sub').attr('hidden');
+  
+  if (isHidden === undefined) {
+    $('#artistUkMenu .uk-nav-sub').attr('hidden', true);  // Add 'disabled' if not present
+  } else {
+    $('#artistUkMenu .uk-nav-sub').removeAttr('hidden'); // Remove 'disabled' if it is present
+  }
 });
   
 
