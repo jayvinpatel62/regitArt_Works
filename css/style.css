@@ -5715,7 +5715,7 @@ select.no-bg{
   &[data-popper-placement^="left"]{
     .arrow{
       rotate: -90deg;
-      top: 10px;
+      top: 20px;
       left: -10px;
       transform: translate3d(0px, 0px, 0px);
     }
