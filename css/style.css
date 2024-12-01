@@ -124,7 +124,7 @@ body {
 .font-Josefin,
 .font-josefin,
 .josefin {
-  font-family: var(--font-josefin);
+  font-family: var(--font-josefin) !important;
 }
 
 .font-Helvetica,
@@ -1758,6 +1758,15 @@ table .filterDropdown {
 
     .form-check-label {
       font-size: 12px;
+    }
+  }
+  &.size-24 {
+    --_size: 24px !important;
+    .form-check-input,
+    .size-24 {
+      --_size: 24px !important;
+      width: var(--_size);
+      height: var(--_size);
     }
   }
 }
@@ -5495,5 +5504,234 @@ svg.icon-primary {
     color: var(--text-color);
     text-decoration: none;
     padding: 2px 4px;
+  }
+}
+
+/*--------- table - switch type css-----------*/
+
+.single-page-wrapper{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.single-container{
+  width: 100%;
+  max-width: 1476px;
+}
+
+.myloan-tablev2{
+  table-layout: auto;
+
+  tr{
+    th{
+      .label-text{
+        font-size: 16px;
+      }
+    }
+    .acc-rrow {
+      width: 100px;
+    }
+  }
+}
+
+.loanCheckfollow-div{
+  font-family: var(--font-helventica);
+  font-size: 16px;
+  padding:34px 22px ;
+  border:1px solid #C3C3C3;
+  border-radius: 8px;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 108px;
+  height: 32px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 14px;
+  font-family: var(--font-helventica);
+  background: #CE754C;
+  border-radius: inherit;
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity background;
+  -moz-transition-property: opacity background;
+  -o-transition-property: opacity background;
+  transition-property: opacity background;
+}
+.switch-label:before, .switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #fff;
+  
+}
+.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: white;
+ 
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+  background: #A5A1A4;
+}
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 35px;
+
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+.switch-input:checked ~ .switch-handle {
+  left: 80px;
+}
+
+.tr-scope-bg{
+  background: #f2f2f2;
+}
+
+.myloan-tablev2{
+  textarea{
+    border: 1px solid #f2f2f2;
+  }
+}
+
+select.no-bg{
+  background-color:transparent ;
+}
+.valign-top{
+  vertical-align: top !important;
+  td{
+    vertical-align: top !important;
+  }
+}
+
+.richText-toolbar{
+  ul li a{
+    color: var(--text-color);
+  }
+}
+.signature-canvas{
+  width: 100%;
+  height: 300px !important;
+  border:1px solid var(--text-color);
+  margin: 40px 0;
+ 
+}
+.context-tooltip{
+  .nav-tooltip{
+    a{
+      font-size: 12px;
+      padding: 5px 5px;
+      &:hover{
+        background-color: #F2F2F2;
+      }
+    }
+    li{
+      position: relative;
+      &:hover{
+        .tooltip-sub-menu{
+          display: block;
+        }
+      }
+      
+    }
+  }
+}
+
+.nav-tooltip{
+  a{
+    font-size: 12px;
+    padding: 5px 5px;
+    &:hover{
+      background-color: #F2F2F2;
+    }
+  }
+  li{
+    position: relative;
+    &:hover{
+      .tooltip-sub-menu{
+        display: block;
+      }
+    }
+    
+  }
+}
+
+.tooltip-sub-menu{
+  display: none;
+  position: absolute;
+  left:calc(100% + 8px);
+  /* padding: 5px 0; */
+  top: 0;
+  background: #fff;
+  border-radius: 8px;
+  min-width: 130px;
+  &[data-popper-placement^="left"]{
+    .arrow{
+      rotate: -90deg;
+      top: 10px;
+      left: -10px;
+      transform: translate3d(0px, 0px, 0px);
+    }
+  }
+
+  li{
+    white-space: nowrap;
+    a{
+      padding: 5px 20px;
+      font-size: 12px;
+    }
+    
+  }
+}
+#ctxTooltip_v2.context-tooltip{
+  .arrow{
+    transform: translate3d(6px, 0px, 0px);
   }
 }
