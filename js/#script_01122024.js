@@ -293,6 +293,39 @@ document.addEventListener('click', function(event) {
   }
 });
 
+// ctxTooltip right click menu open new tab
+const contextTooltip = document.getElementById('ctxTooltip');
+
+let rightClickX = null;
+let rightClickY = null;
+ // Show custom context menu on right-click
+ document.addEventListener('contextmenu', function(event) {
+  if (event.target.classList.contains('openNewTab')) {
+      event.preventDefault();
+      
+      // Get the bounding rectangle of the right-clicked area
+      const rect = event.target.getBoundingClientRect();
+      
+      // Calculate the vertical center position of the right-clicked area
+      rightClickY = rect.top + window.scrollY + (rect.height / 0.3) - (contextTooltip.offsetHeight / 0.3);
+      rightClickX = rect.left + window.scrollX + (rect.width / 2) - (contextTooltip.offsetWidth / 2);
+
+      contextTooltip.style.top = `${rightClickY}px`;
+      contextTooltip.style.left = `${rightClickX}px`;
+      contextTooltip.style.display = 'block';
+
+  } else {
+    contextTooltip.style.display = 'none';
+  }
+});
+
+// Hide the custom context menu on click outside
+document.addEventListener('click', function(event) {
+  if (!contextTooltip.contains(event.target)) {
+    contextTooltip.style.display = 'none';
+  }
+});
+
 
 
 //-------------- menu dropdown custom -------------------//
