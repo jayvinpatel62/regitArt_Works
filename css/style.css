@@ -5797,3 +5797,73 @@ select.no-bg{
 .radius-full{
   border-radius: 100px !important;
 }
+
+
+
+
+.custom-checkbox-v3 {
+  --form-control-color: #3D3D3D;
+ --form-control-disabled: #959495;
+ font-size: 14px;
+ line-height: 1.1;
+ display: inline-grid;
+ grid-template-columns: 1em auto;
+ gap: 10px;
+}
+
+
+
+.custom-checkbox-v3.is-disabled {
+ color: var(--form-control-disabled);
+ cursor: not-allowed;
+}
+
+.custom-checkbox-v3 input[type="checkbox"] {
+ /* Add if not using autoprefixer */
+ -webkit-appearance: none;
+ /* Remove most all native input styles */
+ appearance: none;
+ /* For iOS < 15 */
+ background-color: transparent;
+ /* Not removed via appearance */
+ margin: 0;
+
+ font: inherit;
+ color: currentColor;
+ width: 18px;
+ height: 18px;
+ border: 1px solid var(--form-control-color);
+ border-radius: 4em;
+ transform: translateY(-0.075em);
+ display: grid;
+ place-content: center;
+}
+
+.custom-checkbox-v3 input[type="checkbox"]::before {
+ content: "";
+ width: 10px;
+ height: 10px;
+ clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+ transform: scale(0);
+ transform-origin: center center;
+ transition: 120ms transform ease-in-out;
+ /* Windows High Contrast Mode */
+ background-color: var(--form-control-color);
+}
+
+.custom-checkbox-v3 input[type="checkbox"]:checked::before {
+ transform: scale(0.8);
+}
+
+.custom-checkbox-v3 input[type="checkbox"]:disabled {
+ --form-control-color: var(--form-control-disabled);
+
+ color: var(--form-control-disabled);
+ cursor: not-allowed;
+}
+
+
+.py-50{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
