@@ -119,105 +119,127 @@
 
                         <!------ tab INTERNAL PORTAL------->
                         <div class="internalPortalTab tab-inner-content h-full">
-                            <div class="tabinn-padding">
-                                <div class="d-flex align-items-center gap-15px flex-wrap btn-josefin btn-flex-group">
-                                    <button class="btn btn-primary text-white radius-8">SAVE</button>
+                            <div class="toggle-portal-content" id="internal-portal-page1">
+                                <div class="tabinn-padding">
+                                    <div class="d-flex align-items-center gap-15px flex-wrap btn-josefin btn-flex-group">
+                                        <button class="btn btn-primary text-white radius-8" uk-toggle="target: .toggle-portal-content">SAVE</button>
+                                    </div>
                                 </div>
-                               
+                                <!---------- table ----------------->
+                                <div class="uk-overflow-auto table-parent position-relative bg-white grow-1 w-100 hidden-scrollbar radius-0">
+                                    <table class="table-borderless table-sys-setting">
+                                        
+                                            <tr>
+                                                <td>Automatic new ID</td>
+                                                <td>
+                                                    <label class="custom-checkbox-v3">
+                                                        <input type="checkbox" checked/>
+                                                        Suggest highest id number +1 when a new object is added
+                                                    </label>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr class="valign-top">
+                                                <td class="valign-top">List size</td>
+                                                <td>
+                                                    <div style="max-width: 400px;">
+                                                        <textarea class="myRichtext-editor" name="example"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>User Access</td>
+                                                <td>
+                                                    <label class="custom-checkbox-v3">
+                                                        <input type="checkbox" checked/>
+                                                        User needs to be approved before getting access to internal portal
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="valign-top">Users</td>
+                                                <td>
+                                                    <div class="uk-overflow-auto table-sys-mobile-setting-border position-relative bg-white grow-1 w-100 hidden-scrollbar radius-0" style="max-width: 544px;">
+                                                        <table class="table-sys-mobile-setting table-portal-internal">
+                                                            <tr>
+                                                                <td>Active</td>
+                                                                <td class="td-space">&nbsp;</td>
+                                                                <td class="text-start">Username</td>
+                                                                <td class="td-switch"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="custom-checkbox-v3">
+                                                                        <input type="checkbox" checked/>
+                                                                    </label>
+                                                                </td>
+                                                                <td class="td-space">&nbsp;</td>
+                                                                <td class="text-start">anna@kommun.se</td>
+                                                                <td class="td-switch">
+                                                                    <label class="switch switch-148">
+                                                                        <input type="checkbox" class="switch-input" checked>
+                                                                        <span class="switch-label" data-on="Approved" data-off="Denied"></span>
+                                                                        <span class="switch-handle"></span>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="custom-checkbox-v3">
+                                                                        <input type="checkbox" checked/>
+                                                                    </label>
+                                                                </td>
+                                                                <td class="td-space">&nbsp;</td>
+                                                                <td class="text-start">anna@kommun.se</td>
+                                                                <td class="td-switch">
+                                                                    <label class="switch switch-148 ml-0">
+                                                                        <input type="checkbox" class="switch-input">
+                                                                        <span class="switch-label" data-on="Approved" data-off="Denied"></span>
+                                                                        <span class="switch-handle"></span>
+                                                                    </label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr> 
+                                                                <td>
+                                                                    <label class="custom-checkbox-v3">
+                                                                        <input type="checkbox" checked/>
+                                                                    </label>
+                                                                </td>
+                                                                <td class="td-space">&nbsp;</td>
+                                                                <td class="text-start">anna@kommun.se</td>
+                                                                <td class="td-switch">
+                                                                    <div class="btn-tab-group">
+                                                                        <a href="javascript://" class="btn btn-approved radius-full">Approved</a>
+                                                                        <a href="javascript://" class="btn btn-deny radius-full">Deny</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                            </tr>
+                                    </table>
+                                </div>
                             </div>
-                             <!---------- table ----------------->
-                             <div class="uk-overflow-auto table-parent position-relative bg-white grow-1 w-100 hidden-scrollbar radius-0">
-                                <table class="table-borderless table-sys-setting">
-                                       
-                                        <tr>
-                                            <td>Automatic new ID</td>
-                                            <td>
-                                                <label class="custom-checkbox-v3">
-                                                    <input type="checkbox" checked/>
-                                                    Suggest highest id number +1 when a new object is added
-                                                </label>
-                                                
-                                            </td>
-                                        </tr>
-                                        <tr class="valign-top">
-                                            <td class="valign-top">List size</td>
-                                            <td>
-                                                <div style="max-width: 400px;">
-                                                    <textarea class="myRichtext-editor" name="example"></textarea>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>User Access</td>
-                                            <td>
-                                                <label class="custom-checkbox-v3">
-                                                    <input type="checkbox" checked/>
-                                                    User needs to be approved before getting access to internal portal
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="valign-top">Users</td>
-                                            <td>
-                                                <div class="uk-overflow-auto table-sys-mobile-setting-border position-relative bg-white grow-1 w-100 hidden-scrollbar radius-0" style="max-width: 544px;">
-                                                    <table class="table-sys-mobile-setting table-portal-internal">
-                                                        <tr>
-                                                            <td>Active</td>
-                                                            <td class="td-space">&nbsp;</td>
-                                                            <td class="text-start">Username</td>
-                                                            <td class="td-switch"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label class="custom-checkbox-v3">
-                                                                    <input type="checkbox" checked/>
-                                                                </label>
-                                                            </td>
-                                                            <td class="td-space">&nbsp;</td>
-                                                            <td class="text-start">anna@kommun.se</td>
-                                                            <td class="td-switch">
-                                                                <label class="switch switch-148">
-                                                                    <input type="checkbox" class="switch-input" checked>
-                                                                    <span class="switch-label" data-on="Approved" data-off="Denied"></span>
-                                                                    <span class="switch-handle"></span>
-                                                                </label>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label class="custom-checkbox-v3">
-                                                                    <input type="checkbox" checked/>
-                                                                </label>
-                                                            </td>
-                                                            <td class="td-space">&nbsp;</td>
-                                                            <td class="text-start">anna@kommun.se</td>
-                                                            <td class="td-switch">
-                                                                <label class="switch switch-148 ml-0">
-                                                                    <input type="checkbox" class="switch-input">
-                                                                    <span class="switch-label" data-on="Approved" data-off="Denied"></span>
-                                                                    <span class="switch-handle"></span>
-                                                                </label>
-                                                            </td>
-                                                        </tr>
-                                                        <tr> 
-                                                            <td>
-                                                                <label class="custom-checkbox-v3">
-                                                                    <input type="checkbox" checked/>
-                                                                </label>
-                                                            </td>
-                                                            <td class="td-space">&nbsp;</td>
-                                                            <td class="text-start">anna@kommun.se</td>
-                                                            <td class="td-switch">
-                                                                <div class="btn-tab-group">
-                                                                    <a href="javascript://" class="btn btn-approved radius-full">Approved</a>
-                                                                    <a href="javascript://" class="btn btn-deny radius-full">Deny</a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                        </tr>
-                                </table>
+                            <div class="toggle-portal-content" id="internal-portal-page2" hidden>
+                                <div class="tabinn-padding text-center">
+                                    <p class="fs-20 Helvetica">The internal portal is a tool for displaying the collection online and easily letting people know what's available for loan.</p>
+                                    <p class="fs-20 Helvetica">If you want to order the portal, fill in the form via the link below and we will get back to you as soon as we can:</p>
+                                    <br>
+                                    <br>
+                                    <div class="d-flex align-items-center gap-15px flex-wrap btn-josefin justify-content-center">
+                                        <button uk-toggle="target: .toggle-portal-content" class="btn btn-primary text-white radius-8" style="width: 100%;max-width: 400px;">ORDER THE PORTAL</button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="portal-video-section">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                                <path d="M39.5833 64.9334V35.0667C39.5839 34.693 39.685 34.3264 39.876 34.0052C40.067 33.684 40.3409 33.4201 40.669 33.2412C40.997 33.0623 41.3672 32.9749 41.7406 32.9881C42.1141 33.0014 42.4771 33.1149 42.7916 33.3167L66.0249 48.2459C66.3191 48.4343 66.5612 48.6938 66.7288 49.0003C66.8965 49.3069 66.9843 49.6506 66.9843 50C66.9843 50.3494 66.8965 50.6932 66.7288 50.9997C66.5612 51.3062 66.3191 51.5657 66.0249 51.7542L42.7916 66.6875C42.4771 66.8893 42.1141 67.0028 41.7406 67.0161C41.3672 67.0294 40.997 66.9419 40.669 66.763C40.3409 66.5841 40.067 66.3202 39.876 65.999C39.685 65.6778 39.5839 65.3112 39.5833 64.9375V64.9334Z" fill="#3D3D3D"/>
+                                                <path d="M4.16675 49.9998C4.16675 24.6873 24.6876 4.1665 50.0001 4.1665C75.3126 4.1665 95.8334 24.6873 95.8334 49.9998C95.8334 75.3123 75.3126 95.8332 50.0001 95.8332C24.6876 95.8332 4.16675 75.3123 4.16675 49.9998ZM50.0001 10.4165C39.5019 10.4165 29.4338 14.5869 22.0104 22.0102C14.5871 29.4335 10.4167 39.5017 10.4167 49.9998C10.4167 60.498 14.5871 70.5662 22.0104 77.9895C29.4338 85.4128 39.5019 89.5832 50.0001 89.5832C60.4982 89.5832 70.5664 85.4128 77.9897 77.9895C85.413 70.5662 89.5834 60.498 89.5834 49.9998C89.5834 39.5017 85.413 29.4335 77.9897 22.0102C70.5664 14.5869 60.4982 10.4165 50.0001 10.4165Z" fill="#3D3D3D"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
