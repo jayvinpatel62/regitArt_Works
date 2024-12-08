@@ -6214,3 +6214,26 @@ select.no-bg{
     width: 25px;
   }
 }
+
+
+.editTemplate-grid-wrapper{
+  display: grid;
+  gap: 60px;
+  .editTemplate-grid-item{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+    @media screen and (min-width: 1199px) {
+      grid-template-columns: 430px auto;
+    }
+  }
+  .excelExportWrapper{
+   .box{
+      min-width: 300px;
+      min-height: 370px;
+   }
+   .scroller-370{
+    max-height: 370px;
+   }
+  }
+}
