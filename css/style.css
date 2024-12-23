@@ -2257,7 +2257,9 @@ table .filterDropdown {
     }
 
     .decription-td {
-      padding-right: 100px;
+      @media screen and (min-width: 1630px) {
+        padding-right: 100px;
+      }
     }
 
     .date-th {
@@ -3947,13 +3949,24 @@ button.context-tooltip {
 }
 
 #location-offcanvas {
-  min-width: 596px;
-  padding-top: 108px;
-  padding-left: 73px;
-  padding-right: 143px;
+  max-width: 420px;
+  width: 100%;
+  padding-top: 20px;
+  padding-left:20px;
+  padding-right: 20px;
   /* padding-bottom: 85px; */
   background: #fafafa;
   border: none;
+  overflow-y: auto;
+  @media screen and (min-width:1200px) {
+    max-width: 596px;
+    padding-top: 108px;
+    padding-left: 73px;
+    padding-right: 143px;
+  }
+  .offcanvas-body{
+    overflow-y: clip;
+  }
 }
 
 .spacer-80 {
