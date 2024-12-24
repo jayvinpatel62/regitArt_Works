@@ -722,8 +722,9 @@ table .filterDropdown {
   color: var(--muted-color);
 }
 
+
 .my-table-model {
-  position: fixed;
+  /* position: fixed;
   right: 55px;
   top: 135px;
   padding: 60px 36px !important;
@@ -731,15 +732,33 @@ table .filterDropdown {
   background: white;
   box-shadow: 4px 4px 16px 0px #0000001f;
   border-radius: 8px;
+  max-width: 334px; */
+  position: fixed;
+  padding: 60px 36px !important;
+  border: 1px solid #c9c9c9;
+  background: white;
+  box-shadow: 4px 4px 16px 0px #0000001f;
+  border-radius: 8px;
   max-width: 334px;
+  width: 334px;
+  height: 100vh;
+  overflow-y: auto;
+  max-height: calc(anchor-size(block) + 3px);
+  position-anchor: --mytable-modal-anchor;
+  top: anchor(top);
+  right: anchor(right);
+  z-index: 999999;
+  anchor-name: --table-model;
   .uk-close {
     --size: 28px;
     width: var(--size);
     height: var(--size);
     border-radius: var(--size);
-    position: absolute;
-    right: 15px;
-    top: 15px;
+    position: fixed;
+    position-anchor: --table-model;
+    top: anchor(top);
+    right: anchor(right);
+    transform: translate(-15px, 15px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6290,4 +6309,47 @@ select.no-bg{
 .right-fillDetailbox{
   max-width: 380px;
   margin-top: 70px;
+}
+
+
+.mytable-modal-anchor{
+  anchor-name: --mytable-modal-anchor;
+}
+.global-modal-anchor{
+  position: fixed;
+  padding: 60px 36px !important;
+  border: 1px solid #c9c9c9;
+  background: white;
+  box-shadow: 4px 4px 16px 0px #0000001f;
+  border-radius: 8px;
+  max-width: 334px;
+  width: 334px;
+  height: 100vh;
+  overflow-y: auto;
+  max-height: calc(anchor-size(block) + 3px);
+  position-anchor: --mytable-modal-anchor;
+  top: anchor(top);
+  right: anchor(right);
+  z-index: 999999;
+  anchor-name: --table-model;
+  .uk-close {
+    --size: 28px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    position: fixed;
+    position-anchor: --table-model;
+    top: anchor(top);
+    right: anchor(right);
+    transform: translate(-15px, 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d9d9d9;
+    color: white;
+    &:hover {
+      background: #c9c9c9;
+      color: white;
+    }
+  }
 }
