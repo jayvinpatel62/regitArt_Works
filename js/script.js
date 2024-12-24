@@ -16,6 +16,15 @@ $('.closeDialog').click(function(){
 });
 
 
+$('.global-modal-anchor').hide();
+  
+$('#dvlocationlist .tr-click-opem-model').click(function(){
+  $('.global-modal-anchor').toggle();
+});
+
+$('.closeDialog').click(function(){
+  $('.global-modal-anchor').hide();
+});
 
 $('.toggleSidebar').click(function(){
   $('.sidebar').toggleClass('show');
