@@ -249,7 +249,7 @@
     }
 
     .singleSearchBar{
-       margin: 0;
+       margin-top: 23px;
        position: relative;
         .searchbox-head{
             position: absolute;
@@ -514,6 +514,20 @@
         max-height: calc(100vh - 149px);
     }
 }
+@media  (min-width:640px) and (max-width:1200px) {
+.singleSearchBar{
+    position: relative;
+        .searchbox-head{
+            max-width: 50px;
+        }
+        .btns-nav {
+            --size: 40px;
+            .btn{
+                padding: 0.5rem;
+            }
+        }
+    }
+}
 @media  (min-width:640px) and (max-width:1800px) {
     .toggleSidebar{
         display: none !important;
@@ -538,18 +552,7 @@
    .sidebar{
         border-radius: var(--radius) !important;
    }
-   .singleSearchBar{
-    position: relative;
-     .searchbox-head{
-        max-width: 50px;
-     }
-     .btns-nav {
-        --size: 40px;
-        .btn{
-            padding: 0.5rem;
-        }
-    }
-    }
+  
     .grid-wrapper{
     grid-template-columns: var(--sidepanel-width) auto;
         
