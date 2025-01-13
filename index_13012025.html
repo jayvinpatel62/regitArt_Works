@@ -93,9 +93,9 @@
                                 <li class="item uk-parent">
                                     <a href="javascript://">Help</a>
                                     <ul class="uk-nav-sub">
-                                        <li class="sub-item"><a href="help_b5_userhelp.html">USER HELP</a></li>
-                                        <li class="sub-item"><a href="help_b5_faq.html">FAQ</a></li>
-                                        <li class="sub-item"><a href="help_b5_updatelog.html">UPDATE LOG</a></li>
+                                        <li class="sub-item"><a href="javascript://">USER HELP</a></li>
+                                        <li class="sub-item"><a href="javascript://">FAQ</a></li>
+                                        <li class="sub-item"><a href="javascript://">UPDATE LOG</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -208,7 +208,7 @@
                     
                     <div class="table-pagisition-wrapper">
                         <!---------- table ----------------->
-                        <div class="uk-overflow-auto table-parent position-relative bg-white grow-1 w-100 mytable-modal-anchor">
+                        <div class="uk-overflow-auto table-parent position-relative bg-white grow-1 w-100 hidden-scrollbar mytable-modal-anchor">
                             <table class="uk-table uk-table-striped my-table">
                                 <thead>
                                     <tr>
@@ -292,15 +292,7 @@
                                                 </div>
                                             </div>
                                         </th>
-                                        <!---- new add th -->
-                                        <!-- <th>column test 8</th>
-                                        <th>column test 9</th>
-                                        <th>column test 10</th>
-                                        <th>column test 11</th>
-                                        <th>column test 12</th>
-                                        <th>column test 13</th>
-                                        <th>column test 14</th>
-                                        <th>column test 15</th> -->
+                                        
                                     </tr>
                                 </thead>
                                 <tbody uk-lightbox>
@@ -324,15 +316,6 @@
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
                                         <td>Xavier Xado</td>
-                                        <!---- new add td -->
-                                        <!-- <td>column test 8</td>
-                                        <td>column test 9</td>
-                                        <td>column test 10</td>
-                                        <td>column test 11</td>
-                                        <td>column test 12</td>
-                                        <td>column test 13</td>
-                                        <td>column test 14</td>
-                                        <td>column test 15</td> -->
                                     </tr>
                                     <tr>
                                         <td>
@@ -1800,14 +1783,13 @@
         <script>
             $(document).ready(function() {
             // Select the table
-            let $table = $('.my-table');
-            // let $tableScroll = $('.uk-overflow-auto')
+            var $table = $('.my-table');
             
             // Get the number of columns (assuming the first row contains the headers)
-            let columnCount = $table.find('tr:first td, tr:first th').length;
+            var columnCount = $table.find('tr:first td, tr:first th').length;
 
             // Toggle the classes based on the number of columns
-            if (columnCount > 8) {
+            if (columnCount > 10) {
                 $table.addClass('tbl-auto').removeClass('tbl-fixed');
             } else {
                 $table.addClass('tbl-fixed').removeClass('tbl-auto');
