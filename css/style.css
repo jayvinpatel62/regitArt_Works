@@ -6471,3 +6471,189 @@ select.no-bg{
     font-size: 14px;
   }
 }
+
+/* ------------- 17 02 2025 css jayvin --------------*/
+.grid-with-form{
+  display: grid;
+  grid-template-columns: 150px auto;
+}
+
+.tbl-access-permission{
+  margin-top: 0 !important;
+  border: 1px solid #ccc;
+  tr{
+    td,th{
+      font-size: 12px !important;
+      
+    }
+  }
+  thead{
+    tr{
+      th{
+        background-color: #ddd;
+        background-image: linear-gradient(to bottom, white 0%, #ddd 100%);
+        white-space: nowrap;
+        padding: 10px 10px;
+        border-bottom: 1px solid #ccc;
+        text-shadow: none;
+      }
+    }
+  }
+  tbody{
+    tr{
+      border: none !important;
+      td{
+        padding: 5px 10px;
+        border: none !important;
+      }
+    }
+  }
+}
+
+.scope-offset{
+  margin-top: -30px;
+}
+
+.main-tree-ul {
+  padding-left: 0;
+  margin:0;
+  > li {
+    &:first-child:before {
+      top: 8px;
+      border:0;
+    }
+  }
+}
+.main-tree-ul {
+  ul{
+     list-style-type: none;
+    padding-left: 10px;
+  }
+  li {
+    position: relative;
+    padding-left: 15px;
+    font-size:12px;
+    input{
+      position:relative;
+      z-index:2;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      border-left: 1px solid #ccc;
+      height: 100%;
+      left: 5px;
+      top: -10px;
+      z-index: 0;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      border-top: 1px solid #ccc;
+      width: 15px;
+      height: 2px;
+      left: 5px;
+      top: 9px;
+      z-index: 0;
+    }
+    ul {
+      padding-left: 5px;
+    }
+  }
+}
+
+.toggle-tree {
+  cursor: pointer;
+  /*             margin-right: 5px; */
+}
+.toggle-tree::before {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  background-image: linear-gradient(to bottom, white 0%, #ddd 100%);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 10px;
+  z-index:2;
+}
+.expanded::before {
+  content: "-";
+}
+.hidden {
+  display: none;
+}
+
+.tree-accordion {
+  display:inline-block;
+  width: 100%;
+  height: fit-content;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 0;
+  border: 1px solid #ddd;
+}
+
+.tree-accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tree-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.tree-accordion-header {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  background-color: #ddd;
+  border-bottom: 1px solid #ccc;
+}
+
+.tree-accordion-header::after {
+  content: "+";
+  font-size: 14px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.tree-accordion-item.active .tree-accordion-header::after {
+  content: "−";
+}
+
+.tree-accordion-content {
+  padding: 0 10px;
+/*   height: 0; */
+/*   max-height:0; */
+  block-size:0;
+  overflow: hidden;
+  transition: block-size 0.3s ease, padding 0.3s ease;
+}
+
+.tree-accordion-item.active .tree-accordion-content {
+  padding: 10px 10px;
+/*   height:auto; */
+/*    max-height:fit-content; */
+  block-size:calc-size(auto, size + 4px)
+}
+
+
+.tree-accordion-item input[type="checkbox"]:checked {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white;
+}
+.tree-accordion-item input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 .25rem #ce754c26;
+}
