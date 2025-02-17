@@ -332,9 +332,240 @@
 
                         <!------ tab usersRolesTab------->
                         <div class="usersRolesTab tab-inner-content h-full">
-                            <div class="tabinn-padding">
-                               <h3>No data found</h3>
+                            <div class="p-30px pb-40px func-with-searchbox d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-15px">
+                                <div class="d-flex align-items-center gap-15px flex-wrap">
+                                    <button class="btn btn-outline-light-gray radius-8 bg-white fw-600">Save</button>
+                                    <button class="btn btn-outline-light-gray radius-8 bg-white fw-600">Delete</button>
+                                    <button class="btn btn-outline-light-gray radius-8 bg-white fw-600" >Cancel</button>
+                                </div>
+                                <div class="input-group-addon icon-left searchbox" >
+                                    <input type="search" name="" id="" placeholder="Search">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--text2-light-color)" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+                                    </span>
+                                </div>
                             </div>
+
+                            <div class="tabinn-padding">
+                                <div class="row gap-4">
+                                    <div class="col col-md-7">
+                                        <div class="grid-with-form">
+                                            <label class="fs-16" for="Section">Role Name:</label>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-7">
+                                        <div class="grid-with-form">
+                                            <label class="fs-16" for="Section">Description:</label>
+                                            <input type="text" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col col-md-7">
+                                                <div class="grid-with-form">
+                                                    <label class="fs-16" for="Section">Access Permission:</label>
+                                                    <table class="uk-table uk-table-striped tbl-access-permission">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Feature Name</th>
+                                                                <th>Full Control</th>
+                                                                <th>View</th>
+                                                                <th>Add</th>
+                                                                <th>Edit</th>
+                                                                <th>Delete</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Adminstration</td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ArtWorks</td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Report</td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mobile set</td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="custom-checkbox-v2 gap-4 d-flex align-items-center">
+                                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="grid-with-form">
+                                                    <label class="fs-16" for="Section">Extra Feature:</label>
+                                                    <div class="custom-checkbox-v2">
+                                                        <input class="form-check-input size-12px radius-2px" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                        This user can only access from mobile
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-4">
+                                                <div class="scope-offset">
+                                                    <p class="mb-2">Scope</p>
+                                                    <div class="tree-accordion">
+                                                        <div class="tree-accordion-item active">
+                                                        <div class="tree-accordion-header">Produktgrupp/Produktkategori</div>
+                                                        <div class="tree-accordion-content">
+                                                            <ul class="main-tree-ul">
+                                                                <li>
+                                                                <span class="toggle-tree"></span>
+                                                                <input type="checkbox" class="form-check-input size-12px radius-2px tree-parent"> Konst
+                                                                <ul class="hidden">
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Fast konst</li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Lös konst</li>
+                                                                </ul>
+                                                            </li>
+                                                            </ul>
+                                                        </div>
+                                                        </div>
+                                                        <div class="tree-accordion-item active">
+                                                        <div class="tree-accordion-header">Plats/Adress</div>
+                                                        <div class="tree-accordion-content">
+                                                            <ul class="main-tree-ul">
+                                                            <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Tom</li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Norra huset</li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Södra huset</li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> test</li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> test2</li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Kommunhuset</li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Gävle sjukhus</li>
+                                                                <li>
+                                                                    <span class="toggle-tree"></span>
+                                                                    <input class="form-check-input size-12px radius-2px tree-parent" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    Stadsbiblioteket
+                                                                   
+                                                                    <ul class="hidden">
+                                                                        <li><input type="checkbox" class="form-check-input size-12px radius-2px tree-child"> Stadsbiblioteket källare</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px child"> Stadshuset</li>
+                                                            </ul>
+                                                        </div>
+                                                        </div>
+                                                        <div class="tree-accordion-item active">
+                                                        <div class="tree-accordion-header">Avdelning/Underavdelning</div>
+                                                        <div class="tree-accordion-content">
+                                                            <ul class="main-tree-ul">
+                                                                <li>
+                                                                    <input class="form-check-input size-12px radius-2px child" type="checkbox" name="selectCheckbox" id="selectCheckbox">
+                                                                    Tom
+                                                                    </li>
+                                                                <li><input type="checkbox" class="form-check-input size-12px radius-2px child"> Teknik och samhäll</li>
+                                                            </li>
+                                                            </ul>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                           
                         </div>
 
                         <!------ tab usersGroupTab------->
@@ -405,7 +636,7 @@
     <!--Common script -->
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/script.js"></script>
-
+    <script src="js/treeView.js"></script>
     <script>
          $(document).ready(function(){
         $('.addWorkFrom-trigger').click(function(){
